@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wakfu-dle — Astra Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#141312; --bg-2:#1c1a18; --panel:#211e1b;
+    --orange:#ff5b1f; --orange-bright:#ff8a3d;
+    --white:#f6f3ec; --gray:#9c968c; --gray-dim:#716c63;
+    --line:#33302c;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    background:var(--bg); color:var(--white);
+    font-family:'Manrope', sans-serif;
+    margin:0; padding:40px 20px 80px;
+  }
+  .wrap{ max-width:640px; margin:0 auto; }
+  h1{
+    font-family:'Anton', sans-serif;
+    font-size:2.2rem; text-transform:uppercase;
+    color:var(--white); margin-bottom:2px;
+  }
+  h1 span{ color:var(--orange); }
+  .subt{ color:var(--gray); margin-bottom:26px; font-size:0.95rem; }
+
+  .buscador{ position:relative; margin-bottom:20px; }
+  #inputClase{
+    width:100%; padding:14px 16px;
+    background:var(--panel); border:1px solid var(--line);
+    color:var(--white); font-family:'Manrope', sans-serif; font-size:1rem;
+  }
+  #inputClase:focus{ outline:none; border-color:var(--orange); }
+  #listaSugerencias{
+    position:absolute; top:calc(100% + 4px); left:0; right:0;
+    background:var(--panel); border:1px solid var(--orange);
+    max-height:220px; overflow-y:auto; z-index:20; display:none;
+  }
+  #listaSugerencias.abierta{ display:block; }
+  .sugerencia{ padding:10px 16px; cursor:pointer; font-size:0.95rem; }
+  .sugerencia:hover, .sugerencia.activa{ background:rgba(255,91,31,0.15); color:var(--orange-bright); }
+
+  .cabecera-tabla{
+    display:grid; grid-template-columns:1.4fr 1fr 0.8fr 1fr 0.6fr;
+    gap:6px; margin-bottom:8px;
+    font-family:'Space Mono', monospace; font-size:0.62rem;
+    text-transform:uppercase; letter-spacing:0.03em; color:var(--gray-dim);
+    text-align:center;
+  }
+  .cabecera-tabla span:first-child{ text-align:left; }
+
+  .fila-guess{
+    display:grid; grid-template-columns:1.4fr 1fr 0.8fr 1fr 0.6fr;
+    gap:6px; margin-bottom:6px;
+  }
+  .celda{
+    padding:12px 8px; text-align:center;
+    font-weight:700; font-size:0.85rem;
+    border-radius:3px;
+  }
+  .celda.nombre{ text-align:left; font-family:'Anton', sans-serif; letter-spacing:0.02em; }
+  .celda.correcto{ background:#3c8a4c; color:#fff; }
+  .celda.parcial{ background:#b8922e; color:#fff; }
+  .celda.incorrecto{ background:#3a3532; color:var(--gray); }
+  .celda .flecha{ font-size:0.7rem; margin-left:3px; }
+
+  #mensajeFinal{
+    margin-top:24px; padding:18px; background:var(--panel);
+    border:1px solid var(--orange); text-align:center; display:none;
+  }
+  #mensajeFinal.visible{ display:block; }
+  #mensajeFinal h2{ font-family:'Anton', sans-serif; color:var(--orange-bright); margin:0 0 6px; }
+  #btnReiniciar{
+    margin-top:14px; padding:10px 22px; background:var(--orange); color:#0f0e0d;
+    border:none; font-weight:800; text-transform:uppercase; cursor:pointer;
+    clip-path:polygon(0 0, 100% 0, 96% 100%, 4% 100%);
+  }
+  #btnReiniciar:hover{ background:var(--orange-bright); }
+
+  .volver{ display:inline-block; margin-bottom:24px; color:var(--gray); text-decoration:none; font-size:0.85rem; }
+  .volver:hover{ color:var(--orange-bright); }
+
+  .leyenda{ display:flex; gap:16px; flex-wrap:wrap; margin-top:20px; font-size:0.75rem; color:var(--gray-dim); }
+  .leyenda span{ display:inline-flex; align-items:center; gap:5px; }
+  .punto{ width:10px; height:10px; display:inline-block; border-radius:2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="volver" href="/">← Volver a Astra Club</a>
+  <h1>WAKFU<span>-DLE</span></h1>
+  <p class="subt">Adiviná la clase de Wakfu. Cada intento te da pistas — probá las 18.</p>
+
+  <div class="buscador">
+    <input type="text" id="inputClase" placeholder="Escribí el nombre de una clase..." autocomplete="off">
+    <div id="listaSugerencias"></div>
+  </div>
+
+  <div class="cabecera-tabla">
+    <span>Clase</span>
+    <span>Elemento(s)</span>
+    <span>De los 12</span>
+    <span>Hechizos</span>
+    <span>Inicial</span>
+  </div>
+  <div id="filasGuesses"></div>
+
+  <div id="mensajeFinal">
+    <h2 id="mensajeFinalTitulo"></h2>
+    <p id="mensajeFinalTexto"></p>
+    <button id="btnReiniciar" type="button">Jugar de nuevo</button>
+  </div>
+
+  <div class="leyenda">
+    <span><i class="punto" style="background:#3c8a4c;"></i> Correcto</span>
+    <span><i class="punto" style="background:#b8922e;"></i> Parcial</span>
+    <span><i class="punto" style="background:#3a3532;"></i> Incorrecto</span>
+  </div>
+</div>
+
+<script>
+const CLASES = [
+  { nombre: "Cra", elementos: ["Fuego","Tierra","Aire","Luz"], doce: true, hechizos: 16 },
+  { nombre: "Ecaflip", elementos: ["Fuego","Agua","Tierra"], doce: true, hechizos: 15 },
+  { nombre: "Eliotrope", elementos: ["Agua","Tierra","Aire"], doce: false, hechizos: 15 },
+  { nombre: "Eniripsa", elementos: ["Fuego","Agua","Aire"], doce: true, hechizos: 15 },
+  { nombre: "Enutrof", elementos: ["Fuego","Agua","Tierra"], doce: true, hechizos: 15 },
+  { nombre: "Feca", elementos: ["Fuego","Agua","Tierra"], doce: true, hechizos: 15 },
+  { nombre: "Foggernaut", elementos: ["Fuego","Agua","Tierra"], doce: false, hechizos: 15 },
+  { nombre: "Iop", elementos: ["Fuego","Tierra","Aire"], doce: true, hechizos: 15 },
+  { nombre: "Huppermage", elementos: ["Fuego","Agua","Tierra","Aire"], doce: false, hechizos: 20 },
+  { nombre: "Masqueraider", elementos: ["Fuego","Agua","Aire"], doce: false, hechizos: 15 },
+  { nombre: "Osamodas", elementos: ["Fuego","Tierra","Aire"], doce: true, hechizos: 15 },
+  { nombre: "Ouginak", elementos: ["Agua","Tierra","Aire"], doce: false, hechizos: 15 },
+  { nombre: "Pandawa", elementos: ["Fuego","Agua","Tierra"], doce: true, hechizos: 15 },
+  { nombre: "Rogue", elementos: ["Fuego","Tierra","Aire"], doce: false, hechizos: 15 },
+  { nombre: "Sacrier", elementos: ["Fuego","Tierra","Aire"], doce: true, hechizos: 15 },
+  { nombre: "Sadida", elementos: ["Agua","Tierra","Aire"], doce: true, hechizos: 15 },
+  { nombre: "Sram", elementos: ["Fuego","Agua","Aire"], doce: true, hechizos: 15 },
+  { nombre: "Xelor", elementos: ["Fuego","Agua","Aire"], doce: true, hechizos: 15 }
+];
+
+let claseSecreta = CLASES[Math.floor(Math.random() * CLASES.length)];
+let intentosHechos = [];
+let juegoTerminado = false;
+
+const input = document.getElementById("inputClase");
+const listaSugerencias = document.getElementById("listaSugerencias");
+const filasGuesses = document.getElementById("filasGuesses");
+const mensajeFinal = document.getElementById("mensajeFinal");
+
+input.addEventListener("input", () => {
+  const texto = input.value.trim().toLowerCase();
+  listaSugerencias.innerHTML = "";
+  if(!texto){ listaSugerencias.classList.remove("abierta"); return; }
+
+  const yaUsadas = intentosHechos.map(i => i.nombre);
+  const coincidencias = CLASES.filter(c =>
+    c.nombre.toLowerCase().includes(texto) && !yaUsadas.includes(c.nombre)
+  );
+
+  if(!coincidencias.length){ listaSugerencias.classList.remove("abierta"); return; }
+
+  coincidencias.forEach(c => {
+    const div = document.createElement("div");
+    div.className = "sugerencia";
+    div.textContent = c.nombre;
+    div.addEventListener("click", () => intentar(c.nombre));
+    listaSugerencias.appendChild(div);
+  });
+  listaSugerencias.classList.add("abierta");
+});
+
+input.addEventListener("keydown", (e) => {
+  if(e.key === "Enter"){
+    const primera = listaSugerencias.querySelector(".sugerencia");
+    if(primera) intentar(primera.textContent);
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if(!e.target.closest(".buscador")) listaSugerencias.classList.remove("abierta");
+});
+
+function intentar(nombreElegido){
+  if(juegoTerminado) return;
+  const clase = CLASES.find(c => c.nombre === nombreElegido);
+  if(!clase) return;
+
+  intentosHechos.push(clase);
+  input.value = "";
+  listaSugerencias.classList.remove("abierta");
+  renderizarFila(clase);
+
+  if(clase.nombre === claseSecreta.nombre){
+    terminarJuego(true);
+  }
+}
+
+function compararElementos(guess, secreta){
+  const iguales = guess.length === secreta.length && guess.every(e => secreta.includes(e));
+  if(iguales) return "correcto";
+  const hayInterseccion = guess.some(e => secreta.includes(e));
+  return hayInterseccion ? "parcial" : "incorrecto";
+}
+
+function renderizarFila(clase){
+  const fila = document.createElement("div");
+  fila.className = "fila-guess";
+
+  const estadoElementos = compararElementos(clase.elementos, claseSecreta.elementos);
+  const estadoDoce = clase.doce === claseSecreta.doce ? "correcto" : "incorrecto";
+  const estadoHechizos = clase.hechizos === claseSecreta.hechizos ? "correcto" : "incorrecto";
+  const inicialGuess = clase.nombre[0].toUpperCase();
+  const inicialSecreta = claseSecreta.nombre[0].toUpperCase();
+  const estadoInicial = inicialGuess === inicialSecreta ? "correcto" : "incorrecto";
+
+  const flechaHechizos = clase.hechizos === claseSecreta.hechizos ? "" :
+    (clase.hechizos < claseSecreta.hechizos ? '<span class="flecha">▲</span>' : '<span class="flecha">▼</span>');
+
+  fila.innerHTML = `
+    <div class="celda nombre">${clase.nombre}</div>
+    <div class="celda ${estadoElementos}">${clase.elementos.join(", ")}</div>
+    <div class="celda ${estadoDoce}">${clase.doce ? "Sí" : "No"}</div>
+    <div class="celda ${estadoHechizos}">${clase.hechizos}${flechaHechizos}</div>
+    <div class="celda ${estadoInicial}">${inicialGuess}</div>
+  `;
+  filasGuesses.prepend(fila);
+}
+
+function terminarJuego(gano){
+  juegoTerminado = true;
+  input.disabled = true;
+  mensajeFinal.classList.add("visible");
+  document.getElementById("mensajeFinalTitulo").textContent = gano ? "¡Lo lograste! 🎉" : "Se acabaron las clases";
+  document.getElementById("mensajeFinalTexto").textContent =
+    `La clase era ${claseSecreta.nombre}. La adivinaste en ${intentosHechos.length} intento${intentosHechos.length === 1 ? "" : "s"}.`;
+}
+
+document.getElementById("btnReiniciar").addEventListener("click", () => {
+  claseSecreta = CLASES[Math.floor(Math.random() * CLASES.length)];
+  intentosHechos = [];
+  juegoTerminado = false;
+  input.disabled = false;
+  filasGuesses.innerHTML = "";
+  mensajeFinal.classList.remove("visible");
+  input.focus();
+});
+</script>
+</body>
+</html>
