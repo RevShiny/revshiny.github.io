@@ -1,0 +1,3448 @@
+{
+  "_nota": "Las 18 clases completas de Wakfu con frases traducidas a es/en/fr/pt, listas para el modo Frases. Ademas se incluye 'Forjalanzas' (Forgelance) como bonus de lore aparte -- Roman confirma que NO es una clase jugable real en Wakfu, asi que va separada de las 18 reales (marcada con esBonus:true) para que el modo de juego pueda decidir si la usa o no. Traducciones adaptadas por Claude (no son la localizacion oficial de Ankama), priorizando mantener el sentido y el humor de cada expresion antes que una traduccion literal palabra por palabra.",
+  "Pandawa": {
+    "nombreAlt": "Pandawa",
+    "frases": [
+      {
+        "es": {
+          "frase": "Petaca",
+          "significado": "Licorera, pero también apelativo cariñoso entre pandawas previo consentimiento. «¡Mi peluchín, cómo me encanta el culito de petaca!», «¡Pero mira qué cara de petaquita tan rica!»."
+        },
+        "en": {
+          "frase": "Flask",
+          "significado": "A hip flask, but also a cute nickname between pandawas once they've hit it off. \"My little cuddle-bear, I love your flask-shaped bum!\", \"Look at that adorable flask-face!\""
+        },
+        "fr": {
+          "frase": "Gourde",
+          "significado": "Une gourde d'alcool, mais aussi un petit surnom affectueux entre pandawas, une fois l'accord donné. « Mon petit nounours, j'adore tes fesses en forme de gourde ! », « Regarde cette bouille de petite gourde, trop mignonne ! »"
+        },
+        "pt": {
+          "frase": "Cantil",
+          "significado": "Um cantil de bebida, mas também um apelido carinhoso entre pandawas depois que rola o consentimento. \"Meu ursinho, adoro sua bunda de cantil!\", \"Olha essa carinha de cantilzinho gostoso!\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Picadillo a hachazos",
+          "significado": "Hacer un uso intensivo del hacha."
+        },
+        "en": {
+          "frase": "Chop it to mince",
+          "significado": "To make heavy use of the axe."
+        },
+        "fr": {
+          "frase": "Charcuter à la hache",
+          "significado": "Faire un usage intensif de la hache."
+        },
+        "pt": {
+          "frase": "Picadinho a machadadas",
+          "significado": "Fazer uso intenso do machado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Una última pinta para el descamino",
+          "significado": "Cuando un pandawa está en estado de embriaguez."
+        },
+        "en": {
+          "frase": "One last pint before the wobble home",
+          "significado": "When a pandawa is thoroughly drunk."
+        },
+        "fr": {
+          "frase": "Une dernière pinte pour la route qui titube",
+          "significado": "Quand un pandawa est en pleine ivresse."
+        },
+        "pt": {
+          "frase": "Uma última caneca antes de cambalear pra casa",
+          "significado": "Quando um pandawa está bêbado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Estar tan claro como el agua",
+          "significado": "Se dice de una situación difícil de comprender, sobre todo para un pandawa."
+        },
+        "en": {
+          "frase": "Clear as water",
+          "significado": "Said of a situation hard to understand, especially for a pandawa."
+        },
+        "fr": {
+          "frase": "Clair comme de l'eau de roche",
+          "significado": "Se dit d'une situation difficile à comprendre, surtout pour un pandawa."
+        },
+        "pt": {
+          "frase": "Claro como água",
+          "significado": "Se diz de uma situação difícil de entender, principalmente para um pandawa."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ir negro como un cuerbok",
+          "significado": "Estar embriagado... de rabia, de amor (o borracho sin más)."
+        },
+        "en": {
+          "frase": "Go black as a cuerbok",
+          "significado": "To be smashed... with rage, with love (or just plain drunk)."
+        },
+        "fr": {
+          "frase": "Devenir noir comme un cuerbok",
+          "significado": "Être ivre... de rage, d'amour (ou simplement soûl)."
+        },
+        "pt": {
+          "frase": "Ficar preto feito um cuerbok",
+          "significado": "Estar transtornado... de raiva, de amor (ou simplesmente bêbado)."
+        }
+      }
+    ]
+  },
+  "Eliotrope": {
+    "nombreAlt": "Selotrop",
+    "frases": [
+      {
+        "es": {
+          "frase": "Estar wakfu furioso",
+          "significado": "Agarrarse una rabieta."
+        },
+        "en": {
+          "frase": "To be wakfu-furious",
+          "significado": "To throw a tantrum."
+        },
+        "fr": {
+          "frase": "Être wakfu furieux",
+          "significado": "Piquer une crise de colère."
+        },
+        "pt": {
+          "frase": "Estar furioso feito wakfu",
+          "significado": "Fazer um chilique."
+        }
+      },
+      {
+        "es": {
+          "frase": "Hacer el puerta a puerta",
+          "significado": "Ser insistente y obstinado."
+        },
+        "en": {
+          "frase": "Go door to door",
+          "significado": "To be pushy and stubborn."
+        },
+        "fr": {
+          "frase": "Faire du porte-à-porte",
+          "significado": "Être insistant et têtu."
+        },
+        "pt": {
+          "frase": "Fazer porta em porta",
+          "significado": "Ser insistente e teimoso."
+        }
+      },
+      {
+        "es": {
+          "frase": "Gorro azul, azul gorro",
+          "significado": "Me da igual que me da lo mismo."
+        },
+        "en": {
+          "frase": "Blue cap, cap blue",
+          "significado": "\"I couldn't care less either way.\""
+        },
+        "fr": {
+          "frase": "Bonnet bleu, bleu bonnet",
+          "significado": "« Ça m'est complètement égal, dans un sens comme dans l'autre. »"
+        },
+        "pt": {
+          "frase": "Boné azul, azul boné",
+          "significado": "\"Tanto faz quanto tanto fez.\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Dolerte el ser",
+          "significado": "Sufrir un ataque de melancolía."
+        },
+        "en": {
+          "frase": "To ache in one's being",
+          "significado": "To suffer a bout of melancholy."
+        },
+        "fr": {
+          "frase": "Avoir mal à son être",
+          "significado": "Souffrir d'un coup de mélancolie."
+        },
+        "pt": {
+          "frase": "Doer o próprio ser",
+          "significado": "Sofrer um ataque de melancolia."
+        }
+      },
+      {
+        "es": {
+          "frase": "Hay que saber dejarse olvidar para volver en buen momento",
+          "significado": "Más vale reflexionar antes de actuar."
+        },
+        "en": {
+          "frase": "You have to know how to be forgotten to come back at the right time",
+          "significado": "Better to think before acting."
+        },
+        "fr": {
+          "frase": "Il faut savoir se faire oublier pour mieux revenir",
+          "significado": "Mieux vaut réfléchir avant d'agir."
+        },
+        "pt": {
+          "frase": "É preciso saber se deixar esquecer para voltar na hora certa",
+          "significado": "Melhor refletir antes de agir."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cambiar de opinión como de portal",
+          "significado": "Indica cierta inconstancia en las decisiones."
+        },
+        "en": {
+          "frase": "Change your mind like you change portals",
+          "significado": "Shows a certain fickleness in decision-making."
+        },
+        "fr": {
+          "frase": "Changer d'avis comme de portail",
+          "significado": "Indique une certaine inconstance dans les décisions."
+        },
+        "pt": {
+          "frase": "Mudar de opinião como quem muda de portal",
+          "significado": "Indica certa inconstância nas decisões."
+        }
+      },
+      {
+        "es": {
+          "frase": "Estar en el zenit de su forma",
+          "significado": "Estar en la cúspide de sus capacidades."
+        },
+        "en": {
+          "frase": "To be at the zenith of one's form",
+          "significado": "To be at the peak of one's abilities."
+        },
+        "fr": {
+          "frase": "Être au zénith de sa forme",
+          "significado": "Être au sommet de ses capacités."
+        },
+        "pt": {
+          "frase": "Estar no zênite da forma",
+          "significado": "Estar no auge das capacidades."
+        }
+      },
+      {
+        "es": {
+          "frase": "Amigos como dragones",
+          "significado": "Indica un vínculo de amistad inquebrantable."
+        },
+        "en": {
+          "frase": "Friends like dragons",
+          "significado": "Denotes an unbreakable bond of friendship."
+        },
+        "fr": {
+          "frase": "Amis comme des dragons",
+          "significado": "Indique un lien d'amitié incassable."
+        },
+        "pt": {
+          "frase": "Amigos como dragões",
+          "significado": "Indica um vínculo de amizade inquebrável."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ser más monárquico que el rey-dios",
+          "significado": "Ser muy exigente."
+        },
+        "en": {
+          "frase": "To be more royalist than the god-king",
+          "significado": "To be extremely demanding."
+        },
+        "fr": {
+          "frase": "Être plus royaliste que le roi-dieu",
+          "significado": "Être très exigeant."
+        },
+        "pt": {
+          "frase": "Ser mais realista que o rei-deus",
+          "significado": "Ser muito exigente."
+        }
+      },
+      {
+        "es": {
+          "frase": "Llegar como un selotrop",
+          "significado": "Llegar sin avisar, de improviso."
+        },
+        "en": {
+          "frase": "To show up like an eliotrope",
+          "significado": "To arrive unannounced, out of nowhere."
+        },
+        "fr": {
+          "frase": "Arriver comme un eliotrope",
+          "significado": "Arriver sans prévenir, à l'improviste."
+        },
+        "pt": {
+          "frase": "Chegar feito um eliotrope",
+          "significado": "Chegar sem avisar, de surpresa."
+        }
+      }
+    ]
+  },
+  "Iop": {
+    "nombreAlt": "Yopuka",
+    "frases": [
+      {
+        "es": {
+          "frase": "¡Sable en ristre y al ataque!",
+          "significado": "Grito de guerra yopuka lanzándose al asalto."
+        },
+        "en": {
+          "frase": "Sword at the ready, charge!",
+          "significado": "War cry of an iop launching into the assault."
+        },
+        "fr": {
+          "frase": "Sabre au clair, à l'attaque !",
+          "significado": "Cri de guerre d'un iop qui se lance à l'assaut."
+        },
+        "pt": {
+          "frase": "Espada em riste e ataque!",
+          "significado": "Grito de guerra de um iop partindo pro combate."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener la hoja al ojo",
+          "significado": "Cuando un enemigo se rinde demasiado pronto, casi sin combatir, a los ojos de un yopuka se le hostiga hasta meterle la espada por la nariz, o por el ojo."
+        },
+        "en": {
+          "frase": "To have the blade at the eye",
+          "significado": "When an enemy surrenders too soon, barely fighting; in an iop's eyes, they get hounded until the sword's shoved right up their nose, or their eye."
+        },
+        "fr": {
+          "frase": "Avoir la lame à l'œil",
+          "significado": "Quand un ennemi se rend trop vite, sans combattre ; aux yeux d'un iop, on le harcèle jusqu'à lui planter l'épée dans le nez, ou dans l'œil."
+        },
+        "pt": {
+          "frase": "Ter a lâmina no olho",
+          "significado": "Quando um inimigo se rende cedo demais, quase sem lutar; aos olhos de um iop, ele é perseguido até levar a espada enfiada no nariz, ou no olho."
+        }
+      },
+      {
+        "es": {
+          "frase": "Vaina sin espada",
+          "significado": "Expresa decepción: «¿Cazar arañas? ¡Qué vaina sin espada!»."
+        },
+        "en": {
+          "frase": "Empty scabbard",
+          "significado": "Expresses disappointment: \"Hunting spiders? What a letdown!\""
+        },
+        "fr": {
+          "frase": "Fourreau sans épée",
+          "significado": "Exprime la déception : « Chasser des araignées ? Quelle déception ! »"
+        },
+        "pt": {
+          "frase": "Bainha sem espada",
+          "significado": "Expressa decepção: \"Caçar aranhas? Que decepção!\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Llora, llora, cantimplora",
+          "significado": "Réplica para dirigirse a un adversario que implora piedad."
+        },
+        "en": {
+          "frase": "Cry, cry, canteen-guy",
+          "significado": "A retort aimed at an enemy begging for mercy."
+        },
+        "fr": {
+          "frase": "Pleure, pleure, ma gourde",
+          "significado": "Réplique adressée à un adversaire qui implore pitié."
+        },
+        "pt": {
+          "frase": "Chora, chora, cantil",
+          "significado": "Resposta para um adversário que implora piedade."
+        }
+      },
+      {
+        "es": {
+          "frase": "Se me hace la boca sangre",
+          "significado": "Expresa impaciencia."
+        },
+        "en": {
+          "frase": "My mouth's bleeding with impatience",
+          "significado": "Expresses impatience."
+        },
+        "fr": {
+          "frase": "J'en ai la bouche qui saigne",
+          "significado": "Exprime l'impatience."
+        },
+        "pt": {
+          "frase": "Minha boca sangra de impaciência",
+          "significado": "Expressa impaciência."
+        }
+      },
+      {
+        "es": {
+          "frase": "¡Venga, qué salpique!",
+          "significado": "Grito de entusiasmo en el momento de rematar a un enemigo."
+        },
+        "en": {
+          "frase": "Come on, splatter time!",
+          "significado": "Cry of enthusiasm when finishing off an enemy."
+        },
+        "fr": {
+          "frase": "Allez, ça va gicler !",
+          "significado": "Cri d'enthousiasme au moment d'achever un ennemi."
+        },
+        "pt": {
+          "frase": "Vamos, que respinga!",
+          "significado": "Grito de entusiasmo ao finalizar um inimigo."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener cabeza de yopuka / tener la cabeza como un yopuka",
+          "significado": "Para los yopukas es el hecho de estar aturdido. Para los fieles de otras religiones es el hecho de que te liquiden: «Me han destrozado, tengo la cabeza como un yopuka»."
+        },
+        "en": {
+          "frase": "To have an iop head / a head like an iop's",
+          "significado": "For iops it means being dazed. For followers of other religions, it means getting wrecked: \"They destroyed me, my head's like an iop's.\""
+        },
+        "fr": {
+          "frase": "Avoir la tête de iop / la tête comme un iop",
+          "significado": "Pour les iops, c'est être assommé. Pour les fidèles des autres religions, c'est se faire massacrer : « Ils m'ont détruit, j'ai la tête comme un iop. »"
+        },
+        "pt": {
+          "frase": "Ter cabeça de iop / a cabeça feito iop",
+          "significado": "Para os iops, é estar atordoado. Para fiéis de outras religiões, é ser arrasado: \"Me destruíram, minha cabeça ficou feito a de um iop.\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Endiño, luego existo",
+          "significado": "Axioma de la filosofía yopuka."
+        },
+        "en": {
+          "frase": "I smash, therefore I am",
+          "significado": "Axiom of iop philosophy."
+        },
+        "fr": {
+          "frase": "Je cogne, donc je suis",
+          "significado": "Axiome de la philosophie iop."
+        },
+        "pt": {
+          "frase": "Esmurro, logo existo",
+          "significado": "Axioma da filosofia iop."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ya veremos eso en el momento clave",
+          "significado": "Posponer las cosas."
+        },
+        "en": {
+          "frase": "We'll see about that when it matters",
+          "significado": "Putting things off."
+        },
+        "fr": {
+          "frase": "On verra ça le moment venu",
+          "significado": "Repousser les choses à plus tard."
+        },
+        "pt": {
+          "frase": "Isso a gente vê na hora certa",
+          "significado": "Adiar as coisas."
+        }
+      },
+      {
+        "es": {
+          "frase": "Djaul en desiembro, año de amputaciones de miembros",
+          "significado": "Proverbio yopuka que hace referencia al mes de desiembro y a su protector. Al parecer, el invierno es un mes muy peligroso."
+        },
+        "en": {
+          "frase": "Djaul in Decembro, year of severed limbs",
+          "significado": "An iop proverb about the month of Decembro and its patron. Winter, it seems, is a very dangerous month."
+        },
+        "fr": {
+          "frase": "Djaul en Décembro, année de membres à terre",
+          "significado": "Proverbe iop sur le mois de Décembro et son protecteur. L'hiver, semble-t-il, est un mois très dangereux."
+        },
+        "pt": {
+          "frase": "Djaul em decembro, ano de membros pelo chão",
+          "significado": "Provérbio iop sobre o mês de decembro e seu protetor. O inverno, ao que parece, é um mês muito perigoso."
+        }
+      }
+    ]
+  },
+  "Rogue": {
+    "nombreAlt": "Tymador",
+    "frases": [
+      {
+        "es": {
+          "frase": "A bomba y platillo",
+          "significado": "Hacer revelaciones (normalmente escandalosas) cuando se había pedido expresamente que se cerrara el pico."
+        },
+        "en": {
+          "frase": "Bomb and platter",
+          "significado": "Blurting out revelations (usually scandalous ones) right after being told to zip it."
+        },
+        "fr": {
+          "frase": "À la bombe et au plateau",
+          "significado": "Balancer des révélations (généralement scandaleuses) juste après qu'on t'ait demandé de la fermer."
+        },
+        "pt": {
+          "frase": "A bomba e prato",
+          "significado": "Soltar revelações (geralmente escandalosas) bem quando pediram pra você calar a boca."
+        }
+      },
+      {
+        "es": {
+          "frase": "¡Cuidado! ¡Boooomba!... fétida",
+          "significado": "Aviso de una explosión inminente, ya sea artesanal o intestinal."
+        },
+        "en": {
+          "frase": "Watch out! Boooomb!... a smelly one",
+          "significado": "Warning of an imminent explosion, whether homemade or intestinal."
+        },
+        "fr": {
+          "frase": "Attention ! Boooombe !... fétide",
+          "significado": "Avertissement d'une explosion imminente, artisanale ou intestinale."
+        },
+        "pt": {
+          "frase": "Cuidado! Bombaaa!... fedida",
+          "significado": "Aviso de uma explosão iminente, caseira ou intestinal."
+        }
+      },
+      {
+        "es": {
+          "frase": "Carácter explosivo",
+          "significado": "Describe el carácter de una persona que se enoja por poca cosa, o que han cansado y explota. Ejemplo: «Cariño, ¿dónde están las llaves? —Toma las llaves; ¿dónde están las bombas? —Toma, una bomba (boooom)». Ya se suele decir que no se puede molestar mucho a un tymador, porque «si no explota, revienta»..."
+        },
+        "en": {
+          "frase": "Explosive temper",
+          "significado": "Describes someone who blows up over small things, or who finally snaps after being pushed too far. Example: \"Honey, where are the keys? —Here are the keys; where are the bombs? —Here, a bomb (boooom).\" You can't push a rogue too far, because \"if it doesn't explode, it bursts.\""
+        },
+        "fr": {
+          "frase": "Caractère explosif",
+          "significado": "Décrit quelqu'un qui s'énerve pour un rien, ou qui, à bout, explose. Exemple : « Chéri, où sont les clés ? — Voici les clés ; où sont les bombes ? — Tiens, une bombe (boooom). » On ne peut pas trop embêter un rogue, parce que « si ça n'explose pas, ça éclate »."
+        },
+        "pt": {
+          "frase": "Temperamento explosivo",
+          "significado": "Descreve alguém que se irrita por qualquer coisa, ou que, cansado, explode. Exemplo: \"Amor, cadê as chaves? —Toma as chaves; cadê as bombas? —Toma, uma bomba (boooom).\" Não dá pra encher o saco de um rogue demais, porque \"se não explode, estoura\"."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ser la bomba",
+          "significado": "Expresión utilizada para expresar una gran satisfacción o para hablar de una persona que acaba de pasar vestida de manera muy sugerente."
+        },
+        "en": {
+          "frase": "To be the bomb",
+          "significado": "Used to express great satisfaction, or to describe someone dressed very provocatively."
+        },
+        "fr": {
+          "frase": "Être la bombe",
+          "significado": "Employé pour exprimer une grande satisfaction, ou pour parler de quelqu'un habillé de façon très suggestive."
+        },
+        "pt": {
+          "frase": "Ser uma bomba",
+          "significado": "Usado pra expressar grande satisfação, ou pra descrever alguém vestido de forma bem sugestiva."
+        }
+      },
+      {
+        "es": {
+          "frase": "Antifaz en la faz",
+          "significado": "Orden utilizada la mayor parte del tiempo por el líder de la banda, justo antes de dar un golpe."
+        },
+        "en": {
+          "frase": "Mask on face",
+          "significado": "Order given, most of the time, by the gang leader right before pulling off a heist."
+        },
+        "fr": {
+          "frase": "Masque sur le visage",
+          "significado": "Ordre donné, la plupart du temps, par le chef de bande juste avant un coup."
+        },
+        "pt": {
+          "frase": "Máscara no rosto",
+          "significado": "Ordem dada, na maioria das vezes, pelo líder do bando bem antes de dar o golpe."
+        }
+      },
+      {
+        "es": {
+          "frase": "Pasario bomba",
+          "significado": "Expresión utilizada por un tymador cuando se encuentran para beber una jarra en la taberna del barrio. También se utiliza para indicar que se tuvo un éxito rotundo gracias a las técnicas de ligoteo."
+        },
+        "en": {
+          "frase": "Bomb hangout",
+          "significado": "Used when meeting up for a drink at the local tavern, or to mean a roaring success at flirting."
+        },
+        "fr": {
+          "frase": "Rendez-vous bombe",
+          "significado": "S'emploie quand on se retrouve pour boire un coup à la taverne du quartier, ou pour indiquer un succès retentissant en drague."
+        },
+        "pt": {
+          "frase": "Point da bomba",
+          "significado": "Usado quando se encontram pra beber algo na taberna do bairro, ou pra indicar um sucesso e tanto na paquera."
+        }
+      },
+      {
+        "es": {
+          "frase": "¿Cómo van las explosiones?",
+          "significado": "Pregunta típica de tymador para saber cómo va un combate."
+        },
+        "en": {
+          "frase": "How are the explosions going?",
+          "significado": "Typical rogue question to check how a fight's going."
+        },
+        "fr": {
+          "frase": "Ça explose comment ?",
+          "significado": "Question typique d'un rogue pour savoir comment se passe un combat."
+        },
+        "pt": {
+          "frase": "Como andam as explosões?",
+          "significado": "Pergunta típica de um rogue pra saber como está indo o combate."
+        }
+      },
+      {
+        "es": {
+          "frase": "Pañuelo en boca cerrada... no entran moscas",
+          "significado": "Orden de colocarse bien el pañuelo para no resfriarse cuando bajen temperaturas."
+        },
+        "en": {
+          "frase": "Scarf over closed mouth, no flies get in",
+          "significado": "Order to bundle up your mouth with a scarf when it gets cold."
+        },
+        "fr": {
+          "frase": "Foulard sur bouche fermée, les mouches n'entrent pas",
+          "significado": "Ordre de bien se couvrir la bouche avec le foulard quand les températures baissent."
+        },
+        "pt": {
+          "frase": "Lenço na boca fechada, não entram moscas",
+          "significado": "Ordem para cobrir bem a boca com o lenço quando a temperatura cai."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ser el fab'huritu",
+          "significado": "Se dice de alguien a quien se acuerdan ciertos privilegios y por quien demostramos tener preferencia."
+        },
+        "en": {
+          "frase": "To be the fab'huritu",
+          "significado": "Said of someone granted special privileges, a clear favorite."
+        },
+        "fr": {
+          "frase": "Être le fab'huritu",
+          "significado": "Se dit de quelqu'un à qui l'on accorde des privilèges, pour qui l'on montre une préférence."
+        },
+        "pt": {
+          "frase": "Ser o fab'huritu",
+          "significado": "Se diz de alguém a quem se concedem privilégios, um claro favorito."
+        }
+      },
+      {
+        "es": {
+          "frase": "Hacer que gire el petardo",
+          "significado": "Expresión utilizada para recordar a sus aliados que deben hacer lo posible por que todos los adversarios se beneficien de las bombas que han puesto. Puede reemplazarse por «hacer la bomba»."
+        },
+        "en": {
+          "frase": "Keep the firecracker spinning",
+          "significado": "Reminding your allies to make sure every enemy gets caught by the bombs that were placed. Can be swapped for \"make the bomb.\""
+        },
+        "fr": {
+          "frase": "Faire tourner le pétard",
+          "significado": "Rappeler à ses alliés de répartir les dégâts des bombes posées sur tous les ennemis. Peut être remplacé par « faire la bombe »."
+        },
+        "pt": {
+          "frase": "Fazer o rojão girar",
+          "significado": "Lembrar os aliados de espalhar o dano das bombas colocadas entre todos os inimigos. Pode ser trocado por \"fazer a bomba\"."
+        }
+      }
+    ]
+  },
+  "Feca": {
+    "nombreAlt": "Feca",
+    "frases": [
+      {
+        "es": {
+          "frase": "Que la diosa te guarde a la sombra de su escudo",
+          "significado": "Fórmula de cortesía feca."
+        },
+        "en": {
+          "frase": "May the goddess keep you in the shadow of her shield",
+          "significado": "Feca courtesy greeting."
+        },
+        "fr": {
+          "frase": "Que la déesse te garde à l'ombre de son bouclier",
+          "significado": "Formule de politesse feca."
+        },
+        "pt": {
+          "frase": "Que a deusa te guarde à sombra de seu escudo",
+          "significado": "Fórmula de cortesia feca."
+        }
+      },
+      {
+        "es": {
+          "frase": "A fuerza de escudo",
+          "significado": "Se dice de una tarea difícil y que requiere mucho esfuerzo para llevarla a cabo."
+        },
+        "en": {
+          "frase": "By dint of shield",
+          "significado": "Said of a hard task requiring a lot of effort."
+        },
+        "fr": {
+          "frase": "À la force du bouclier",
+          "significado": "Se dit d'une tâche difficile qui demande beaucoup d'efforts."
+        },
+        "pt": {
+          "frase": "À força do escudo",
+          "significado": "Se diz de uma tarefa difícil que exige muito esforço."
+        }
+      },
+      {
+        "es": {
+          "frase": "Bueno como la morcilla cocida de jalató",
+          "significado": "Elogio gastronómico. La morcilla cocida con las flecas es un plato apreciado por los fecas."
+        },
+        "en": {
+          "frase": "Good as jalató blood sausage",
+          "significado": "A culinary compliment; blood sausage with fleecs is a dish fecas love."
+        },
+        "fr": {
+          "frase": "Bon comme le boudin de jalató",
+          "significado": "Compliment culinaire ; le boudin aux flèches est un plat apprécié des fecas."
+        },
+        "pt": {
+          "frase": "Bom como a morcela de jalató",
+          "significado": "Elogio gastronômico; a morcela com flecas é um prato querido pelos fecas."
+        }
+      },
+      {
+        "es": {
+          "frase": "Jalatonterías",
+          "significado": "Se dice de una persona que quiere hacer reír haciendo pamplinas."
+        },
+        "en": {
+          "frase": "Jalató-nonsense",
+          "significado": "Said of someone trying to get a laugh by clowning around."
+        },
+        "fr": {
+          "frase": "Jalatoneries",
+          "significado": "Se dit de quelqu'un qui veut faire rire en faisant des bêtises."
+        },
+        "pt": {
+          "frase": "Jalatolices",
+          "significado": "Se diz de alguém que quer fazer rir fazendo bobagens."
+        }
+      },
+      {
+        "es": {
+          "frase": "Jalató con pantys",
+          "significado": "Para burlarse de una persona torpe. «¿No eres capaz de matar una araña? ¡Venga ya, deja de hacerte el jalató con pantys!»"
+        },
+        "en": {
+          "frase": "Jalató in pantyhose",
+          "significado": "Mockery of a clumsy person. \"Can't kill a spider? Quit being such a jalató in pantyhose!\""
+        },
+        "fr": {
+          "frase": "Jalató en collants",
+          "significado": "Moquerie envers une personne maladroite. « Tu n'arrives pas à tuer une araignée ? Arrête de faire ton jalató en collants ! »"
+        },
+        "pt": {
+          "frase": "Jalató de meia-calça",
+          "significado": "Zombaria de alguém desastrado. \"Não consegue matar uma aranha? Para de bancar o jalató de meia-calça!\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Contar los jalatós de Allister",
+          "significado": "Truco para hacer dormir a los niños fecas con insomnio."
+        },
+        "en": {
+          "frase": "Counting Allister's jalatós",
+          "significado": "A trick to help feca kids with insomnia fall asleep."
+        },
+        "fr": {
+          "frase": "Compter les jalatós d'Allister",
+          "significado": "Astuce pour endormir les enfants fecas insomniaques."
+        },
+        "pt": {
+          "frase": "Contar os jalatós de Allister",
+          "significado": "Truque para fazer crianças fecas com insônia dormirem."
+        }
+      },
+      {
+        "es": {
+          "frase": "Haber comido jalató rabioso",
+          "significado": "Estar muy nervioso o enfadado."
+        },
+        "en": {
+          "frase": "To have eaten a rabid jalató",
+          "significado": "To be very on edge or angry."
+        },
+        "fr": {
+          "frase": "Avoir mangé un jalató enragé",
+          "significado": "Être très nerveux ou en colère."
+        },
+        "pt": {
+          "frase": "Ter comido jalató raivoso",
+          "significado": "Estar muito nervoso ou irritado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Feca de pura lana",
+          "significado": "Estar orgulloso de ser feca."
+        },
+        "en": {
+          "frase": "Pure-wool feca",
+          "significado": "To be proud of being a feca."
+        },
+        "fr": {
+          "frase": "Feca pure laine",
+          "significado": "Être fier d'être un feca."
+        },
+        "pt": {
+          "frase": "Feca pura lã",
+          "significado": "Ter orgulho de ser feca."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tanto monta monta tanto, el jalató como Gorsanto",
+          "significado": "Expresión que designa la similitud de personalidad entre dos personas. «¿Djaul y Rushu? Tanto monta monta tanto, el jalató como Gorsanto»."
+        },
+        "en": {
+          "frase": "Six of one, half a dozen of the other, the jalató same as Gorsanto",
+          "significado": "Points out how alike two people's personalities are. \"Djaul and Rushu? Six of one, half a dozen of the other.\""
+        },
+        "fr": {
+          "frase": "Bonnet blanc, blanc bonnet, le jalató comme Gorsanto",
+          "significado": "Souligne la ressemblance de personnalité entre deux personnes. « Djaul et Rushu ? Bonnet blanc, blanc bonnet. »"
+        },
+        "pt": {
+          "frase": "Tanto faz, tanto fez, o jalató que nem Gorsanto",
+          "significado": "Aponta a semelhança de personalidade entre duas pessoas. \"Djaul e Rushu? Tanto faz, tanto fez.\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Pasarse de la cerca",
+          "significado": "Exagerar, ir demasiado lejos en sus afirmaciones."
+        },
+        "en": {
+          "frase": "To go over the fence",
+          "significado": "To exaggerate, to go too far with claims."
+        },
+        "fr": {
+          "frase": "Passer par-dessus la clôture",
+          "significado": "Exagérer, aller trop loin dans ses propos."
+        },
+        "pt": {
+          "frase": "Passar da cerca",
+          "significado": "Exagerar, ir longe demais nas afirmações."
+        }
+      }
+    ]
+  },
+  "Eniripsa": {
+    "nombreAlt": "Aniripsa",
+    "frases": [
+      {
+        "es": {
+          "frase": "De los pies a la cabeza",
+          "significado": "Durante los combates, los aniripsas son conocidos por curar a casos desesperados. A uno le falta el brazo, a otro la cabeza; sus heridos tienen el cuerpo por las patas arriba, de ahí la expresión."
+        },
+        "en": {
+          "frase": "Head over heels",
+          "significado": "In battle, eniripsas patch up the most desperate cases; one's missing an arm, another a head — their patients end up completely turned upside down."
+        },
+        "fr": {
+          "frase": "De la tête aux pieds (à l'envers)",
+          "significado": "Pendant les combats, elles soignent des cas désespérés ; il manque un bras à l'un, une tête à l'autre — leurs patients finissent sens dessus dessous."
+        },
+        "pt": {
+          "frase": "Da cabeça aos pés (de pernas pro ar)",
+          "significado": "Durante os combates, curam casos desesperados; falta um braço aqui, uma cabeça ali — os pacientes ficam de pernas pro ar."
+        }
+      },
+      {
+        "es": {
+          "frase": "Poner el corazón",
+          "significado": "Los aniripsas también dicen «echarle una mano», y «¡Vamos a remangarnos!», normalmente canturrean mientras tienen las manos ocupadas con las tripas y los cerebros machacados en el campo de batalla."
+        },
+        "en": {
+          "frase": "Putting your heart into it",
+          "significado": "They also say \"lend a hand\" and \"let's roll up our sleeves!\", humming away while elbow-deep in guts and brains on the battlefield."
+        },
+        "fr": {
+          "frase": "Y mettre son cœur",
+          "significado": "Elles disent aussi « donner un coup de main » et « retroussons nos manches ! », en fredonnant les mains plongées dans les tripes et les cervelles sur le champ de bataille."
+        },
+        "pt": {
+          "frase": "Colocar o coração",
+          "significado": "Também dizem \"dar uma mãozinha\" e \"vamos arregaçar as mangas!\", cantarolando com as mãos ocupadas em tripas e miolos no campo de batalha."
+        }
+      },
+      {
+        "es": {
+          "frase": "Palabrotas",
+          "significado": "Las aniripsas saben expresarse de forma muy clara, y cuanto más grande la palabra, más insultantes resultan: «Apesta a aliento de bwork, ¿te has comido un pedo o qué?»."
+        },
+        "en": {
+          "frase": "Swear words",
+          "significado": "They're crystal clear when insulting; the longer the word, the harder it stings: \"You reek of bwork breath, did you eat a fart or what?\""
+        },
+        "fr": {
+          "frase": "Gros mots",
+          "significado": "Elles s'expriment très clairement ; plus le mot est long, plus il insulte : « Tu pues l'haleine de bouftou, t'as mangé un pet ou quoi ? »"
+        },
+        "pt": {
+          "frase": "Palavrões",
+          "significado": "Se expressam com clareza total; quanto mais longa a palavra, mais insulta: \"Fede a hálito de bwork, comeu um peido ou quê?\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Eufemismos",
+          "significado": "Demostrar diplomacia. «Qué extraña fragancia digna de un representante de la raza de bwork... Por algún casual, ¿estará su orificio de base rodeado de un aura como la luna llena de aperitivo?»."
+        },
+        "en": {
+          "frase": "Euphemisms",
+          "significado": "Showing diplomacy. \"What a strange fragrance worthy of a bwork... could their nether-orifice be haloed like a full moon at snack time?\""
+        },
+        "fr": {
+          "frase": "Euphémismes",
+          "significado": "Faire preuve de diplomatie. « Quel étrange parfum digne d'un bouftou... son orifice serait-il auréolé comme une pleine lune à l'heure de l'apéro ? »"
+        },
+        "pt": {
+          "frase": "Eufemismos",
+          "significado": "Demonstrar diplomacia. \"Que fragrância estranha, digna de um bwork... será que aquele orifício tem uma auréola como a lua cheia na hora do lanche?\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Corazón que no siente, no hay reproche que valga",
+          "significado": "Se dice de una aniripsa cuando reniega de los principios de su dios."
+        },
+        "en": {
+          "frase": "A heart that feels nothing has nothing to answer for",
+          "significado": "Said of an eniripsa who turns their back on their god's principles."
+        },
+        "fr": {
+          "frase": "Cœur qui ne sent rien n'a rien à se reprocher",
+          "significado": "Se dit d'une eniripsa qui renie les principes de son dieu."
+        },
+        "pt": {
+          "frase": "Coração que não sente, censura não merece",
+          "significado": "Se diz de uma eniripsa que renega os princípios de seu deus."
+        }
+      },
+      {
+        "es": {
+          "frase": "Corazoncito mío",
+          "significado": "Cuando dos aniripsas se declaran su amor."
+        },
+        "en": {
+          "frase": "My little sweetheart",
+          "significado": "When two eniripsas confess their love to each other."
+        },
+        "fr": {
+          "frase": "Mon petit cœur",
+          "significado": "Quand deux eniripsas se déclarent leur amour."
+        },
+        "pt": {
+          "frase": "Meu coraçãozinho",
+          "significado": "Quando duas eniripsas se declaram amor."
+        }
+      },
+      {
+        "es": {
+          "frase": "Panacea",
+          "significado": "Medicina universal que las aniripsas investigan y buscan. Se dice de una situación inmejorable: «¡Esto es la panacea! ¡Al fin he aprendido el hechizo Zanahowirie!»."
+        },
+        "en": {
+          "frase": "Panacea",
+          "significado": "The universal cure they're always chasing; used for a perfect situation: \"This is the panacea! I finally learned the Zanahowirie spell!\""
+        },
+        "fr": {
+          "frase": "Panacée",
+          "significado": "Remède universel qu'elles recherchent ; se dit d'une situation idéale : « C'est la panacée ! J'ai enfin appris le sort Zanahowirie ! »"
+        },
+        "pt": {
+          "frase": "Panaceia",
+          "significado": "Remédio universal que elas buscam; se diz de uma situação perfeita: \"Isso é a panaceia! Finalmente aprendi o feitiço Zanahowirie!\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Altruista como un aniripsa",
+          "significado": "Expresión derivada de los encantos aniripsas (que benefician a menudo a sus aliados)."
+        },
+        "en": {
+          "frase": "Selfless as an eniripsa",
+          "significado": "A phrase born from their charms, which usually benefit their allies."
+        },
+        "fr": {
+          "frase": "Altruiste comme une eniripsa",
+          "significado": "Expression tirée de leurs charmes, qui profitent souvent à leurs alliés."
+        },
+        "pt": {
+          "frase": "Altruísta como um eniripsa",
+          "significado": "Expressão derivada de seus encantos, que costumam beneficiar seus aliados."
+        }
+      },
+      {
+        "es": {
+          "frase": "Frote de aniripsa",
+          "significado": "Como en la expresión «paso como de mi primer frote de aniripsa», demuestra el poco caso que le hacemos a algo. No se debe confundir con «frotarse con el aniripsa», que expresa un deseo ardiente por uno de estos seres de belleza incomparable."
+        },
+        "en": {
+          "frase": "Eniripsa's rub",
+          "significado": "\"I care as much as about my first eniripsa rub\" shows how little attention something gets. Not to be confused with \"rubbing up against an eniripsa,\" a burning desire for these incomparably beautiful beings."
+        },
+        "fr": {
+          "frase": "Frottement d'eniripsa",
+          "significado": "« Je m'en soucie comme de mon premier frottement d'eniripsa » montre le peu de cas qu'on fait de quelque chose. À ne pas confondre avec « se frotter à l'eniripsa », désir ardent pour ces êtres d'une beauté incomparable."
+        },
+        "pt": {
+          "frase": "Esfregão de eniripsa",
+          "significado": "\"Ligo pra isso como pro meu primeiro esfregão de eniripsa\" mostra o quão pouco caso se faz de algo. Não confundir com \"se esfregar no eniripsa\", desejo ardente por esses seres de beleza incomparável."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cumplimiento hoy, cumplimiento siempre",
+          "significado": "Expresión que recalca la lealtad y la fidelidad de las que hacen gala los aniripsas hacia sus aliados."
+        },
+        "en": {
+          "frase": "Devoted today, devoted always",
+          "significado": "Highlights eniripsas' loyalty and faithfulness to their allies."
+        },
+        "fr": {
+          "frase": "Fidèle aujourd'hui, fidèle toujours",
+          "significado": "Souligne la loyauté et la fidélité des eniripsas envers leurs alliés."
+        },
+        "pt": {
+          "frase": "Fiel hoje, fiel sempre",
+          "significado": "Ressalta a lealdade e fidelidade dos eniripsas com seus aliados."
+        }
+      }
+    ]
+  },
+  "Sadida": {
+    "nombreAlt": "Sadida",
+    "frases": [
+      {
+        "es": {
+          "frase": "Tener una buena mano verde",
+          "significado": "Se dice de un sadida hábil en el arte floral y arbóreo. Un cumplido."
+        },
+        "en": {
+          "frase": "To have a good green thumb",
+          "significado": "A sadida skilled in floral and tree-craft. A compliment."
+        },
+        "fr": {
+          "frase": "Avoir la main verte",
+          "significado": "Un sadida habile dans l'art floral et arboricole. Un compliment."
+        },
+        "pt": {
+          "frase": "Ter mão verde boa",
+          "significado": "Sadida habilidoso na arte floral e arbórea. Um elogio."
+        }
+      },
+      {
+        "es": {
+          "frase": "Haber nacido con un trébol bajo el brazo",
+          "significado": "Se dice de un sadida con suerte."
+        },
+        "en": {
+          "frase": "Born with a clover under one's arm",
+          "significado": "A lucky sadida."
+        },
+        "fr": {
+          "frase": "Être né avec un trèfle sous le bras",
+          "significado": "Un sadida chanceux."
+        },
+        "pt": {
+          "frase": "Ter nascido com um trevo debaixo do braço",
+          "significado": "Sadida sortudo."
+        }
+      },
+      {
+        "es": {
+          "frase": "Se me acelera la savia",
+          "significado": "Se dice de un sadida enamorado."
+        },
+        "en": {
+          "frase": "My sap is racing",
+          "significado": "A sadida in love."
+        },
+        "fr": {
+          "frase": "La sève s'accélère",
+          "significado": "Un sadida amoureux."
+        },
+        "pt": {
+          "frase": "Minha seiva acelera",
+          "significado": "Sadida apaixonado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Echar humo por las ramas",
+          "significado": "Estar irritado, enfadado."
+        },
+        "en": {
+          "frase": "Smoke coming out of the branches",
+          "significado": "To be irritated, angry."
+        },
+        "fr": {
+          "frase": "Fumer par les branches",
+          "significado": "Être irrité, énervé."
+        },
+        "pt": {
+          "frase": "Soltar fumaça pelos galhos",
+          "significado": "Estar irritado, com raiva."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener buena planta",
+          "significado": "Se dice de un sadida que tiene encanto, que es bello."
+        },
+        "en": {
+          "frase": "To have a good plant/figure",
+          "significado": "A sadida with charm, who is good-looking."
+        },
+        "fr": {
+          "frase": "Avoir une belle plante",
+          "significado": "Un sadida avec du charme, qui est beau."
+        },
+        "pt": {
+          "frase": "Ter boa planta",
+          "significado": "Sadida com charme, bonito."
+        }
+      },
+      {
+        "es": {
+          "frase": "Andar con las zarzas revueltas",
+          "significado": "Se dice de un sadida impulsivo, listo para batirse."
+        },
+        "en": {
+          "frase": "Walking with tangled brambles",
+          "significado": "An impulsive sadida, ready to fight."
+        },
+        "fr": {
+          "frase": "Marcher avec les ronces emmêlées",
+          "significado": "Un sadida impulsif, prêt à se battre."
+        },
+        "pt": {
+          "frase": "Andar com os espinhos revoltos",
+          "significado": "Sadida impulsivo, pronto pra briga."
+        }
+      },
+      {
+        "es": {
+          "frase": "Dar mil zarzas",
+          "significado": "Expresión de un sadida que ha llegado a maestro en el arte de cultivar zarzas a los pies de sus enemigos."
+        },
+        "en": {
+          "frase": "To give a thousand brambles",
+          "significado": "A sadida who's mastered growing brambles at their enemies' feet."
+        },
+        "fr": {
+          "frase": "Donner mille ronces",
+          "significado": "Un sadida passé maître dans l'art de cultiver des ronces aux pieds de ses ennemis."
+        },
+        "pt": {
+          "frase": "Dar mil espinhos",
+          "significado": "Sadida mestre na arte de cultivar espinhos aos pés dos inimigos."
+        }
+      },
+      {
+        "es": {
+          "frase": "Dar una somanta de palos",
+          "significado": "Infligir un castigo severo."
+        },
+        "en": {
+          "frase": "To give a good thrashing",
+          "significado": "To inflict a severe punishment."
+        },
+        "fr": {
+          "frase": "Donner une bonne raclée",
+          "significado": "Infliger un châtiment sévère."
+        },
+        "pt": {
+          "frase": "Dar uma boa surra",
+          "significado": "Infligir um castigo severo."
+        }
+      },
+      {
+        "es": {
+          "frase": "No andarse por las ramas",
+          "significado": "Se dice de un sadida que lucha arriesgando su vida. También se dice: enseñar de qué madera se está hecho."
+        },
+        "en": {
+          "frase": "To not beat around the branches",
+          "significado": "A sadida who fights risking their life. Also: to show what you're made of."
+        },
+        "fr": {
+          "frase": "Ne pas y aller par quatre chemins",
+          "significado": "Un sadida qui se bat en risquant sa vie. Aussi : montrer de quel bois on se chauffe."
+        },
+        "pt": {
+          "frase": "Não ficar enrolando pelos galhos",
+          "significado": "Sadida que luta arriscando a vida. Também: mostrar do que é feito."
+        }
+      },
+      {
+        "es": {
+          "frase": "Plantita del diosito Sadida",
+          "significado": "Dar su palabra, prometer algo."
+        },
+        "en": {
+          "frase": "Little plant of the Sadida godling",
+          "significado": "To give one's word, to make a promise."
+        },
+        "fr": {
+          "frase": "Petite plante du petit dieu Sadida",
+          "significado": "Donner sa parole, promettre quelque chose."
+        },
+        "pt": {
+          "frase": "Plantinha do deusinho Sadida",
+          "significado": "Dar a palavra, prometer algo."
+        }
+      },
+      {
+        "es": {
+          "frase": "Mala hierba",
+          "significado": "Se dice de un sadida que ha abandonado las enseñanzas de su maestro y no escucha los espíritus de la naturaleza."
+        },
+        "en": {
+          "frase": "Weed",
+          "significado": "A sadida who's abandoned their master's teachings and no longer listens to nature's spirits."
+        },
+        "fr": {
+          "frase": "Mauvaise herbe",
+          "significado": "Un sadida qui a abandonné les enseignements de son maître et n'écoute plus les esprits de la nature."
+        },
+        "pt": {
+          "frase": "Erva daninha",
+          "significado": "Sadida que abandonou os ensinamentos do mestre e não escuta mais os espíritos da natureza."
+        }
+      },
+      {
+        "es": {
+          "frase": "Abandonar el bosque",
+          "significado": "Periodo en el que un sadida deja por primera vez su hogar para recorrer el mundo y vivir una vida de adulto."
+        },
+        "en": {
+          "frase": "Leaving the forest",
+          "significado": "The period when a sadida first leaves home to see the world and start their adult life."
+        },
+        "fr": {
+          "frase": "Quitter la forêt",
+          "significado": "Période où un sadida quitte pour la première fois son foyer pour parcourir le monde et vivre sa vie d'adulte."
+        },
+        "pt": {
+          "frase": "Abandonar a floresta",
+          "significado": "Período em que um sadida deixa o lar pela primeira vez para conhecer o mundo e viver sua vida adulta."
+        }
+      },
+      {
+        "es": {
+          "frase": "Perder la raíz",
+          "significado": "Se dice de los sadidas que han pasado mucho tiempo fuera de los bosques."
+        },
+        "en": {
+          "frase": "Losing one's roots",
+          "significado": "Sadidas who've spent too long away from the forests."
+        },
+        "fr": {
+          "frase": "Perdre sa racine",
+          "significado": "Des sadidas qui ont passé trop de temps loin des forêts."
+        },
+        "pt": {
+          "frase": "Perder a raiz",
+          "significado": "Sadidas que passaram tempo demais longe das florestas."
+        }
+      }
+    ]
+  },
+  "Sram": {
+    "nombreAlt": "Sram",
+    "frases": [
+      {
+        "es": {
+          "frase": "Hacer algo en las narices de un sram / subirse a las barbas de un sram",
+          "significado": "El colmo para un sram, ya que no tienen ni nariz ni barba..."
+        },
+        "en": {
+          "frase": "To do something right under a sram's nose / climb onto a sram's beard",
+          "significado": "The ultimate irony, since srams have neither a nose nor a beard."
+        },
+        "fr": {
+          "frase": "Faire quelque chose sous le nez d'un sram / monter sur la barbe d'un sram",
+          "significado": "Le comble, puisque les srams n'ont ni nez ni barbe."
+        },
+        "pt": {
+          "frase": "Fazer algo debaixo do nariz de um sram / subir na barba de um sram",
+          "significado": "O cúmulo, já que srams não têm nariz nem barba."
+        }
+      },
+      {
+        "es": {
+          "frase": "Mentiroso como un sram",
+          "significado": "Los srams son conocidos por su habilidad para manipular a los demás. Mentir es una de sus especialidades."
+        },
+        "en": {
+          "frase": "Liar like a sram",
+          "significado": "Known for their knack for manipulation; lying is one of their specialties."
+        },
+        "fr": {
+          "frase": "Menteur comme un sram",
+          "significado": "Connus pour leur talent de manipulation ; le mensonge est une de leurs spécialités."
+        },
+        "pt": {
+          "frase": "Mentiroso feito sram",
+          "significado": "Conhecidos pela habilidade de manipular; mentir é uma das especialidades deles."
+        }
+      },
+      {
+        "es": {
+          "frase": "Quien roba una vez, roba diez",
+          "significado": "Proverbio inculcado a los jóvenes srams desde su más lúgubre infancia para indicarles el camino de buen estafador."
+        },
+        "en": {
+          "frase": "Steal once, steal ten times",
+          "significado": "A proverb drilled into young srams from their gloomiest childhood, pointing them down the path of the skilled con artist."
+        },
+        "fr": {
+          "frase": "Qui vole une fois, vole dix fois",
+          "significado": "Proverbe inculqué aux jeunes srams dès leur plus sombre enfance, pour leur montrer la voie du bon escroc."
+        },
+        "pt": {
+          "frase": "Quem rouba uma vez, rouba dez",
+          "significado": "Provérbio incutido nos jovens srams desde a infância mais sombria, para lhes mostrar o caminho do bom vigarista."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cuando los huesos no nos encajan",
+          "significado": "Hay algo anormal, raro o ciertamente sospechoso."
+        },
+        "en": {
+          "frase": "When the bones don't fit right",
+          "significado": "Something's off, strange, or fishy."
+        },
+        "fr": {
+          "frase": "Quand les os ne s'emboîtent pas",
+          "significado": "Il y a quelque chose d'anormal, de louche ou de suspect."
+        },
+        "pt": {
+          "frase": "Quando os ossos não encaixam",
+          "significado": "Tem algo estranho, anormal ou suspeito."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener olfato",
+          "significado": "Se dice de un sram que suele detectar el peligro, hasta tal punto de tener olfato sin nariz. (Nota: la mitad de esta frase estaba parcialmente ilegible en la foto original; Roman puede confirmarla si quiere el texto 100% exacto.)"
+        },
+        "en": {
+          "frase": "To have a nose for it",
+          "significado": "Said of a sram who's so good at sensing danger they seem to smell things without even having a nose. (Note: part of the original Spanish text was hard to read in the photo; Roman can confirm the exact wording later.)"
+        },
+        "fr": {
+          "frase": "Avoir du flair",
+          "significado": "Se dit d'un sram si doué pour sentir le danger qu'il semble avoir du flair sans même avoir de nez. (Note : une partie du texte espagnol d'origine était difficile à lire sur la photo.)"
+        },
+        "pt": {
+          "frase": "Ter faro",
+          "significado": "Se diz de um sram tão bom em sentir o perigo que parece ter faro mesmo sem ter nariz. (Nota: parte do texto original em espanhol estava difícil de ler na foto.)"
+        }
+      },
+      {
+        "es": {
+          "frase": "Huesos de cristal",
+          "significado": "Insulto que se suele dirigir a aquellos que por su conducta insensata corren el riesgo de perder la vida."
+        },
+        "en": {
+          "frase": "Glass bones",
+          "significado": "An insult aimed at those whose reckless behavior puts their life at risk."
+        },
+        "fr": {
+          "frase": "Os de verre",
+          "significado": "Insulte adressée à ceux qui, par leur comportement insensé, risquent leur vie."
+        },
+        "pt": {
+          "frase": "Ossos de vidro",
+          "significado": "Insulto dirigido a quem, por comportamento imprudente, arrisca a própria vida."
+        }
+      },
+      {
+        "es": {
+          "frase": "Un sram puñetero, pin pon te tocó",
+          "significado": "Antes de una misión peligrosa, se echa a suertes para elegir a los «felices» voluntarios. Se dice: «Echarlo a sram puñetero»."
+        },
+        "en": {
+          "frase": "Sneaky sram, eeny-meeny-miny-you",
+          "significado": "Before a dangerous mission, they draw lots to pick the \"lucky\" volunteers."
+        },
+        "fr": {
+          "frase": "Un sram sournois, am stram gram, c'est toi",
+          "significado": "Avant une mission dangereuse, on tire au sort pour désigner les « heureux » volontaires."
+        },
+        "pt": {
+          "frase": "Um sram sacana, um dois três, foi você",
+          "significado": "Antes de uma missão perigosa, tiram a sorte pra escolher os \"felizes\" voluntários."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener las cuencas de los ojos bien abiertas",
+          "significado": "Para un sram, la vigilancia es una cualidad vital. Otra expresión similar también se emplea para señalar una actitud distraída: «¿Pero no tienes ojos en la cara?»."
+        },
+        "en": {
+          "frase": "To keep your eye sockets wide open",
+          "significado": "Vigilance is a vital trait for a sram. Also used for a distracted attitude: \"Don't you have eyes on your face?\""
+        },
+        "fr": {
+          "frase": "Avoir les orbites bien ouvertes",
+          "significado": "La vigilance est une qualité vitale pour un sram. Sert aussi à souligner une attitude distraite : « Tu n'as pas des yeux en face des trous ? »"
+        },
+        "pt": {
+          "frase": "Ter as órbitas bem abertas",
+          "significado": "Vigilância é uma qualidade vital para um sram. Também aponta uma atitude distraída: \"Você não tem olhos na cara, não?\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Manda huesos",
+          "significado": "Indica indiferencia y hastío. A menudo va seguida de la conocida «Has venido a dar con un buen hueso». Ejemplo de respuesta típica sramesca en caso de provocación: «Te voy a partir la cabeza, ¡sramuchi! Pues has dado con un buen hueso»."
+        },
+        "en": {
+          "frase": "Send bones",
+          "significado": "Indifference and boredom. Often followed by \"you've bitten off more than you can chew.\" Typical comeback to provocation: \"I'll crack your skull, little sram! Well, you've bitten off more than you can chew.\""
+        },
+        "fr": {
+          "frase": "Envoie des os",
+          "significado": "Indifférence et lassitude. Souvent suivi de « tu es tombé sur un os ». Réponse typique à une provocation : « Je vais te fendre le crâne, sramounet ! Eh bien, tu es tombé sur un os. »"
+        },
+        "pt": {
+          "frase": "Manda ossos",
+          "significado": "Indiferença e cansaço. Costuma vir seguido de \"você encontrou um osso duro de roer\". Resposta típica a uma provocação: \"Vou rachar sua cabeça, sramzinho! Pois é, achou um osso duro de roer.\""
+        }
+      },
+      {
+        "es": {
+          "frase": "El deshuesador que te deshuese buen sram será",
+          "significado": "Refranillo que canturrean los srams antes de la batalla para intimidar al adversario."
+        },
+        "en": {
+          "frase": "The boner who bones you well will be a good sram",
+          "significado": "A little chant srams hum before battle to intimidate their foes."
+        },
+        "fr": {
+          "frase": "Le désosseur qui te désosse sera un bon sram",
+          "significado": "Petit refrain que les srams fredonnent avant la bataille pour intimider l'adversaire."
+        },
+        "pt": {
+          "frase": "O desossador que te desossar será um bom sram",
+          "significado": "Cantiga que os srams cantarolam antes da batalha para intimidar o adversário."
+        }
+      }
+    ]
+  },
+  "Osamodas": {
+    "nombreAlt": "Osamodas",
+    "frases": [
+      {
+        "es": {
+          "frase": "No hay prespic que por bien no valga",
+          "significado": "Frase común entre las abuelas osamodas, que adoran hacerse curas de picaduras."
+        },
+        "en": {
+          "frase": "Every prespic sting is a blessing in disguise",
+          "significado": "A saying among osamodas grandmothers, who love treating bug bites."
+        },
+        "fr": {
+          "frase": "Il n'y a pas de prespic qui ne soit bon pour quelque chose",
+          "significado": "Phrase des grand-mères osamodas, qui adorent se soigner des piqûres."
+        },
+        "pt": {
+          "frase": "Não há prespic que não sirva pra algo de bom",
+          "significado": "Frase das avós osamodas, que adoram tratar picadas."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener otros minotauros que lidiar",
+          "significado": "Tener otras cosas que hacer."
+        },
+        "en": {
+          "frase": "To have other minotaurs to wrangle",
+          "significado": "To have other things to deal with."
+        },
+        "fr": {
+          "frase": "Avoir d'autres minotaures à dresser",
+          "significado": "Avoir d'autres chats à fouetter."
+        },
+        "pt": {
+          "frase": "Ter outros minotauros pra lidar",
+          "significado": "Ter outras coisas pra fazer."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener cara de gobio",
+          "significado": "Estar enfermo o cansado."
+        },
+        "en": {
+          "frase": "To have a gobball face",
+          "significado": "To look sick or tired."
+        },
+        "fr": {
+          "frase": "Avoir une tête de bouftou",
+          "significado": "Avoir l'air malade ou fatigué."
+        },
+        "pt": {
+          "frase": "Ter cara de gobbo",
+          "significado": "Estar doente ou cansado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Dulce como un tofu",
+          "significado": "Expresión irónica, pues el tofu adiestrado es un animal ávido en el combate, implacable y sanguinario."
+        },
+        "en": {
+          "frase": "Sweet as a tofu",
+          "significado": "Ironic, since a trained tofu is a ferocious, relentless, bloodthirsty combatant."
+        },
+        "fr": {
+          "frase": "Doux comme un tofu",
+          "significado": "Ironique, puisqu'un tofu dressé est un animal féroce au combat, impitoyable et sanguinaire."
+        },
+        "pt": {
+          "frase": "Doce como um tofu",
+          "significado": "Irônico, já que um tofu treinado é um animal feroz no combate, implacável e sanguinário."
+        }
+      },
+      {
+        "es": {
+          "frase": "Llover mares de Sufokia",
+          "significado": "Se dice cuando hace mal tiempo. También se dice «llorar mares de Sufokia» para burlarse de los llora mantales."
+        },
+        "en": {
+          "frase": "Raining seas of Sufokia",
+          "significado": "Said of bad weather; also \"crying seas of Sufokia\" to mock crybabies."
+        },
+        "fr": {
+          "frase": "Pleuvoir des mers de Sufokia",
+          "significado": "Se dit du mauvais temps ; aussi « pleurer des mers de Sufokia » pour se moquer des pleurnichards."
+        },
+        "pt": {
+          "frase": "Chover mares de Sufokia",
+          "significado": "Se diz de mau tempo; também \"chorar mares de Sufokia\" pra zoar chorões."
+        }
+      },
+      {
+        "es": {
+          "frase": "Gritar milubo",
+          "significado": "Dar la alerta."
+        },
+        "en": {
+          "frase": "To shout milubo",
+          "significado": "To raise the alarm."
+        },
+        "fr": {
+          "frase": "Crier milbot",
+          "significado": "Donner l'alerte."
+        },
+        "pt": {
+          "frase": "Gritar milubo",
+          "significado": "Dar o alerta."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tengo un hambre de milubo",
+          "significado": "Tener mucha hambre."
+        },
+        "en": {
+          "frase": "I've got a milubo hunger",
+          "significado": "To be very hungry."
+        },
+        "fr": {
+          "frase": "J'ai une faim de milbot",
+          "significado": "Avoir très faim."
+        },
+        "pt": {
+          "frase": "Estou com uma fome de milubo",
+          "significado": "Estar com muita fome."
+        }
+      },
+      {
+        "es": {
+          "frase": "Como un moskito sin alas",
+          "significado": "Estar desprovisto o desposeído de sus bienes."
+        },
+        "en": {
+          "frase": "Like a wingless mosquito",
+          "significado": "To be stripped of one's belongings."
+        },
+        "fr": {
+          "frase": "Comme un moskito sans ailes",
+          "significado": "Être dépouillé de ses biens."
+        },
+        "pt": {
+          "frase": "Como um moskito sem asas",
+          "significado": "Estar despojado dos próprios bens."
+        }
+      },
+      {
+        "es": {
+          "frase": "Abarcar como dos crujidores y apretar como un bwak",
+          "significado": "Se dice del osamodas trabajador cuyos esfuerzos no se ven recompensados en consonancia."
+        },
+        "en": {
+          "frase": "To grab like two craklers and squeeze like a bwak",
+          "significado": "A hardworking osamodas whose efforts go unrewarded."
+        },
+        "fr": {
+          "frase": "En prendre comme deux craqueleurs et serrer comme un bwak",
+          "significado": "Un osamodas travailleur dont les efforts ne sont pas récompensés à la hauteur."
+        },
+        "pt": {
+          "frase": "Abarcar feito dois craqueladores e apertar feito um bwak",
+          "significado": "Osamodas trabalhador cujo esforço não é recompensado à altura."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener la lombricita en el ojo",
+          "significado": "Conmoverse."
+        },
+        "en": {
+          "frase": "To get a little worm in the eye",
+          "significado": "To be moved to tears."
+        },
+        "fr": {
+          "frase": "Avoir le petit vers dans l'œil",
+          "significado": "Être ému aux larmes."
+        },
+        "pt": {
+          "frase": "Ter a minhoquinha no olho",
+          "significado": "Ficar emocionado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tocar la larva",
+          "significado": "Servirse de una larva como instrumento musical, palpándola hasta que emita una serie de sonidos musicales."
+        },
+        "en": {
+          "frase": "To play the larva",
+          "significado": "Using a larva as a musical instrument, squeezing it until it makes musical sounds."
+        },
+        "fr": {
+          "frase": "Jouer de la larve",
+          "significado": "Se servir d'une larve comme instrument de musique, en la palpant jusqu'à ce qu'elle émette des sons musicaux."
+        },
+        "pt": {
+          "frase": "Tocar a larva",
+          "significado": "Usar uma larva como instrumento musical, apertando-a até que emita sons musicais."
+        }
+      }
+    ]
+  },
+  "Cra": {
+    "nombreAlt": "Ocra",
+    "frases": [
+      {
+        "es": {
+          "frase": "Justo en el Bwork",
+          "significado": "Apuntar bien. También se dice: hacer moskito."
+        },
+        "en": {
+          "frase": "Right in the Bwork",
+          "significado": "To aim well. Also: \"make mosquito.\""
+        },
+        "fr": {
+          "frase": "En plein dans le Bouftou",
+          "significado": "Bien viser. Aussi : « faire moskito »."
+        },
+        "pt": {
+          "frase": "Bem no Bwork",
+          "significado": "Acertar em cheio. Também: \"fazer moskito\"."
+        }
+      },
+      {
+        "es": {
+          "frase": "A arco duro, fecha penetrante",
+          "significado": "Grito de guerra de los ocras. Normalmente, se suele decir antes de la batalla o tras un banquete bien sazonado."
+        },
+        "en": {
+          "frase": "Hard bow, piercing shot",
+          "significado": "War cry of the cras, said before battle or after a good feast."
+        },
+        "fr": {
+          "frase": "À arc dur, flèche pénétrante",
+          "significado": "Cri de guerre des crâs, dit avant la bataille ou après un bon banquet."
+        },
+        "pt": {
+          "frase": "Arco duro, flecha penetrante",
+          "significado": "Grito de guerra dos cras, dito antes da batalha ou depois de um bom banquete."
+        }
+      },
+      {
+        "es": {
+          "frase": "Una flecha, un adversario",
+          "significado": "Axioma de la filosofía ocra."
+        },
+        "en": {
+          "frase": "One arrow, one foe",
+          "significado": "Axiom of cra philosophy."
+        },
+        "fr": {
+          "frase": "Une flèche, un adversaire",
+          "significado": "Axiome de la philosophie crâ."
+        },
+        "pt": {
+          "frase": "Uma flecha, um adversário",
+          "significado": "Axioma da filosofia cra."
+        }
+      },
+      {
+        "es": {
+          "frase": "Bwork afortunado",
+          "significado": "Se dice tras tirar la última flecha, cuando el carcaj está vacío."
+        },
+        "en": {
+          "frase": "Lucky bwork",
+          "significado": "Said after shooting the last arrow, with an empty quiver."
+        },
+        "fr": {
+          "frase": "Bouftou chanceux",
+          "significado": "Se dit après avoir tiré la dernière flèche, carquois vide."
+        },
+        "pt": {
+          "frase": "Bwork sortudo",
+          "significado": "Se diz depois de atirar a última flecha, com a aljava vazia."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tirada la flecha, descansa el ocra",
+          "significado": "Se dice de una situación urgente cuya solución ya se ha encontrado."
+        },
+        "en": {
+          "frase": "Arrow shot, cra rests",
+          "significado": "An urgent situation whose solution has already been found."
+        },
+        "fr": {
+          "frase": "La flèche tirée, le crâ se repose",
+          "significado": "Une situation urgente dont la solution a déjà été trouvée."
+        },
+        "pt": {
+          "frase": "Flecha atirada, cra descansa",
+          "significado": "Situação urgente cuja solução já foi encontrada."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cuando el arco está duro, hay que tirar una flecha",
+          "significado": "Se dice de una situación en la que hay que asumir las consecuencias."
+        },
+        "en": {
+          "frase": "When the bow is drawn, you have to loose the arrow",
+          "significado": "When you have to face the consequences."
+        },
+        "fr": {
+          "frase": "Quand l'arc est bandé, il faut tirer une flèche",
+          "significado": "Quand il faut assumer les conséquences."
+        },
+        "pt": {
+          "frase": "Quando o arco está tenso, tem que soltar a flecha",
+          "significado": "Quando é preciso assumir as consequências."
+        }
+      },
+      {
+        "es": {
+          "frase": "Al arco flecha y al bwork flechazo",
+          "significado": "Denota lógica."
+        },
+        "en": {
+          "frase": "To the bow the arrow, to the bwork the shot",
+          "significado": "Denotes plain logic."
+        },
+        "fr": {
+          "frase": "À l'arc la flèche, au bouftou le tir",
+          "significado": "Dénote une logique implacable."
+        },
+        "pt": {
+          "frase": "Ao arco a flecha, ao bwork o disparo",
+          "significado": "Denota lógica pura."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tirar de la cuerda sensible",
+          "significado": "Jugar con los sentimientos de alguien para conseguir lo que se desea."
+        },
+        "en": {
+          "frase": "To pull the heartstring",
+          "significado": "To play on someone's feelings to get what you want."
+        },
+        "fr": {
+          "frase": "Tirer sur la corde sensible",
+          "significado": "Jouer sur les sentiments de quelqu'un pour obtenir ce qu'on veut."
+        },
+        "pt": {
+          "frase": "Puxar a corda sensível",
+          "significado": "Mexer com os sentimentos de alguém pra conseguir o que quer."
+        }
+      },
+      {
+        "es": {
+          "frase": "Aunque a la flecha la llamen pluma, no escribe, remata",
+          "significado": "Expresión similar a «el arco no hace al arquero», o dicho de otro modo, las apariencias engañan."
+        },
+        "en": {
+          "frase": "Call the arrow a feather all you want, it still finishes the job, not the writing",
+          "significado": "Similar to \"clothes don't make the man\"; appearances deceive."
+        },
+        "fr": {
+          "frase": "On a beau appeler la flèche une plume, elle achève, elle n'écrit pas",
+          "significado": "Similaire à « l'habit ne fait pas le moine » ; les apparences sont trompeuses."
+        },
+        "pt": {
+          "frase": "Por mais que chamem a flecha de pena, ela finaliza, não escreve",
+          "significado": "Parecido com \"o hábito não faz o monge\"; as aparências enganam."
+        }
+      },
+      {
+        "es": {
+          "frase": "¡Qué Ocra nos libre del gatillazo!",
+          "significado": "Expresión de ruego para prevenir un fracaso."
+        },
+        "en": {
+          "frase": "May Ocra spare us the misfire!",
+          "significado": "A plea to ward off failure."
+        },
+        "fr": {
+          "frase": "Qu'Ocre nous préserve du raté !",
+          "significado": "Prière pour éviter un échec."
+        },
+        "pt": {
+          "frase": "Que Ocra nos livre da falha!",
+          "significado": "Prece pra evitar um fracasso."
+        }
+      }
+    ]
+  },
+  "Huppermage": {
+    "nombreAlt": "Hipermago",
+    "frases": [
+      {
+        "es": {
+          "frase": "Ser rúnico en su especie",
+          "significado": "Cumplido que se dirige a alguien al que se admira."
+        },
+        "en": {
+          "frase": "To be runic in one's own right",
+          "significado": "A compliment for someone admired."
+        },
+        "fr": {
+          "frase": "Être runique en son genre",
+          "significado": "Compliment adressé à quelqu'un qu'on admire."
+        },
+        "pt": {
+          "frase": "Ser rúnico à sua maneira",
+          "significado": "Elogio dirigido a alguém admirado."
+        }
+      },
+      {
+        "es": {
+          "frase": "¡Es elemental!",
+          "significado": "Expresión que denota lo evidente, utilizada a veces para zanjar una discusión que se considera inútil: «No vale la pena volver al tema; ya lo hemos hablado. Es elemental». Se suele decir también «estar más claro que el agua de Rok»."
+        },
+        "en": {
+          "frase": "It's elemental!",
+          "significado": "States the obvious, cuts pointless arguments short: \"No point revisiting it, we've been over it. It's elemental.\" Also \"clearer than Rok's water.\""
+        },
+        "fr": {
+          "frase": "C'est élémentaire !",
+          "significado": "Souligne l'évidence, coupe court aux discussions inutiles : « Pas la peine d'y revenir, on en a déjà parlé. C'est élémentaire. » Aussi « plus clair que l'eau de Rok »."
+        },
+        "pt": {
+          "frase": "É elementar!",
+          "significado": "Aponta o óbvio, encerra discussões inúteis: \"Não vale a pena voltar ao assunto, já falamos disso. É elementar.\" Também \"mais claro que a água de Rok\"."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener cuatro varas de medir",
+          "significado": "Juzgar de manera imparcial teniendo en cuenta todas las opiniones."
+        },
+        "en": {
+          "frase": "To have four measuring sticks",
+          "significado": "To judge impartially, weighing every opinion."
+        },
+        "fr": {
+          "frase": "Avoir quatre mesures",
+          "significado": "Juger de manière impartiale en tenant compte de tous les avis."
+        },
+        "pt": {
+          "frase": "Ter quatro varas de medir",
+          "significado": "Julgar com imparcialidade, levando em conta todas as opiniões."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener las arrugas de Rimanda",
+          "significado": "Ser muy viejo; se refiere a Rimanda, la decana de los hipermagos, que no tiene ni una arruga a pesar de su avanzada edad."
+        },
+        "en": {
+          "frase": "To have Rimanda's wrinkles",
+          "significado": "To be very old; Rimanda, the huppermage elder, doesn't have a single wrinkle despite her age."
+        },
+        "fr": {
+          "frase": "Avoir les rides de Rimanda",
+          "significado": "Être très vieux ; Rimanda, la doyenne des huppermages, n'a pas une seule ride malgré son âge."
+        },
+        "pt": {
+          "frase": "Ter as rugas de Rimanda",
+          "significado": "Ser muito velho; Rimanda, a decana dos huppermages, não tem uma ruga sequer apesar da idade."
+        }
+      },
+      {
+        "es": {
+          "frase": "El hábito no hace al mago",
+          "significado": "Refrán con el que se recomienda que se debe ser capaz de ver más allá de las apariencias."
+        },
+        "en": {
+          "frase": "The robe doesn't make the mage",
+          "significado": "Recommends looking beyond appearances."
+        },
+        "fr": {
+          "frase": "L'habit ne fait pas le mage",
+          "significado": "Recommande de voir au-delà des apparences."
+        },
+        "pt": {
+          "frase": "O hábito não faz o mago",
+          "significado": "Recomenda enxergar além das aparências."
+        }
+      },
+      {
+        "es": {
+          "frase": "Nieves en Bonta, cenizas en Brakmar",
+          "significado": "Proverbio que ilustra la distinción entre las dos ciudades, a pesar de su vínculo indefectible; se utiliza para calificar dos cosas que se oponen pero que forman parte de un todo."
+        },
+        "en": {
+          "frase": "Snow in Bonta, ashes in Brakmar",
+          "significado": "Illustrates the divide between the two cities despite their unbreakable bond; used for two opposites that form part of one whole."
+        },
+        "fr": {
+          "frase": "Neige à Bonta, cendres à Brâkmar",
+          "significado": "Illustre la distinction entre les deux villes malgré leur lien indéfectible ; s'emploie pour deux choses opposées qui forment un tout."
+        },
+        "pt": {
+          "frase": "Neve em Bonta, cinzas em Brakmar",
+          "significado": "Ilustra a distinção entre as duas cidades apesar do vínculo inquebrável; usado para duas coisas opostas que formam um todo."
+        }
+      },
+      {
+        "es": {
+          "frase": "Estar de hipercapa caída",
+          "significado": "Estar deprimido."
+        },
+        "en": {
+          "frase": "To have one's hypercape down",
+          "significado": "To be depressed."
+        },
+        "fr": {
+          "frase": "Avoir la hypercape en berne",
+          "significado": "Être déprimé."
+        },
+        "pt": {
+          "frase": "Estar com a hipercapa caída",
+          "significado": "Estar deprimido."
+        }
+      },
+      {
+        "es": {
+          "frase": "Hacer balanza",
+          "significado": "Soltar todo lo que se tiene en el corazón."
+        },
+        "en": {
+          "frase": "To weigh it all out",
+          "significado": "To pour out everything weighing on your heart."
+        },
+        "fr": {
+          "frase": "Faire la balance",
+          "significado": "Vider tout ce qu'on a sur le cœur."
+        },
+        "pt": {
+          "frase": "Fazer a balança",
+          "significado": "Colocar tudo o que está no coração pra fora."
+        }
+      },
+      {
+        "es": {
+          "frase": "¡Hasta luego, elemento!",
+          "significado": "Fórmula de despedida que usan los hipermagos."
+        },
+        "en": {
+          "frase": "See you later, element!",
+          "significado": "Huppermage farewell."
+        },
+        "fr": {
+          "frase": "À plus, élément !",
+          "significado": "Formule d'adieu des huppermages."
+        },
+        "pt": {
+          "frase": "Até mais, elemento!",
+          "significado": "Fórmula de despedida dos huppermages."
+        }
+      },
+      {
+        "es": {
+          "frase": "Soplar caliente y frío",
+          "significado": "Sostener algo y lo contrario siendo, sin embargo, coherente."
+        },
+        "en": {
+          "frase": "To blow hot and cold",
+          "significado": "To hold two opposite views while somehow staying consistent."
+        },
+        "fr": {
+          "frase": "Souffler le chaud et le froid",
+          "significado": "Soutenir une chose et son contraire, tout en restant cohérent."
+        },
+        "pt": {
+          "frase": "Soprar quente e frio",
+          "significado": "Sustentar algo e o contrário, sendo ainda assim coerente."
+        }
+      }
+    ]
+  },
+  "Enutrof": {
+    "nombreAlt": "Anutrof",
+    "frases": [
+      {
+        "es": {
+          "frase": "En opinión mía...",
+          "significado": "Cuando un anutrof te da su opinión, es que está interesado en alguna cosa. No te fíes."
+        },
+        "en": {
+          "frase": "In my humble opinion...",
+          "significado": "When an enutrof shares their opinion, they're after something. Don't trust it."
+        },
+        "fr": {
+          "frase": "À mon humble avis...",
+          "significado": "Quand un enutrof donne son avis, c'est qu'il a un intérêt derrière. Méfiance."
+        },
+        "pt": {
+          "frase": "Na minha humilde opinião...",
+          "significado": "Quando um enutrof dá a opinião dele, é porque está interessado em algo. Não confie."
+        }
+      },
+      {
+        "es": {
+          "frase": "¡Por los Doce! ¡Si diría que no ers d'aquí! ¡Voy a tér que repetillo tó!",
+          "significado": "Los anutrofs de Astrub emplean a veces un vocabulario que para los extranjeros es difícil de entender. Con que le pidas una vez que te repita lo que ha dicho, se harán con su simpatía que acabas de salir de tu pueblo sin entender la lengua de Astrub."
+        },
+        "en": {
+          "frase": "By the Twelve! You must not be from around here! I'll have to say it all again!",
+          "significado": "Astrub enutrofs have a dialect that's hard for outsiders to follow; ask them to repeat it once, and they'll good-naturedly make you feel like you just arrived without a clue about Astrub's language."
+        },
+        "fr": {
+          "frase": "Par les Douze ! On dirait bien que tu n'es pas d'ici ! Je vais devoir tout te répéter !",
+          "significado": "Les enutrofs d'Astrub ont un vocabulaire difficile à comprendre pour les étrangers ; demande-leur de répéter une fois, et ils te feront sentir, avec toute leur sympathie, que tu débarques sans rien comprendre à la langue d'Astrub."
+        },
+        "pt": {
+          "frase": "Pelos Doze! Você não deve ser daqui! Vou ter que repetir tudo!",
+          "significado": "Os enutrofs de Astrub têm um vocabulário difícil de entender para estrangeiros; peça pra repetirem uma vez, e vão te fazer sentir, com toda simpatia, que você acabou de chegar sem entender a língua de Astrub."
+        }
+      },
+      {
+        "es": {
+          "frase": "No valer ni un kama",
+          "significado": "Expresión utilizada por los anutrofs, ciertamente apenados y decepcionados, cuando un objeto no les reporta nada."
+        },
+        "en": {
+          "frase": "Not worth a single kama",
+          "significado": "What enutrofs say, hurt and disappointed, when an item turns out worthless."
+        },
+        "fr": {
+          "frase": "Ne pas valoir un kama",
+          "significado": "Expression des enutrofs, dépités et déçus, quand un objet ne leur rapporte rien."
+        },
+        "pt": {
+          "frase": "Não valer nem um kama",
+          "significado": "Expressão dos enutrofs, chateados e decepcionados, quando um objeto não rende nada."
+        }
+      },
+      {
+        "es": {
+          "frase": "No me des la pala",
+          "significado": "Denota que se está harto y falto de interés."
+        },
+        "en": {
+          "frase": "Don't give me the shovel",
+          "significado": "Denotes being fed up and uninterested."
+        },
+        "fr": {
+          "frase": "Ne me donne pas la pelle",
+          "significado": "Dénote la lassitude et le manque d'intérêt."
+        },
+        "pt": {
+          "frase": "Não me dê a pá",
+          "significado": "Denota cansaço e falta de interesse."
+        }
+      },
+      {
+        "es": {
+          "frase": "Estirar la pala",
+          "significado": "Morir, o estar herido gravemente: «¿Un combate contra Dark Vlad? ¡Estás a punto de estirar la pala, amigo!»"
+        },
+        "en": {
+          "frase": "To stretch out the shovel",
+          "significado": "To die, or be gravely wounded: \"A fight against Dark Vlad? You're about to kick the bucket, my friend!\""
+        },
+        "fr": {
+          "frase": "Allonger la pelle",
+          "significado": "Mourir, ou être gravement blessé : « Un combat contre Dark Vlad ? Tu es sur le point d'y passer, mon ami ! »"
+        },
+        "pt": {
+          "frase": "Esticar a pá",
+          "significado": "Morrer, ou ficar gravemente ferido: \"Um combate contra Dark Vlad? Você está prestes a bater as botas, amigo!\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Echar en saco roto",
+          "significado": "Exagerar. Recordemos que los anutrofs tienen por sus sacos una pasión desbordante. Ver un saco estropeado representa para ellos un verdadero sufrimiento."
+        },
+        "en": {
+          "frase": "To pour into a broken sack",
+          "significado": "To exaggerate; seeing a ruined sack is real suffering for enutrofs, who have an overflowing passion for their sacks."
+        },
+        "fr": {
+          "frase": "Verser dans un sac percé",
+          "significado": "Exagérer ; voir un sac abîmé est une vraie souffrance pour les enutrofs, qui vouent une passion débordante à leurs sacs."
+        },
+        "pt": {
+          "frase": "Jogar em saco furado",
+          "significado": "Exagerar; ver um saco estragado é um verdadeiro sofrimento pros enutrofs, que têm uma paixão transbordante pelos sacos."
+        }
+      },
+      {
+        "es": {
+          "frase": "Nudo corredizo",
+          "significado": "Se dice de una negociación mal llevada a cabo. Además, aunque pocos lo saben, también es el motivo de una postura amorosa típicamente anutrofa."
+        },
+        "en": {
+          "frase": "Slipknot",
+          "significado": "Said of a poorly-handled negotiation. Also, though few know it, the name of a classic enutrof romantic position."
+        },
+        "fr": {
+          "frase": "Nœud coulant",
+          "significado": "Se dit d'une négociation mal menée. Aussi, bien que peu le sachent, c'est le nom d'une posture amoureuse typiquement enutrofe."
+        },
+        "pt": {
+          "frase": "Nó corrediço",
+          "significado": "Se diz de uma negociação mal conduzida. Também, embora poucos saibam, é o nome de uma posição amorosa típica dos enutrofs."
+        }
+      },
+      {
+        "es": {
+          "frase": "¿Adivinas? ¡Apoquina!",
+          "significado": "Fórmula empleada al final de la negociación."
+        },
+        "en": {
+          "frase": "Guess what? Pay up!",
+          "significado": "Phrase used at the close of a negotiation."
+        },
+        "fr": {
+          "frase": "Devine quoi ? Casque !",
+          "significado": "Formule employée à la fin d'une négociation."
+        },
+        "pt": {
+          "frase": "Adivinha? Desembolsa!",
+          "significado": "Fórmula usada no final de uma negociação."
+        }
+      },
+      {
+        "es": {
+          "frase": "Llevarse una pala",
+          "significado": "Expresa una decepción amorosa, o un fracaso en una negociación."
+        },
+        "en": {
+          "frase": "To get hit with the shovel",
+          "significado": "Expresses heartbreak, or a failed negotiation."
+        },
+        "fr": {
+          "frase": "Se prendre une pelle",
+          "significado": "Exprime une déception amoureuse, ou un échec de négociation."
+        },
+        "pt": {
+          "frase": "Levar uma pá",
+          "significado": "Expressa uma decepção amorosa, ou um fracasso numa negociação."
+        }
+      },
+      {
+        "es": {
+          "frase": "Bailarme la pala (variante: bailar la pala delante)",
+          "significado": "Invitación a bailar. Los anutrofs tienen muchos bailes folklóricos en los que utilizan sus palas, hay que levantarlas y sacudirlas. Cuidado, porque estos bailes pueden resultar peligrosos para los que no son anutrofs. También indica un comportamiento zalamero."
+        },
+        "en": {
+          "frase": "Dance me the shovel (variant: dance the shovel up front)",
+          "significado": "An invitation to dance; enutrofs have folk dances where shovels get waved around. Careful, they can be dangerous for non-enutrofs. Also denotes fawning behavior."
+        },
+        "fr": {
+          "frase": "Me danser la pelle (variante : danser la pelle devant)",
+          "significado": "Invitation à danser ; les enutrofs ont des danses folkloriques où l'on agite les pelles. Attention, ça peut être dangereux pour qui n'est pas enutrof. Indique aussi un comportement enjôleur."
+        },
+        "pt": {
+          "frase": "Me dançar a pá (variante: dançar a pá na frente)",
+          "significado": "Convite pra dançar; os enutrofs têm danças folclóricas em que se agitam as pás. Cuidado, pode ser perigoso pra quem não é enutrof. Também indica um comportamento bajulador."
+        }
+      }
+    ]
+  },
+  "Ouginak": {
+    "nombreAlt": "Uginak",
+    "frases": [
+      {
+        "es": {
+          "frase": "Pinchar en hueso",
+          "significado": "Encontrar una dificultad imprevista, pero conseguir sacar lo mejor de ella."
+        },
+        "en": {
+          "frase": "To hit bone",
+          "significado": "To run into an unexpected snag, but manage to make the best of it."
+        },
+        "fr": {
+          "frase": "Tomber sur un os",
+          "significado": "Rencontrer une difficulté imprévue, mais réussir à en tirer le meilleur."
+        },
+        "pt": {
+          "frase": "Esbarrar num osso",
+          "significado": "Encontrar uma dificuldade inesperada, mas conseguir tirar o melhor dela."
+        }
+      },
+      {
+        "es": {
+          "frase": "Picarle a uno la trufa",
+          "significado": "Olisquear una pista."
+        },
+        "en": {
+          "frase": "To get an itch in the snout",
+          "significado": "To sniff out a lead."
+        },
+        "fr": {
+          "frase": "Avoir la truffe qui gratte",
+          "significado": "Flairer une piste."
+        },
+        "pt": {
+          "frase": "Coçar o focinho",
+          "significado": "Farejar uma pista."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cuando los lucharniegos",
+          "significado": "Al caer la noche."
+        },
+        "en": {
+          "frase": "When the nightprowlers come out",
+          "significado": "At nightfall."
+        },
+        "fr": {
+          "frase": "Quand les rôdenuit sortent",
+          "significado": "À la tombée de la nuit."
+        },
+        "pt": {
+          "frase": "Quando os notívagos saem",
+          "significado": "Ao cair da noite."
+        }
+      },
+      {
+        "es": {
+          "frase": "La cosa está rabiosa",
+          "significado": "Está a punto de formarse una pelea."
+        },
+        "en": {
+          "frase": "Things are getting rabid",
+          "significado": "A fight's about to break out."
+        },
+        "fr": {
+          "frase": "Ça devient enragé",
+          "significado": "Une bagarre est sur le point d'éclater."
+        },
+        "pt": {
+          "frase": "A coisa está raivosa",
+          "significado": "Uma briga está prestes a começar."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ser un ladrador (poco mordedor)",
+          "significado": "No ser tan fuerte como se pretende."
+        },
+        "en": {
+          "frase": "To be all bark (little bite)",
+          "significado": "To not be as tough as one claims."
+        },
+        "fr": {
+          "frase": "Être un aboyeur (peu mordeur)",
+          "significado": "Ne pas être aussi fort qu'on le prétend."
+        },
+        "pt": {
+          "frase": "Ser um latidor (pouco mordedor)",
+          "significado": "Não ser tão forte quanto finge ser."
+        }
+      },
+      {
+        "es": {
+          "frase": "El que caza, sus penas rechaza",
+          "significado": "La tribu acepta al que cumple con sus obligaciones."
+        },
+        "en": {
+          "frase": "Who hunts, casts off their troubles",
+          "significado": "The tribe accepts whoever fulfills their duties."
+        },
+        "fr": {
+          "frase": "Qui chasse, chasse ses peines",
+          "significado": "La tribu accepte celui qui remplit ses obligations."
+        },
+        "pt": {
+          "frase": "Quem caça, afasta suas penas",
+          "significado": "A tribo aceita quem cumpre suas obrigações."
+        }
+      },
+      {
+        "es": {
+          "frase": "Levantarse con la almohadilla derecha",
+          "significado": "Empezar el día con buen humor."
+        },
+        "en": {
+          "frase": "To get up on the right paw pad",
+          "significado": "To start the day in a good mood."
+        },
+        "fr": {
+          "frase": "Se lever du bon coussinet",
+          "significado": "Commencer la journée de bonne humeur."
+        },
+        "pt": {
+          "frase": "Levantar com a almofadinha certa",
+          "significado": "Começar o dia de bom humor."
+        }
+      },
+      {
+        "es": {
+          "frase": "Írsele a uno la cola",
+          "significado": "Estar muy motivado."
+        },
+        "en": {
+          "frase": "To have your tail get away from you",
+          "significado": "To be very fired up."
+        },
+        "fr": {
+          "frase": "Avoir la queue qui s'emballe",
+          "significado": "Être très motivé."
+        },
+        "pt": {
+          "frase": "A cauda disparar",
+          "significado": "Estar muito motivado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ugito, con lo que dices",
+          "significado": "Hay que mantener lo que se enuncia."
+        },
+        "en": {
+          "frase": "Little ugin, mind what you say",
+          "significado": "You have to stand by what you say."
+        },
+        "fr": {
+          "frase": "Petit ugin, fais gaffe à ce que tu dis",
+          "significado": "Il faut tenir parole."
+        },
+        "pt": {
+          "frase": "Uginzinho, olha o que fala",
+          "significado": "É preciso manter o que se diz."
+        }
+      },
+      {
+        "es": {
+          "frase": "Gruñir hasta diez",
+          "significado": "No enrabiarse."
+        },
+        "en": {
+          "frase": "To growl to ten",
+          "significado": "To not lose your temper."
+        },
+        "fr": {
+          "frase": "Grogner jusqu'à dix",
+          "significado": "Ne pas s'énerver."
+        },
+        "pt": {
+          "frase": "Rosnar até dez",
+          "significado": "Não perder a paciência."
+        }
+      }
+    ]
+  },
+  "Xelor": {
+    "nombreAlt": "Xelor",
+    "frases": [
+      {
+        "es": {
+          "frase": "La aguja está en la manteca",
+          "significado": "Se dice de una situación muy complicada."
+        },
+        "en": {
+          "frase": "The needle's stuck in the lard",
+          "significado": "A very complicated situation."
+        },
+        "fr": {
+          "frase": "L'aiguille est dans le beurre",
+          "significado": "Une situation très compliquée."
+        },
+        "pt": {
+          "frase": "A agulha está na banha",
+          "significado": "Situação muito complicada."
+        }
+      },
+      {
+        "es": {
+          "frase": "Te ha llegado la hora",
+          "significado": "Respuesta de intimidación, o presagio, dependiendo del poder del xelor en cuestión."
+        },
+        "en": {
+          "frase": "Your hour has come",
+          "significado": "An intimidating comeback, or an omen, depending on the xelor's power."
+        },
+        "fr": {
+          "frase": "Ton heure est venue",
+          "significado": "Réponse d'intimidation, ou présage, selon le pouvoir du xelor."
+        },
+        "pt": {
+          "frase": "Sua hora chegou",
+          "significado": "Resposta de intimidação, ou presságio, dependendo do poder do xelor."
+        }
+      },
+      {
+        "es": {
+          "frase": "Por quién doblan las campanas",
+          "significado": "Designa la hora de defunción, que no hay que confundir con «por quién doblan las serranas», que es ganar peso."
+        },
+        "en": {
+          "frase": "For whom the bells toll",
+          "significado": "Refers to the hour of death; not to be confused with \"for whom the scales tip,\" gaining weight."
+        },
+        "fr": {
+          "frase": "Pour qui sonnent les cloches",
+          "significado": "Désigne l'heure de la mort ; à ne pas confondre avec « pour qui penche la balance », prendre du poids."
+        },
+        "pt": {
+          "frase": "Por quem os sinos dobram",
+          "significado": "Refere-se à hora da morte; não confundir com \"por quem a balança pende\", ganhar peso."
+        }
+      },
+      {
+        "es": {
+          "frase": "Poner los péndulos en hora",
+          "significado": "Poner las cosas en su sitio, ver las cosas claras."
+        },
+        "en": {
+          "frase": "To set the pendulums right",
+          "significado": "To set things straight, to see things clearly."
+        },
+        "fr": {
+          "frase": "Remettre les pendules à l'heure",
+          "significado": "Remettre les choses en place, voir clair."
+        },
+        "pt": {
+          "frase": "Acertar os pêndulos",
+          "significado": "Colocar as coisas no lugar, ver com clareza."
+        }
+      },
+      {
+        "es": {
+          "frase": "La hora 25",
+          "significado": "Dejar para más tarde. «Eso ya lo veremos en la hora 25»."
+        },
+        "en": {
+          "frase": "The 25th hour",
+          "significado": "Putting something off. \"We'll deal with that in the 25th hour.\""
+        },
+        "fr": {
+          "frase": "La 25e heure",
+          "significado": "Remettre à plus tard. « On verra ça à la 25e heure. »"
+        },
+        "pt": {
+          "frase": "A hora 25",
+          "significado": "Deixar para depois. \"Isso a gente vê na hora 25.\""
+        }
+      },
+      {
+        "es": {
+          "frase": "Nadie se equivoca nunca del todo. Incluso un reloj parado da la hora correcta dos veces al día",
+          "significado": "Perla de filosofía xelor."
+        },
+        "en": {
+          "frase": "No one's ever completely wrong. Even a stopped clock is right twice a day",
+          "significado": "A pearl of xelor philosophy."
+        },
+        "fr": {
+          "frase": "Personne n'a jamais complètement tort. Même une horloge arrêtée donne l'heure juste deux fois par jour",
+          "significado": "Perle de philosophie xelor."
+        },
+        "pt": {
+          "frase": "Ninguém erra completamente. Até um relógio parado acerta a hora duas vezes por dia",
+          "significado": "Pérola da filosofia xelor."
+        }
+      },
+      {
+        "es": {
+          "frase": "Es más fácil que un crujidor entre por el ojo de una aguja que Djaul entre en el reino de Xelor",
+          "significado": "Se dice de un caso desesperado."
+        },
+        "en": {
+          "frase": "It's easier for a crackler to pass through the eye of a needle than for Djaul to enter the Xelor realm",
+          "significado": "A hopeless case."
+        },
+        "fr": {
+          "frase": "Il est plus facile qu'un craqueleur passe par le chas d'une aiguille que Djaul n'entre dans le royaume de Xelor",
+          "significado": "Cas désespéré."
+        },
+        "pt": {
+          "frase": "É mais fácil um craquelador passar pelo buraco de uma agulha do que Djaul entrar no reino de Xelor",
+          "significado": "Caso desesperado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ya eches un vaso o las aguas del mar Rano sobre el ojo de una aguja, siempre pasará solo una gota",
+          "significado": "No hay que hacerse ilusiones. Ser modesto."
+        },
+        "en": {
+          "frase": "Whether you pour a glass or the whole Rano Sea over the eye of a needle, only one drop gets through",
+          "significado": "Don't get your hopes up. Stay humble."
+        },
+        "fr": {
+          "frase": "Que tu verses un verre ou toute la mer du Rano sur le chas d'une aiguille, il n'en passera toujours qu'une goutte",
+          "significado": "Il ne faut pas se faire d'illusions. Rester modeste."
+        },
+        "pt": {
+          "frase": "Quer você despeje um copo ou o mar de Rano inteiro no buraco de uma agulha, só passa uma gota",
+          "significado": "Não é bom criar ilusões. Ser modesto."
+        }
+      },
+      {
+        "es": {
+          "frase": "El reloj es un buen invento para recordar la hora de las comidas",
+          "significado": "Magnífica prueba de la capacidad de observación de los xelors."
+        },
+        "en": {
+          "frase": "The clock is a great invention for remembering mealtimes",
+          "significado": "Splendid proof of the xelors' powers of observation."
+        },
+        "fr": {
+          "frase": "L'horloge est une bonne invention pour se rappeler l'heure des repas",
+          "significado": "Magnifique preuve du sens de l'observation des xelors."
+        },
+        "pt": {
+          "frase": "O relógio é uma ótima invenção pra lembrar a hora das refeições",
+          "significado": "Prova magnífica da capacidade de observação dos xelors."
+        }
+      },
+      {
+        "es": {
+          "frase": "Un mecanismo redondo no encaja en un reloj cuadrado",
+          "significado": "Dicho de otra forma, lo que es imposible es imposible."
+        },
+        "en": {
+          "frase": "A round mechanism doesn't fit a square clock",
+          "significado": "In other words, the impossible is impossible."
+        },
+        "fr": {
+          "frase": "Un mécanisme rond ne rentre pas dans une horloge carrée",
+          "significado": "Autrement dit, l'impossible est impossible."
+        },
+        "pt": {
+          "frase": "Um mecanismo redondo não encaixa num relógio quadrado",
+          "significado": "Em outras palavras, o impossível é impossível."
+        }
+      }
+    ]
+  },
+  "Sacrier": {
+    "nombreAlt": "Sacrógrito",
+    "frases": [
+      {
+        "es": {
+          "frase": "¡Nada es imposible para un corazón sangriento!",
+          "significado": "Grito de guerra que se lanza al principio de un combate."
+        },
+        "en": {
+          "frase": "Nothing is impossible for a bleeding heart!",
+          "significado": "War cry at the start of a battle."
+        },
+        "fr": {
+          "frase": "Rien n'est impossible pour un cœur sanguinaire !",
+          "significado": "Cri de guerre au début d'un combat."
+        },
+        "pt": {
+          "frase": "Nada é impossível pra um coração sangrento!",
+          "significado": "Grito de guerra no início de um combate."
+        }
+      },
+      {
+        "es": {
+          "frase": "Buena sangre",
+          "significado": "Respuesta de un sacrógrito que te tiene confianza."
+        },
+        "en": {
+          "frase": "Good blood",
+          "significado": "A sacrier's reply when they trust you."
+        },
+        "fr": {
+          "frase": "Bon sang",
+          "significado": "Réponse d'un sacrieur qui te fait confiance."
+        },
+        "pt": {
+          "frase": "Bom sangue",
+          "significado": "Resposta de um sacrier que confia em você."
+        }
+      },
+      {
+        "es": {
+          "frase": "La sangre llegará al río",
+          "significado": "Si un sacrógrito se dirige a ti de esta forma, es que cree que le has mentido. No estaría de más soltar la razón."
+        },
+        "en": {
+          "frase": "Blood will reach the river",
+          "significado": "If a sacrier says this to you, they think you've lied to them; better come clean."
+        },
+        "fr": {
+          "frase": "Le sang coulera jusqu'à la rivière",
+          "significado": "Si un sacrieur te dit ça, il pense que tu lui as menti ; il serait bon de dire la vérité."
+        },
+        "pt": {
+          "frase": "O sangue vai chegar ao rio",
+          "significado": "Se um sacrier te diz isso, ele acha que você mentiu; melhor soltar a verdade."
+        }
+      },
+      {
+        "es": {
+          "frase": "Subirse la sangre a la cabeza",
+          "significado": "Se dice del adversario que pierde la calma, monta a cólera y pierde la razón."
+        },
+        "en": {
+          "frase": "Blood rushing to the head",
+          "significado": "An opponent who loses their cool, flies into a rage, and loses all reason."
+        },
+        "fr": {
+          "frase": "Le sang qui monte à la tête",
+          "significado": "L'adversaire qui perd son calme, monte en colère et perd la raison."
+        },
+        "pt": {
+          "frase": "O sangue sobe à cabeça",
+          "significado": "O adversário que perde a calma, entra em fúria e perde a razão."
+        }
+      },
+      {
+        "es": {
+          "frase": "Sudar gotas de sangre",
+          "significado": "Exclamación de júbilo, tras un combate bien llevado a cabo, por ejemplo: «¡Ja ja ja, la que le he metido! ¡He sudado gotas de sangre!»."
+        },
+        "en": {
+          "frase": "To sweat drops of blood",
+          "significado": "A joyful cry after a battle well fought: \"Ha ha ha, did I ever get him! I sweated drops of blood!\""
+        },
+        "fr": {
+          "frase": "Suer des gouttes de sang",
+          "significado": "Exclamation de joie après un combat bien mené : « Ha ha ha, je l'ai bien eu ! J'ai sué des gouttes de sang ! »"
+        },
+        "pt": {
+          "frase": "Suar gotas de sangue",
+          "significado": "Exclamação de alegria depois de um combate bem conduzido: \"Ha ha ha, como eu acertei ele! Suei gotas de sangue!\""
+        }
+      },
+      {
+        "es": {
+          "frase": "¡A sangre y fuego!",
+          "significado": "Exclamación de complicidad cuando sus camaradas de aventuras le golpean y este acmira la potencia que saca de dicho sufrimiento. Incitación a realizar dicho acto."
+        },
+        "en": {
+          "frase": "By blood and fire!",
+          "significado": "A cry of camaraderie when fellow adventurers strike a sacrier, who marvels at the power drawn from the pain; also an invitation to do it."
+        },
+        "fr": {
+          "frase": "Par le sang et le feu !",
+          "significado": "Exclamation de complicité quand les compagnons d'aventure frappent un sacrieur, qui admire la puissance tirée de cette souffrance ; invitation à recommencer."
+        },
+        "pt": {
+          "frase": "A sangue e fogo!",
+          "significado": "Exclamação de cumplicidade quando os companheiros de aventura batem num sacrier, que admira o poder que tira daquele sofrimento; convite pra fazer de novo."
+        }
+      },
+      {
+        "es": {
+          "frase": "Alegrar la sangre",
+          "significado": "Se dice cuando los compañeros golpean amistosamente a un sacrógrito."
+        },
+        "en": {
+          "frase": "To cheer up the blood",
+          "significado": "Said when companions give a sacrier a friendly beating."
+        },
+        "fr": {
+          "frase": "Réjouir le sang",
+          "significado": "Se dit quand les compagnons frappent amicalement un sacrieur."
+        },
+        "pt": {
+          "frase": "Alegrar o sangue",
+          "significado": "Se diz quando os companheiros dão uma surra amigável num sacrier."
+        }
+      },
+      {
+        "es": {
+          "frase": "Hacer hematomas",
+          "significado": "Saludo amistoso que consiste en darse golpes en las partes más blandas del cuerpo con otra parte (dura, preferentemente). Por ejemplo: golpe mejilla-codo, vientre-rodilla, en fin, todas las variaciones son posibles."
+        },
+        "en": {
+          "frase": "Making bruises",
+          "significado": "A friendly greeting where you strike each other's softest body parts with another (preferably hard) part: cheek-to-elbow, belly-to-knee, and so on."
+        },
+        "fr": {
+          "frase": "Faire des hématomes",
+          "significado": "Salut amical qui consiste à se frapper les parties les plus molles du corps avec une autre (de préférence dure) : joue-coude, ventre-genou, etc."
+        },
+        "pt": {
+          "frase": "Fazer hematomas",
+          "significado": "Cumprimento amigável que consiste em bater nas partes mais moles do corpo com outra parte (de preferência dura): bochecha-cotovelo, barriga-joelho, etc."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cuajar la sangre",
+          "significado": "Aburrirse. «No queda ni un jalató, ni tengo nada que hacer... ¡Se me va a cuajar la sangre!». Expresión antónima a la anterior."
+        },
+        "en": {
+          "frase": "For the blood to curdle",
+          "significado": "To be bored stiff. \"Not a jalató left, nothing to do... my blood's about to curdle!\" The opposite of the previous one."
+        },
+        "fr": {
+          "frase": "Le sang qui caille",
+          "significado": "S'ennuyer. « Plus un jalató en vue, rien à faire... mon sang va cailler ! » Antonyme de la précédente."
+        },
+        "pt": {
+          "frase": "O sangue coalhar",
+          "significado": "Ficar entediado. \"Não sobrou nem um jalató, não tenho nada pra fazer... meu sangue vai coalhar!\" Antônimo da anterior."
+        }
+      },
+      {
+        "es": {
+          "frase": "Bullir la sangre",
+          "significado": "El nerviosismo, como la excitación tienen efectos psicológicos particulares en los sacrógritos. Por eso suelen decir: «Cuando me bulle la sangre, me bulle el bollo»."
+        },
+        "en": {
+          "frase": "For the blood to boil",
+          "significado": "Nervousness and excitement have particular psychological effects on sacriers: \"When my blood boils, my bun boils too.\""
+        },
+        "fr": {
+          "frase": "Le sang qui bout",
+          "significado": "La nervosité et l'excitation ont des effets psychologiques particuliers chez les sacrieurs : « Quand mon sang bout, ma brioche bout aussi. »"
+        },
+        "pt": {
+          "frase": "O sangue ferver",
+          "significado": "O nervosismo e a excitação têm efeitos psicológicos particulares nos sacriers: \"Quando meu sangue ferve, meu pão doce também ferve.\""
+        }
+      }
+    ]
+  },
+  "Ecaflip": {
+    "nombreAlt": "Zurcarák",
+    "frases": [
+      {
+        "es": {
+          "frase": "Tener la suerte de Zurcarák",
+          "significado": "Es cierto que, a veces, los zurcaráks tienen una suerte muy descarada, algo que el resto de aventureros envidia."
+        },
+        "en": {
+          "frase": "To have Ecaflip's luck",
+          "significado": "Sometimes ecaflips have shamelessly good luck, which the rest of the adventurers envy."
+        },
+        "fr": {
+          "frase": "Avoir la chance d'Ecaflip",
+          "significado": "Parfois les ecaflips ont une chance insolente, que le reste des aventuriers leur envie."
+        },
+        "pt": {
+          "frase": "Ter a sorte de Ecaflip",
+          "significado": "Às vezes os ecaflips têm uma sorte descarada, que o resto dos aventureiros inveja."
+        }
+      },
+      {
+        "es": {
+          "frase": "Pagarle con la misma moneda",
+          "significado": "Significa ser justo en todo momento."
+        },
+        "en": {
+          "frase": "To pay in the same coin",
+          "significado": "To always be fair."
+        },
+        "fr": {
+          "frase": "Rendre la monnaie de sa pièce",
+          "significado": "Être juste en toutes circonstances."
+        },
+        "pt": {
+          "frase": "Pagar na mesma moeda",
+          "significado": "Ser justo o tempo todo."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ficha falsa",
+          "significado": "Se dice de los hipócritas y traidores."
+        },
+        "en": {
+          "frase": "Fake chip",
+          "significado": "Said of hypocrites and traitors."
+        },
+        "fr": {
+          "frase": "Faux jeton",
+          "significado": "Se dit des hypocrites et des traîtres."
+        },
+        "pt": {
+          "frase": "Ficha falsa",
+          "significado": "Se diz dos hipócritas e traidores."
+        }
+      },
+      {
+        "es": {
+          "frase": "Armado como la sota de picas",
+          "significado": "Se dice de un zurcarák épico y cazador de monstruos."
+        },
+        "en": {
+          "frase": "Armed like the jack of spades",
+          "significado": "Said of an epic, monster-hunting ecaflip."
+        },
+        "fr": {
+          "frase": "Armé comme le valet de pique",
+          "significado": "Se dit d'un ecaflip épique et chasseur de monstres."
+        },
+        "pt": {
+          "frase": "Armado como o valete de espadas",
+          "significado": "Se diz de um ecaflip épico e caçador de monstros."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ronronear",
+          "significado": "Cortejar al sexo opuesto."
+        },
+        "en": {
+          "frase": "To purr",
+          "significado": "To woo the opposite sex."
+        },
+        "fr": {
+          "frase": "Ronronner",
+          "significado": "Draguer le sexe opposé."
+        },
+        "pt": {
+          "frase": "Ronronar",
+          "significado": "Cortejar o sexo oposto."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tocar cascabel",
+          "significado": "Caricia amorosa muy común entre los zurcaráks."
+        },
+        "en": {
+          "frase": "Playing with the bell",
+          "significado": "A very common loving caress between ecaflips."
+        },
+        "fr": {
+          "frase": "Toucher la clochette",
+          "significado": "Caresse amoureuse très courante chez les ecaflips."
+        },
+        "pt": {
+          "frase": "Tocar o guizo",
+          "significado": "Carícia amorosa muito comum entre ecaflips."
+        }
+      },
+      {
+        "es": {
+          "frase": "Se te comió la lengua el miamiau",
+          "significado": "Si no tienes orejas puntiagudas ni una cola peluda, ten cuidado si utilizas esta expresión: solo el dios Zurcarák sabe qué podría ocurrirle a tu lengua..."
+        },
+        "en": {
+          "frase": "Did the meow-meow eat your tongue?",
+          "significado": "If you don't have pointy ears or a fluffy tail, be careful using this one: only the god Ecaflip knows what might happen to your tongue..."
+        },
+        "fr": {
+          "frase": "Le miâmiâ t'a mangé la langue ?",
+          "significado": "Si tu n'as pas les oreilles pointues ni la queue touffue, prends garde en utilisant cette expression : seul le dieu Ecaflip sait ce qui pourrait arriver à ta langue..."
+        },
+        "pt": {
+          "frase": "O miamiau comeu sua língua?",
+          "significado": "Se você não tem orelhas pontudas nem rabo peludo, cuidado ao usar essa expressão: só o deus Ecaflip sabe o que pode acontecer com sua língua..."
+        }
+      },
+      {
+        "es": {
+          "frase": "Miamiau escaldado, del agua fría y tranquila huye",
+          "significado": "Expresa desconfianza. Los zurcaráks desconfían de las extensiones líquidas y evitan el contacto prolongado con el agua."
+        },
+        "en": {
+          "frase": "A scalded meow-meow flees even calm cold water",
+          "significado": "Expresses distrust. Ecaflips are wary of bodies of water and avoid prolonged contact with it."
+        },
+        "fr": {
+          "frase": "Miâmiâ échaudé craint l'eau froide et calme",
+          "significado": "Exprime la méfiance. Les ecaflips se méfient des étendues d'eau et évitent tout contact prolongé avec elle."
+        },
+        "pt": {
+          "frase": "Miamiau escaldado foge até da água fria e calma",
+          "significado": "Expressa desconfiança. Os ecaflips desconfiam de extensões de água e evitam contato prolongado com ela."
+        }
+      },
+      {
+        "es": {
+          "frase": "Haber sacado mala mano",
+          "significado": "Expresión peyorativa, se dice de los adversarios caídos en combate."
+        },
+        "en": {
+          "frase": "To have drawn a bad hand",
+          "significado": "A derogatory phrase, said of foes who fell in battle."
+        },
+        "fr": {
+          "frase": "Avoir tiré une mauvaise main",
+          "significado": "Expression péjorative, se dit des adversaires tombés au combat."
+        },
+        "pt": {
+          "frase": "Ter tirado uma mão ruim",
+          "significado": "Expressão pejorativa, se diz dos adversários caídos em combate."
+        }
+      },
+      {
+        "es": {
+          "frase": "Estar zurcarerizado",
+          "significado": "Esta expresión designa a un discípulo de Zurcarák alertado por su sexto sentido... ¡o asustado!"
+        },
+        "en": {
+          "frase": "To be ecaflipified",
+          "significado": "Describes an Ecaflip disciple whose sixth sense is on alert... or who's just plain scared!"
+        },
+        "fr": {
+          "frase": "Être ecaflipé",
+          "significado": "Désigne un disciple d'Ecaflip alerté par son sixième sens... ou effrayé !"
+        },
+        "pt": {
+          "frase": "Estar ecaflipado",
+          "significado": "Designa um discípulo de Ecaflip alertado pelo sexto sentido... ou assustado!"
+        }
+      },
+      {
+        "es": {
+          "frase": "Poner las cartas sobre la mesa",
+          "significado": "Ser franco, leal, como todo zurcarák que se respete."
+        },
+        "en": {
+          "frase": "To lay the cards on the table",
+          "significado": "To be frank, loyal, like every self-respecting ecaflip."
+        },
+        "fr": {
+          "frase": "Mettre les cartes sur la table",
+          "significado": "Être franc, loyal, comme tout ecaflip qui se respecte."
+        },
+        "pt": {
+          "frase": "Colocar as cartas na mesa",
+          "significado": "Ser franco, leal, como todo ecaflip que se preze."
+        }
+      },
+      {
+        "es": {
+          "frase": "Enseñar las cartas",
+          "significado": "Demostrar su talento de luchador."
+        },
+        "en": {
+          "frase": "To show one's cards",
+          "significado": "To prove one's fighting talent."
+        },
+        "fr": {
+          "frase": "Montrer ses cartes",
+          "significado": "Démontrer son talent de combattant."
+        },
+        "pt": {
+          "frase": "Mostrar as cartas",
+          "significado": "Demonstrar seu talento de lutador."
+        }
+      }
+    ]
+  },
+  "Masqueraider": {
+    "nombreAlt": "Zobal",
+    "frases": [
+      {
+        "es": {
+          "frase": "¡Fuera máscara!",
+          "significado": "Orden utilizada cuando un zobal invita a otro zobal a rendir las armas. O mejor dicho, las máscaras..."
+        },
+        "en": {
+          "frase": "Mask off!",
+          "significado": "Order used when a masqueraider invites another to lay down their arms. Or rather, their masks..."
+        },
+        "fr": {
+          "frase": "Masque à terre !",
+          "significado": "Ordre utilisé quand un zobal invite un autre à déposer les armes. Ou plutôt, les masques..."
+        },
+        "pt": {
+          "frase": "Máscara fora!",
+          "significado": "Ordem usada quando um zobal convida outro a depor as armas. Ou melhor, as máscaras..."
+        }
+      },
+      {
+        "es": {
+          "frase": "¡Zobidá!",
+          "significado": "Interjección utilizada por los zobals para expresar su deseo de ir a bailar a la taberna de la esquina."
+        },
+        "en": {
+          "frase": "Zobiyay!",
+          "significado": "Interjection masqueraiders use to express their wish to go dancing at the corner tavern."
+        },
+        "fr": {
+          "frase": "Zobidah !",
+          "significado": "Interjection utilisée par les zobals pour exprimer leur envie d'aller danser à la taverne du coin."
+        },
+        "pt": {
+          "frase": "Zobidá!",
+          "significado": "Interjeição usada pelos zobals pra expressar vontade de ir dançar na taberna da esquina."
+        }
+      },
+      {
+        "es": {
+          "frase": "Estar con la máscara al aire",
+          "significado": "Equivalente de «estar con el culo al aire», estar desnudo. Se usa también para expresar que alguien es tan fácil de leer como un libro abierto."
+        },
+        "en": {
+          "frase": "To have your mask hanging in the wind",
+          "significado": "Equivalent of being caught with your pants down, being exposed. Also, to be as easy to read as an open book."
+        },
+        "fr": {
+          "frase": "Avoir le masque à l'air",
+          "significado": "Équivalent d'être pris le pantalon baissé, être exposé. Aussi, être facile à lire comme un livre ouvert."
+        },
+        "pt": {
+          "frase": "Estar com a máscara ao vento",
+          "significado": "Equivalente a ser pego de calças na mão, estar exposto. Também, ser fácil de ler feito um livro aberto."
+        }
+      },
+      {
+        "es": {
+          "frase": "A cada combate de máscara y del enemigo quede solo la cáscara",
+          "significado": "Proverbio zobal para recordar que cada adversario requiere una técnica particular."
+        },
+        "en": {
+          "frase": "To every mask its match, and let only the shell remain of the enemy",
+          "significado": "Masqueraider proverb: every opponent calls for a different technique."
+        },
+        "fr": {
+          "frase": "À chaque combat son masque, et de l'ennemi ne reste que la carcasse",
+          "significado": "Proverbe zobal : chaque adversaire demande une technique particulière."
+        },
+        "pt": {
+          "frase": "A cada combate sua máscara, e do inimigo só resta a casca",
+          "significado": "Provérbio zobal: cada adversário exige uma técnica particular."
+        }
+      },
+      {
+        "es": {
+          "frase": "El zobal se hace dándole al martillo",
+          "significado": "Viejo dicho utilizado principalmente para recordar los orígenes de los zobals. Con un sentido más general, se trata también de un dicho utilizado para animar a alguien a perseverar en la tarea que tiene entre manos."
+        },
+        "en": {
+          "frase": "The masqueraider is forged by the hammer",
+          "significado": "A saying recalling masqueraiders' origins, and more broadly, used to encourage someone to keep at their task."
+        },
+        "fr": {
+          "frase": "Le zobal se forge à coups de marteau",
+          "significado": "Dicton rappelant les origines des zobals, et plus généralement utilisé pour encourager quelqu'un à persévérer dans sa tâche."
+        },
+        "pt": {
+          "frase": "O zobal se forja no martelo",
+          "significado": "Ditado que lembra as origens dos zobals, e de forma mais geral, usado pra incentivar alguém a perseverar na tarefa."
+        }
+      }
+    ]
+  },
+  "Foggernaut": {
+    "nombreAlt": "Steamer",
+    "frases": [
+      {
+        "es": {
+          "frase": "En mar calmado, todos somos capitanes",
+          "significado": "Se dice de aquellos que no son buenos marinos, sobre todo del resto de clases del Mundo de los Doce."
+        },
+        "en": {
+          "frase": "In calm seas, we're all captains",
+          "significado": "Said of those who aren't good sailors, especially the rest of the classes of the World of Twelve."
+        },
+        "fr": {
+          "frase": "Par mer calme, tout le monde est capitaine",
+          "significado": "Se dit de ceux qui ne sont pas de bons marins, surtout le reste des classes du Monde des Douze."
+        },
+        "pt": {
+          "frase": "Em mar calmo, todos somos capitães",
+          "significado": "Se diz de quem não é bom marinheiro, principalmente o resto das classes do Mundo dos Doze."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cada palo que aguante su vela",
+          "significado": "Hay que trabajar. Cada cual debe ser responsable de sus propios actos."
+        },
+        "en": {
+          "frase": "Let each mast hold its own sail",
+          "significado": "You've got to work. Everyone's responsible for their own actions."
+        },
+        "fr": {
+          "frase": "Que chaque mât tienne sa voile",
+          "significado": "Il faut travailler. Chacun doit être responsable de ses propres actes."
+        },
+        "pt": {
+          "frase": "Que cada mastro aguente sua vela",
+          "significado": "É preciso trabalhar. Cada um deve ser responsável pelos próprios atos."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tener vaho en el ojo de buey",
+          "significado": "Estar emocionado."
+        },
+        "en": {
+          "frase": "To fog up the porthole",
+          "significado": "To be moved, emotional."
+        },
+        "fr": {
+          "frase": "Avoir de la buée sur le hublot",
+          "significado": "Être ému."
+        },
+        "pt": {
+          "frase": "Embaçar a vigia (janelinha do navio)",
+          "significado": "Estar emocionado."
+        }
+      },
+      {
+        "es": {
+          "frase": "Más vale flotar sin flotador que hundirse sin escafandra",
+          "significado": "Proverbio que anima a aprender a nadar."
+        },
+        "en": {
+          "frase": "Better to float without a float than sink without a diving suit",
+          "significado": "A proverb encouraging you to learn to swim."
+        },
+        "fr": {
+          "frase": "Mieux vaut flotter sans bouée que couler sans scaphandre",
+          "significado": "Proverbe qui encourage à apprendre à nager."
+        },
+        "pt": {
+          "frase": "Melhor boiar sem boia do que afundar sem escafandro",
+          "significado": "Provérbio que incentiva a aprender a nadar."
+        }
+      },
+      {
+        "es": {
+          "frase": "A barco desesperado, Oktapodas le encuentra puerto",
+          "significado": "Confiarse al dios de los marineros cuando la situación se complica."
+        },
+        "en": {
+          "frase": "For a desperate ship, Oktapodas finds a harbor",
+          "significado": "Trusting the sailors' god when things get complicated."
+        },
+        "fr": {
+          "frase": "À navire désespéré, Oktapodas trouve un port",
+          "significado": "Se fier au dieu des marins quand la situation se complique."
+        },
+        "pt": {
+          "frase": "Pra navio desesperado, Oktapodas acha um porto",
+          "significado": "Confiar no deus dos marinheiros quando a situação complica."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tirarse al agua sin red",
+          "significado": "Correr riesgos de forma imprudente."
+        },
+        "en": {
+          "frase": "To dive in without a net",
+          "significado": "To take reckless risks."
+        },
+        "fr": {
+          "frase": "Se jeter à l'eau sans filet",
+          "significado": "Prendre des risques imprudemment."
+        },
+        "pt": {
+          "frase": "Pular na água sem rede",
+          "significado": "Correr riscos de forma imprudente."
+        }
+      },
+      {
+        "es": {
+          "frase": "Cambiar de vela",
+          "significado": "Cambiar de idea."
+        },
+        "en": {
+          "frase": "To change sail",
+          "significado": "To change your mind."
+        },
+        "fr": {
+          "frase": "Changer de voile",
+          "significado": "Changer d'avis."
+        },
+        "pt": {
+          "frase": "Trocar de vela",
+          "significado": "Mudar de ideia."
+        }
+      },
+      {
+        "es": {
+          "frase": "Aferrarse al palo mayor",
+          "significado": "No cambiar de idea. Ser cabezota."
+        },
+        "en": {
+          "frase": "To cling to the mainmast",
+          "significado": "To refuse to change your mind. To be stubborn."
+        },
+        "fr": {
+          "frase": "S'accrocher au grand mât",
+          "significado": "Ne pas changer d'avis. Être têtu."
+        },
+        "pt": {
+          "frase": "Se agarrar ao mastro principal",
+          "significado": "Não mudar de ideia. Ser cabeça-dura."
+        }
+      },
+      {
+        "es": {
+          "frase": "Tirar por la borda",
+          "significado": "Malgastar el esfuerzo realizado. Deshacerse inconsideradamente de alguien o de algo."
+        },
+        "en": {
+          "frase": "To throw overboard",
+          "significado": "To waste effort already put in. To carelessly toss aside someone or something."
+        },
+        "fr": {
+          "frase": "Jeter par-dessus bord",
+          "significado": "Gâcher l'effort déjà fourni. Se débarrasser sans réfléchir de quelqu'un ou de quelque chose."
+        },
+        "pt": {
+          "frase": "Jogar pela amurada (borda fora)",
+          "significado": "Desperdiçar o esforço já feito. Se livrar sem pensar de alguém ou de algo."
+        }
+      },
+      {
+        "es": {
+          "frase": "Socorro tardío, socorro baldío",
+          "significado": "Hay que anticiparse y ser reactivo para no sufrir las consecuencias. También se suele decir «tender las velas»: usar el tiempo u ocasión que se ofrece favorable para algún intento."
+        },
+        "en": {
+          "frase": "Late help is no help at all",
+          "significado": "You have to act ahead of time to avoid the consequences. Also said as \"hoist the sails\": seizing a favorable moment or opportunity for an attempt."
+        },
+        "fr": {
+          "frase": "Secours tardif, secours inutile",
+          "significado": "Il faut anticiper et être réactif pour ne pas en subir les conséquences. On dit aussi « hisser les voiles » : saisir le moment ou l'occasion favorable pour une tentative."
+        },
+        "pt": {
+          "frase": "Socorro tardio, socorro em vão",
+          "significado": "É preciso se antecipar e ser reativo pra não sofrer as consequências. Também se costuma dizer \"içar as velas\": aproveitar o momento ou a ocasião favorável pra uma tentativa."
+        }
+      }
+    ]
+  },
+  "Forjalanzas": {
+    "nombreAlt": "Forgelance",
+    "esBonus": true,
+    "notaBonus": "Clase que NO existe como jugable en Wakfu (segun Roman); se guarda como bonus de lore para el modo Frases, separada de las 18 clases reales.",
+    "frases": [
+      {
+        "es": {
+          "frase": "Cambiar la lanza de hombro",
+          "significado": "Cambiar de opinión repentinamente."
+        },
+        "en": {
+          "frase": "To switch the spear to the other shoulder",
+          "significado": "To suddenly change your mind."
+        },
+        "fr": {
+          "frase": "Changer la lance d'épaule",
+          "significado": "Changer d'avis soudainement."
+        },
+        "pt": {
+          "frase": "Trocar a lança de ombro",
+          "significado": "Mudar de opinião de repente."
+        }
+      },
+      {
+        "es": {
+          "frase": "Lanzarse en cuerpo y alma",
+          "significado": "Hacer algo con pasión y sin preocuparse por las consecuencias."
+        },
+        "en": {
+          "frase": "To throw yourself in body and soul",
+          "significado": "To do something with passion, without worrying about the consequences."
+        },
+        "fr": {
+          "frase": "Se lancer corps et âme",
+          "significado": "Faire quelque chose avec passion, sans se soucier des conséquences."
+        },
+        "pt": {
+          "frase": "Se lançar de corpo e alma",
+          "significado": "Fazer algo com paixão, sem se preocupar com as consequências."
+        }
+      },
+      {
+        "es": {
+          "frase": "Ser puntero",
+          "significado": "Estar a la moda o sobresalir en un dominio."
+        },
+        "en": {
+          "frase": "To be the point (spearhead)",
+          "significado": "To be trendy or to excel in a field."
+        },
+        "fr": {
+          "frase": "Être à la pointe",
+          "significado": "Être à la mode ou exceller dans un domaine."
+        },
+        "pt": {
+          "frase": "Ser a ponta de lança",
+          "significado": "Estar na moda ou se destacar em uma área."
+        }
+      },
+      {
+        "es": {
+          "frase": "Alcanzar la edad de hierro",
+          "significado": "Alcanzar la edad de sostener una lanza y luchar con ella."
+        },
+        "en": {
+          "frase": "To reach the Iron Age",
+          "significado": "To reach the age of being able to hold a spear and fight with it."
+        },
+        "fr": {
+          "frase": "Atteindre l'âge de fer",
+          "significado": "Atteindre l'âge de pouvoir tenir une lance et se battre avec."
+        },
+        "pt": {
+          "frase": "Alcançar a idade do ferro",
+          "significado": "Alcançar a idade de segurar uma lança e lutar com ela."
+        }
+      },
+      {
+        "es": {
+          "frase": "La venganza es más dulce que la hidromiel",
+          "significado": "No conviene enfadar a un forjalanza, no vaya a querer vengarse."
+        },
+        "en": {
+          "frase": "Revenge is sweeter than mead",
+          "significado": "Best not to anger a forgelance, lest they seek revenge."
+        },
+        "fr": {
+          "frase": "La vengeance est plus douce que l'hydromel",
+          "significado": "Mieux vaut ne pas fâcher un forgelance, il pourrait vouloir se venger."
+        },
+        "pt": {
+          "frase": "A vingança é mais doce que o hidromel",
+          "significado": "Não convém irritar um forgelance, que pode querer se vingar."
+        }
+      },
+      {
+        "es": {
+          "frase": "A ser forjalanza se aprende forjando",
+          "significado": "Se mejora acumulando experiencia."
+        },
+        "en": {
+          "frase": "You learn to be a forgelance by forging",
+          "significado": "You improve by racking up experience."
+        },
+        "fr": {
+          "frase": "C'est en forgeant qu'on devient forgelance",
+          "significado": "On progresse en accumulant de l'expérience."
+        },
+        "pt": {
+          "frase": "Forgelance se aprende forjando",
+          "significado": "Se melhora acumulando experiência."
+        }
+      },
+      {
+        "es": {
+          "frase": "Estirar la lanza",
+          "significado": "Morir heroicamente (o no)."
+        },
+        "en": {
+          "frase": "To stretch out the spear",
+          "significado": "To die heroically (or not)."
+        },
+        "fr": {
+          "frase": "Allonger la lance",
+          "significado": "Mourir héroïquement (ou pas)."
+        },
+        "pt": {
+          "frase": "Esticar a lança",
+          "significado": "Morrer heroicamente (ou não)."
+        }
+      },
+      {
+        "es": {
+          "frase": "La envidia corroe a los envidiosos como la herrumbre corroe el hierro de la lanza",
+          "significado": "Codiciar el bien ajeno corrompe el carácter de un forjalanza de forma irreversible."
+        },
+        "en": {
+          "frase": "Envy corrodes the envious as rust corrodes the spear's iron",
+          "significado": "Coveting others' belongings irreversibly corrupts a forgelance's character."
+        },
+        "fr": {
+          "frase": "L'envie ronge les envieux comme la rouille ronge le fer de la lance",
+          "significado": "Convoiter le bien d'autrui corrompt irrémédiablement le caractère d'un forgelance."
+        },
+        "pt": {
+          "frase": "A inveja corrói os invejosos como a ferrugem corrói o ferro da lança",
+          "significado": "Cobiçar o bem alheio corrompe de forma irreversível o caráter de um forgelance."
+        }
+      },
+      {
+        "es": {
+          "frase": "Forjarse su propia opinión",
+          "significado": "Constatar algo por uno mismo y sacar tus propias conclusiones."
+        },
+        "en": {
+          "frase": "To forge your own opinion",
+          "significado": "To see something for yourself and draw your own conclusions."
+        },
+        "fr": {
+          "frase": "Se forger sa propre opinion",
+          "significado": "Constater quelque chose par soi-même et en tirer ses propres conclusions."
+        },
+        "pt": {
+          "frase": "Forjar a própria opinião",
+          "significado": "Constatar algo por conta própria e tirar suas próprias conclusões."
+        }
+      },
+      {
+        "es": {
+          "frase": "Más vale morir que desaparecer",
+          "significado": "La muerte no es el fin mientras no seamos olvidados."
+        },
+        "en": {
+          "frase": "Better to die than to disappear",
+          "significado": "Death isn't the end as long as we aren't forgotten."
+        },
+        "fr": {
+          "frase": "Mieux vaut mourir que disparaître",
+          "significado": "La mort n'est pas une fin tant qu'on n'est pas oublié."
+        },
+        "pt": {
+          "frase": "Melhor morrer do que desaparecer",
+          "significado": "A morte não é o fim enquanto não formos esquecidos."
+        }
+      }
+    ]
+  }
+}
