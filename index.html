@@ -2419,6 +2419,16 @@ function escaparHtml(texto){
   return div.innerHTML;
 }
 
+// escaparHtml alcanza para texto que va ADENTRO de una etiqueta (como
+// <h3>...</h3>), pero no escapa comillas — y un valor que se inserta
+// dentro de un atributo (como data-formato="${...}") con una comilla sin
+// escapar puede "romper" el atributo e inyectar código igual. Para esos
+// casos (cualquier ${...} que quede pegado a comillas dentro de una
+// etiqueta) hay que usar esta función en vez de escaparHtml.
+function escaparAtributo(texto){
+  return escaparHtml(texto).replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
 function armarPanelParticipantes(t, equipos, T){
   const esDuelo = t.cupo_maximo === 2;
 
@@ -2463,11 +2473,11 @@ function crearTarjetaTorneoComunidad(t, cantidad, esCreador, T, equipos, user){
     <span class="badge-tipo-torneo ${esDuelo ? "duelo" : "torneo"}">${esDuelo ? T.badgeDuelo : T.badgeTorneo}</span>
     <h3>${escaparHtml(t.nombre)}</h3>
     <div class="torneo-comunidad-meta">
-      <span>${T.formatoLabel[t.formato] || t.formato}</span>
+      <span>${T.formatoLabel[t.formato] || escaparHtml(t.formato)}</span>
       <span>·</span>
       <span>${cantidad}/${t.cupo_maximo} ${T.anotados}</span>
       <span>·</span>
-      <span>${T.por} ${t.creador_nombre}</span>
+      <span>${T.por} ${escaparHtml(t.creador_nombre)}</span>
       ${t.es_privado ? '<span class="torneo-candado">🔒</span>' : ""}
     </div>
     <p>${t.estado === "inscripcion" ? T.inscripcionAbierta : t.estado === "en_curso" ? T.torneoEnCurso : T.torneoFinalizado}</p>
@@ -2478,13 +2488,13 @@ function crearTarjetaTorneoComunidad(t, cantidad, esCreador, T, equipos, user){
       ${t.estado === "inscripcion"
         ? (yaAnotado
             ? `<button class="btn-inscribirse ya-anotado" disabled>${T.yaAnotadoTorneo}</button>`
-            : `<button class="btn-inscribirse" data-torneo-id="${t.id}" data-privado="${t.es_privado}" data-formato="${t.formato}">${T.unirme}</button>`)
+            : `<button class="btn-inscribirse" data-torneo-id="${escaparAtributo(t.id)}" data-privado="${escaparAtributo(t.es_privado)}" data-formato="${escaparAtributo(t.formato)}">${T.unirme}</button>`)
         : ""}
       ${esCreador
-        ? `<button class="btn-cancelar-torneo" data-torneo-id="${t.id}">${T.btnCancelarTorneo}</button>`
+        ? `<button class="btn-cancelar-torneo" data-torneo-id="${escaparAtributo(t.id)}">${T.btnCancelarTorneo}</button>`
         : ""}
       ${t.estado !== "inscripcion"
-        ? `<button class="btn-ver-draft" data-torneo-id="${t.id}" data-nombre="${escaparHtml(t.nombre)}">${T.verDraft}</button>`
+        ? `<button class="btn-ver-draft" data-torneo-id="${escaparAtributo(t.id)}" data-nombre="${escaparAtributo(t.nombre)}">${T.verDraft}</button>`
         : ""}
     </div>
   `;
