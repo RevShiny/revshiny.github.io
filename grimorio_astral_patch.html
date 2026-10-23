@@ -1,0 +1,1184 @@
+<!-- ============================================================
+     GRIMORIO ASTRAL — patch completo para revshiny.github.io
+     ============================================================
+     Instrucciones generales:
+      1) Corré primero grimorio_astral_setup.sql en Supabase
+         (SQL Editor → Run, una sola vez).
+      2) Abrí index.html en tu editor y pegá los 5 bloques de
+         este archivo en los puntos que indica cada uno (son
+         inserciones puras — no se borra ni se cambia nada de lo
+         que ya existe).
+      3) Guardá, probá en local si querés, y subilo al repo.
+
+     Los 5 bloques, en orden:
+       BLOQUE 1 — Estilos        (después de </style>, antes de <header>)
+       BLOQUE 2 — Pill de nav    (después de la pill de WakfuGambler)
+       BLOQUE 3 — Item de menú   (después del <li> de "Sorteos")
+       BLOQUE 4 — Sección ancla  (antes de </main>)
+       BLOQUE 5 — Script         (después del </script> principal, antes de </body>)
+     ============================================================ -->
+
+<!-- ============================================================
+     GRIMORIO ASTRAL — BLOQUE 1: ESTILOS
+     Pegar esto completo justo DESPUÉS de la línea que dice:
+       </style>
+     (la que cierra la hoja de estilos principal, está justo antes
+     del <header>). Es una hoja de estilos nueva e independiente,
+     no modifica nada de la que ya existe.
+     ============================================================ -->
+<style id="estilosGrimorioAstral">
+  /* ---------- pill de navegación (mismo look que btn-extra) ---------- */
+  .btn-extra .grimorio-pill-icon{ width:15px; height:15px; display:inline-flex; vertical-align:-3px; margin-right:2px; }
+
+  /* ---------- tabs (Estrategias / Builds) ---------- */
+  .grimorio-tabs{ display:flex; gap:10px; margin-bottom:22px; flex-wrap:wrap; }
+  .grimorio-tab-btn{
+    background:var(--bg-2); color:var(--gray);
+    border:1px solid var(--line);
+    padding:10px 18px;
+    font-family:'Space Mono', monospace; font-size:0.76rem; letter-spacing:0.04em; text-transform:uppercase;
+    cursor:pointer;
+    transition:border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  }
+  .grimorio-tab-btn:hover{ color:var(--white); border-color:rgba(255,91,31,0.4); }
+  .grimorio-tab-btn.activo{ background:var(--orange-dim); color:var(--orange-bright); border-color:rgba(255,91,31,0.5); }
+
+  /* ---------- barra de filtros + publicar ---------- */
+  .grimorio-barra{
+    display:flex; align-items:flex-end; justify-content:space-between;
+    gap:16px; flex-wrap:wrap; margin-bottom:22px;
+  }
+  .grimorio-filtros{ display:flex; gap:10px; flex-wrap:wrap; }
+  .grimorio-select{
+    background:var(--bg-2); border:1px solid var(--line); color:var(--white);
+    padding:8px 10px; font-family:'Manrope', sans-serif; font-size:0.82rem;
+    min-width:150px;
+  }
+  .grimorio-select:focus{ outline:none; border-color:var(--orange); }
+
+  /* ---------- grilla de publicaciones ---------- */
+  .grimorio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap:16px;
+  }
+  .grimorio-card{ cursor:pointer; padding:0; overflow:hidden; display:flex; flex-direction:column; }
+  .grimorio-card-img{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; border-bottom:1px solid var(--line); background:var(--bg-2); }
+  .grimorio-card-body{ padding:16px 18px 14px; display:flex; flex-direction:column; flex:1; }
+  .grimorio-card-tags{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px; }
+  .grimorio-tag{
+    font-family:'Space Mono', monospace; font-size:0.64rem; letter-spacing:0.03em; text-transform:uppercase;
+    color:var(--orange-bright); border:1px solid rgba(255,91,31,0.35); background:var(--orange-dim);
+    padding:3px 8px;
+  }
+  .grimorio-card h3{ font-size:1.05rem; margin-bottom:8px; color:var(--white); font-family:'Manrope',sans-serif; font-weight:800; }
+  .grimorio-card-extracto{ color:var(--gray); font-size:0.86rem; margin-bottom:14px; flex:1;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .grimorio-card-autor{ display:flex; align-items:center; gap:8px; margin-top:auto; }
+  .grimorio-mini-avatar{ width:20px; height:20px; border-radius:50%; object-fit:cover; border:1px solid var(--line); background:var(--bg-2); flex-shrink:0; }
+  .grimorio-mini-avatar.vacio{ display:flex; align-items:center; justify-content:center; font-size:0.6rem; color:var(--gray-dim); }
+  .grimorio-card-autor span{ font-family:'Space Mono', monospace; font-size:0.72rem; color:var(--gray); }
+  .grimorio-card-foot{
+    display:flex; align-items:center; justify-content:space-between;
+    font-family:'Space Mono', monospace; font-size:0.68rem; color:var(--gray-dim);
+    border-top:1px dashed rgba(246,243,236,0.14); margin-top:12px; padding-top:10px;
+  }
+  .grimorio-card-foot .comentarios-count{ display:flex; align-items:center; gap:4px; }
+  .grimorio-card-foot svg{ width:12px; height:12px; }
+
+  /* ---------- estado vacío ---------- */
+  .grimorio-vacio{
+    grid-column:1 / -1;
+    border:1px dashed var(--line);
+    padding:48px 24px;
+    text-align:center;
+    color:var(--gray);
+  }
+  .grimorio-vacio svg{ width:34px; height:34px; color:var(--orange); margin-bottom:14px; }
+  .grimorio-vacio p{ font-size:0.92rem; max-width:40ch; margin:8px auto 18px; }
+
+  /* ---------- modal de detalle (más ancho que el estándar) ---------- */
+  .modal-box-grimorio{ max-width:620px; max-height:88vh; overflow-y:auto; }
+  .grimorio-detalle-tags{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .grimorio-detalle-autor{ display:flex; align-items:center; gap:10px; margin:4px 0 16px; }
+  .grimorio-detalle-autor span{ font-family:'Space Mono', monospace; font-size:0.76rem; color:var(--gray); }
+  .grimorio-detalle-img{ width:100%; max-height:360px; object-fit:cover; margin-bottom:16px; border:1px solid var(--line); }
+  .grimorio-detalle-texto{ color:var(--white); font-size:0.94rem; line-height:1.65; white-space:pre-wrap; margin-bottom:18px; }
+  .grimorio-video-embed{ position:relative; width:100%; aspect-ratio:16/9; margin-bottom:18px; background:var(--bg-2); border:1px solid var(--line); }
+  .grimorio-video-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:none; }
+  .grimorio-detalle-acciones{ display:flex; justify-content:flex-end; gap:16px; margin-bottom:8px; }
+  .grimorio-link-accion{
+    background:none; border:none; cursor:pointer; padding:0;
+    font-family:'Space Mono', monospace; font-size:0.72rem; color:var(--gray-dim);
+    text-decoration:underline; text-underline-offset:3px;
+  }
+  .grimorio-link-accion:hover{ color:var(--orange-bright); }
+  .grimorio-link-accion.peligro:hover{ color:#ff6b6b; }
+  .grimorio-link-accion[disabled]{ cursor:default; text-decoration:none; opacity:0.6; }
+
+  /* ---------- comentarios ---------- */
+  .grimorio-comentarios-head{ border-top:1px solid var(--line); padding-top:16px; margin-top:4px; }
+  .grimorio-comentarios-head h4{ font-family:'Manrope',sans-serif; font-size:0.9rem; color:var(--white); margin-bottom:12px; }
+  .grimorio-comentarios-lista{ display:flex; flex-direction:column; gap:12px; margin-bottom:16px; max-height:260px; overflow-y:auto; }
+  .grimorio-comentario{ display:flex; gap:10px; }
+  .grimorio-comentario-cuerpo{ flex:1; background:var(--bg-2); border:1px solid var(--line); padding:9px 12px; }
+  .grimorio-comentario-cabecera{ display:flex; justify-content:space-between; gap:8px; margin-bottom:3px; }
+  .grimorio-comentario-nombre{ font-family:'Space Mono', monospace; font-size:0.72rem; color:var(--orange-bright); }
+  .grimorio-comentario-fecha{ font-family:'Space Mono', monospace; font-size:0.64rem; color:var(--gray-dim); }
+  .grimorio-comentario-texto{ font-size:0.84rem; color:var(--white); line-height:1.45; white-space:pre-wrap; }
+  .grimorio-comentario-vacio{ color:var(--gray-dim); font-size:0.82rem; }
+  .grimorio-comentar-fila{ display:flex; gap:8px; align-items:flex-start; }
+  .grimorio-comentar-fila textarea{ flex:1; min-height:44px; resize:vertical; }
+  .grimorio-comentar-fila .btn-primary{ padding:10px 16px; font-size:0.78rem; white-space:nowrap; }
+
+  /* ---------- fix: elementos con display propio deben poder
+     seguir ocultándose con el atributo "hidden" ---------- */
+  #grimorioCamposWrap[hidden],
+  #grimorioLoginBotones[hidden],
+  .grimorio-comentar-fila[hidden]{ display:none !important; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 560px){
+    .grimorio-grid{ grid-template-columns:1fr; }
+    .grimorio-barra{ flex-direction:column; align-items:stretch; }
+    .grimorio-comentar-fila{ flex-direction:column; }
+    .grimorio-comentar-fila .btn-primary{ align-self:flex-end; }
+  }
+</style>
+
+
+<!-- ============================================================
+     GRIMORIO ASTRAL — BLOQUE 2: PILL DE NAVEGACIÓN
+     Buscá esta línea (la de WakfuGambler, va a ser la última de
+     las tres pills "btn-extra"):
+       <a class="btn-extra" href="wakfugambler.html">
+     y pegá esto JUSTO DESPUÉS de esa línea (después del </a> que
+     la cierra):
+     ============================================================ -->
+        <a class="btn-extra" href="#grimorio-astral" id="grimorioNavChip">
+          <svg class="grimorio-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M3 5c2.5-1 5.5-1 8 0v14c-2.5-1-5.5-1-8 0V5Z"/><path d="M21 5c-2.5-1-5.5-1-8 0v14c2.5-1 5.5-1 8 0V5Z"/></svg>
+          <span data-g-nav>Grimorio Astral</span>
+        </a>
+
+
+<!-- ============================================================
+     GRIMORIO ASTRAL — BLOQUE 3: ITEM DEL MENÚ DESPLEGABLE
+     Buscá esta línea (el item "Sorteos" del menú, la última de
+     los tres <li> con clase "nav-chip"):
+       id="navChipSorteos"
+     y pegá esto JUSTO DESPUÉS de la línea completa de ese <li>
+     (después del </li> que lo cierra):
+     ============================================================ -->
+        <li><a href="#grimorio-astral" class="nav-chip" id="navChipGrimorio" data-target="grimorio-astral"><span class="nav-chip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5c2.5-1 5.5-1 8 0v14c-2.5-1-5.5-1-8 0V5Z"/><path d="M21 5c-2.5-1-5.5-1-8 0v14c2.5-1 5.5-1 8 0V5Z"/></svg></span><span id="navGrimorioLabel">Grimorio Astral</span></a></li>
+
+
+<!-- ============================================================
+     GRIMORIO ASTRAL — BLOQUE 4: SECCIÓN ANCLA
+     Buscá la línea:
+       </main>
+     (el cierre de <main>, que está justo antes de <footer>) y
+     pegá esto JUSTO ANTES de esa línea. No hace falta más: todo
+     el contenido de adentro lo arma el script del Bloque 5.
+     ============================================================ -->
+<section id="grimorio-astral">
+  <div class="wrap" id="grimorioRoot"></div>
+</section>
+
+
+<!-- ============================================================
+     GRIMORIO ASTRAL — BLOQUE 5: SCRIPT
+     Buscá la línea:
+       renderContenido();
+     seguida de:
+       </script>
+     (es el cierre del script principal, justo antes de </body>)
+     y pegá esto JUSTO DESPUÉS de ese </script> (y antes de
+     </body>). Es un <script> nuevo e independiente.
+     ============================================================ -->
+<script>
+/* ============================================================
+   GRIMORIO ASTRAL — lógica completa
+   Reutiliza variables y funciones que YA existen más arriba en la
+   página (no las vuelve a declarar): sbClient, idiomaActual,
+   perfilActual, nombreDeUsuario, avatarUrlDesdeId, CLASES_AVATAR,
+   escaparHtml, SUPABASE_URL, aplicarIdioma.
+   ============================================================ */
+
+/* ---------- traducciones propias (no toca el I18N principal) ---------- */
+const GRIMORIO_T = {
+  es: {
+    navGrimorio: "Grimorio Astral",
+    eyebrow: "Comunidad",
+    heading: "Grimorio Astral",
+    desc: "Estrategias de dungeon y builds de clase, escritas por la comunidad. Compartí lo que sabés o aprendé de lo que ya funcionó.",
+    tabEstrategias: "Estrategias de Dungeon",
+    tabBuilds: "Builds por Clase",
+    filtroTodasClases: "Todas las clases",
+    filtroTodosTipos: "Todos los tipos",
+    filtroTodosEnfoques: "Todos los enfoques",
+    filtroDungeonPlaceholder: "Buscar por dungeon...",
+    btnPublicarEstrategia: "+ Publicar estrategia",
+    btnPublicarBuild: "+ Publicar build",
+    vacioEstrategiasTitulo: "Todavía no hay estrategias cargadas",
+    vacioEstrategiasDesc: "Sé el primero en compartir cómo encaraste una dungeon — solo, en dúo o en grupo.",
+    vacioBuildsTitulo: "Todavía no hay builds cargados",
+    vacioBuildsDesc: "Compartí cómo repartís los puntos de característica de tu clase según nivel y objetivo.",
+    comentarios: (n) => n === 1 ? "1 comentario" : `${n} comentarios`,
+    autorDesconocido: "Aventurero",
+    haceRecien: "recién",
+    haceMin: (n) => `hace ${n} min`,
+    haceHoras: (n) => `hace ${n} h`,
+    haceDias: (n) => `hace ${n} d`,
+    tipoEstrategiaOpciones: {
+      solotage: "Solotage", duo: "Dúo", grupo_reducido: "Grupo reducido",
+      grupo_completo: "Grupo completo", speedrun: "Speedrun", farmeo: "Farmeo", otro: "Otro"
+    },
+    enfoqueOpciones: {
+      leveling: "Leveling", pvm_directo: "PvM — Daño directo", pvm_dot: "PvM — Veneno / DoT",
+      pvp: "PvP", soporte: "Soporte / Sanación", tanque: "Tanque", otro: "Otro"
+    },
+    tituloModalEstrategia: "Publicar estrategia de dungeon",
+    tituloModalBuild: "Publicar build de clase",
+    campoTitulo: "Título",
+    campoClase: "Clase / raza",
+    campoDungeon: "Dungeon",
+    campoTipoEstrategia: "Tipo de estrategia (opcional)",
+    campoEnfoque: "Enfoque",
+    campoNivelRango: "Rango de nivel (opcional)",
+    campoTexto: "Explicación",
+    placeholderTextoEstrategia: "Contá cómo encaraste la dungeon: orden de turnos, qué cuidar, errores comunes...",
+    placeholderTextoBuild: "Explicá cómo repartir los puntos de característica según nivel. Esto no incluye equipo ni objetos.",
+    campoImagen: "Imagen (opcional, PNG o JPG, hasta 3MB)",
+    campoVideo: "Link de YouTube o Twitch (opcional)",
+    seleccionar: "Seleccionar...",
+    btnCancelar: "Cancelar",
+    btnPublicar: "Publicar",
+    btnPublicando: "Publicando...",
+    errorSinTitulo: "Poné un título.",
+    errorSinClase: "Elegí una clase.",
+    errorSinDungeon: "Decí de qué dungeon se trata.",
+    errorSinEnfoque: "Elegí un enfoque.",
+    errorTextoCorto: "Contá un poco más (mínimo 30 caracteres).",
+    errorImagenTipo: "La imagen tiene que ser PNG o JPG.",
+    errorImagenTamano: "La imagen no puede pesar más de 3MB.",
+    errorGenerico: "Algo salió mal. Probá de nuevo.",
+    okPublicado: "¡Listo! Tu publicación ya está visible.",
+    avisoLogin: "Para publicar necesitás iniciar sesión con Discord o Google.",
+    comentarAvisoLogin: "Iniciá sesión para comentar.",
+    comentarPlaceholder: "Escribí un comentario...",
+    btnComentar: "Comentar",
+    comentariosVacio: "Todavía no hay comentarios. ¡Sé el primero!",
+    btnReportar: "🚩 Reportar",
+    reportado: "Reportado, gracias",
+    btnEliminarPublicacion: "Eliminar publicación",
+    confirmarEliminar: "¿Seguro que querés eliminar esta publicación? No se puede deshacer.",
+    confirmarEliminarComentario: "¿Eliminar este comentario?",
+    supabaseNoConfigurado: "La conexión con la base de datos no está disponible ahora mismo.",
+    optDiscord: "Discord", optGoogle: "Google"
+  },
+  en: {
+    navGrimorio: "Astral Grimoire",
+    eyebrow: "Community",
+    heading: "Astral Grimoire",
+    desc: "Dungeon strategies and class builds, written by the community. Share what you know or learn from what already worked.",
+    tabEstrategias: "Dungeon Strategies",
+    tabBuilds: "Class Builds",
+    filtroTodasClases: "All classes",
+    filtroTodosTipos: "All types",
+    filtroTodosEnfoques: "All focuses",
+    filtroDungeonPlaceholder: "Search by dungeon...",
+    btnPublicarEstrategia: "+ Post strategy",
+    btnPublicarBuild: "+ Post build",
+    vacioEstrategiasTitulo: "No strategies yet",
+    vacioEstrategiasDesc: "Be the first to share how you cleared a dungeon — solo, duo or full group.",
+    vacioBuildsTitulo: "No builds yet",
+    vacioBuildsDesc: "Share how you spend your class's stat points by level and goal.",
+    comentarios: (n) => n === 1 ? "1 comment" : `${n} comments`,
+    autorDesconocido: "Adventurer",
+    haceRecien: "just now",
+    haceMin: (n) => `${n}m ago`,
+    haceHoras: (n) => `${n}h ago`,
+    haceDias: (n) => `${n}d ago`,
+    tipoEstrategiaOpciones: {
+      solotage: "Solotage", duo: "Duo", grupo_reducido: "Small group",
+      grupo_completo: "Full group", speedrun: "Speedrun", farmeo: "Farming", otro: "Other"
+    },
+    enfoqueOpciones: {
+      leveling: "Leveling", pvm_directo: "PvM — Direct damage", pvm_dot: "PvM — Poison / DoT",
+      pvp: "PvP", soporte: "Support / Healing", tanque: "Tank", otro: "Other"
+    },
+    tituloModalEstrategia: "Post a dungeon strategy",
+    tituloModalBuild: "Post a class build",
+    campoTitulo: "Title",
+    campoClase: "Class",
+    campoDungeon: "Dungeon",
+    campoTipoEstrategia: "Strategy type (optional)",
+    campoEnfoque: "Focus",
+    campoNivelRango: "Level range (optional)",
+    campoTexto: "Explanation",
+    placeholderTextoEstrategia: "Explain how you cleared the dungeon: turn order, what to watch out for, common mistakes...",
+    placeholderTextoBuild: "Explain how to spend stat points by level. This does not include gear or items.",
+    campoImagen: "Image (optional, PNG or JPG, up to 3MB)",
+    campoVideo: "YouTube or Twitch link (optional)",
+    seleccionar: "Select...",
+    btnCancelar: "Cancel",
+    btnPublicar: "Post",
+    btnPublicando: "Posting...",
+    errorSinTitulo: "Add a title.",
+    errorSinClase: "Pick a class.",
+    errorSinDungeon: "Say which dungeon this is about.",
+    errorSinEnfoque: "Pick a focus.",
+    errorTextoCorto: "Write a bit more (at least 30 characters).",
+    errorImagenTipo: "The image must be PNG or JPG.",
+    errorImagenTamano: "The image can't be larger than 3MB.",
+    errorGenerico: "Something went wrong. Try again.",
+    okPublicado: "Done! Your post is now visible.",
+    avisoLogin: "You need to sign in with Discord or Google to post.",
+    comentarAvisoLogin: "Sign in to comment.",
+    comentarPlaceholder: "Write a comment...",
+    btnComentar: "Comment",
+    comentariosVacio: "No comments yet. Be the first!",
+    btnReportar: "🚩 Report",
+    reportado: "Reported, thanks",
+    btnEliminarPublicacion: "Delete post",
+    confirmarEliminar: "Delete this post? This can't be undone.",
+    confirmarEliminarComentario: "Delete this comment?",
+    supabaseNoConfigurado: "The database connection isn't available right now.",
+    optDiscord: "Discord", optGoogle: "Google"
+  },
+  fr: {
+    navGrimorio: "Grimoire Astral",
+    eyebrow: "Communauté",
+    heading: "Grimoire Astral",
+    desc: "Stratégies de donjon et builds de classe, écrits par la communauté. Partagez ce que vous savez ou apprenez de ce qui marche déjà.",
+    tabEstrategias: "Stratégies de Donjon",
+    tabBuilds: "Builds par Classe",
+    filtroTodasClases: "Toutes les classes",
+    filtroTodosTipos: "Tous les types",
+    filtroTodosEnfoques: "Tous les profils",
+    filtroDungeonPlaceholder: "Rechercher un donjon...",
+    btnPublicarEstrategia: "+ Publier une stratégie",
+    btnPublicarBuild: "+ Publier un build",
+    vacioEstrategiasTitulo: "Pas encore de stratégies",
+    vacioEstrategiasDesc: "Sois le premier à partager comment tu as fait ce donjon — solo, duo ou groupe complet.",
+    vacioBuildsTitulo: "Pas encore de builds",
+    vacioBuildsDesc: "Partage comment répartir les points de caractéristique de ta classe selon le niveau et l'objectif.",
+    comentarios: (n) => n === 1 ? "1 commentaire" : `${n} commentaires`,
+    autorDesconocido: "Aventurier",
+    haceRecien: "à l'instant",
+    haceMin: (n) => `il y a ${n} min`,
+    haceHoras: (n) => `il y a ${n} h`,
+    haceDias: (n) => `il y a ${n} j`,
+    tipoEstrategiaOpciones: {
+      solotage: "Solotage", duo: "Duo", grupo_reducido: "Petit groupe",
+      grupo_completo: "Groupe complet", speedrun: "Speedrun", farmeo: "Farming", otro: "Autre"
+    },
+    enfoqueOpciones: {
+      leveling: "Leveling", pvm_directo: "PvM — Dégâts directs", pvm_dot: "PvM — Poison / DoT",
+      pvp: "PvP", soporte: "Soutien / Soin", tanque: "Tank", otro: "Autre"
+    },
+    tituloModalEstrategia: "Publier une stratégie de donjon",
+    tituloModalBuild: "Publier un build de classe",
+    campoTitulo: "Titre",
+    campoClase: "Classe",
+    campoDungeon: "Donjon",
+    campoTipoEstrategia: "Type de stratégie (optionnel)",
+    campoEnfoque: "Profil",
+    campoNivelRango: "Tranche de niveau (optionnel)",
+    campoTexto: "Explication",
+    placeholderTextoEstrategia: "Explique comment tu as fait le donjon : ordre des tours, points d'attention, erreurs courantes...",
+    placeholderTextoBuild: "Explique comment répartir les points de caractéristique selon le niveau. Cela n'inclut pas l'équipement.",
+    campoImagen: "Image (optionnelle, PNG ou JPG, jusqu'à 3 Mo)",
+    campoVideo: "Lien YouTube ou Twitch (optionnel)",
+    seleccionar: "Choisir...",
+    btnCancelar: "Annuler",
+    btnPublicar: "Publier",
+    btnPublicando: "Publication...",
+    errorSinTitulo: "Ajoute un titre.",
+    errorSinClase: "Choisis une classe.",
+    errorSinDungeon: "Indique de quel donjon il s'agit.",
+    errorSinEnfoque: "Choisis un profil.",
+    errorTextoCorto: "Écris un peu plus (30 caractères minimum).",
+    errorImagenTipo: "L'image doit être en PNG ou JPG.",
+    errorImagenTamano: "L'image ne peut pas dépasser 3 Mo.",
+    errorGenerico: "Un problème est survenu. Réessaie.",
+    okPublicado: "C'est fait ! Ta publication est visible.",
+    avisoLogin: "Connecte-toi avec Discord ou Google pour publier.",
+    comentarAvisoLogin: "Connecte-toi pour commenter.",
+    comentarPlaceholder: "Écris un commentaire...",
+    btnComentar: "Commenter",
+    comentariosVacio: "Pas encore de commentaires. Sois le premier !",
+    btnReportar: "🚩 Signaler",
+    reportado: "Signalé, merci",
+    btnEliminarPublicacion: "Supprimer la publication",
+    confirmarEliminar: "Supprimer cette publication ? Action irréversible.",
+    confirmarEliminarComentario: "Supprimer ce commentaire ?",
+    supabaseNoConfigurado: "La connexion à la base de données n'est pas disponible pour le moment.",
+    optDiscord: "Discord", optGoogle: "Google"
+  },
+  pt: {
+    navGrimorio: "Grimório Astral",
+    eyebrow: "Comunidade",
+    heading: "Grimório Astral",
+    desc: "Estratégias de dungeon e builds de classe, escritas pela comunidade. Compartilhe o que você sabe ou aprenda com o que já funcionou.",
+    tabEstrategias: "Estratégias de Dungeon",
+    tabBuilds: "Builds por Classe",
+    filtroTodasClases: "Todas as classes",
+    filtroTodosTipos: "Todos os tipos",
+    filtroTodosEnfoques: "Todos os focos",
+    filtroDungeonPlaceholder: "Buscar por dungeon...",
+    btnPublicarEstrategia: "+ Publicar estratégia",
+    btnPublicarBuild: "+ Publicar build",
+    vacioEstrategiasTitulo: "Ainda não há estratégias",
+    vacioEstrategiasDesc: "Seja o primeiro a contar como você fez essa dungeon — sozinho, em dupla ou em grupo completo.",
+    vacioBuildsTitulo: "Ainda não há builds",
+    vacioBuildsDesc: "Compartilhe como distribuir os pontos de atributo da sua classe conforme nível e objetivo.",
+    comentarios: (n) => n === 1 ? "1 comentário" : `${n} comentários`,
+    autorDesconocido: "Aventureiro",
+    haceRecien: "agora mesmo",
+    haceMin: (n) => `há ${n} min`,
+    haceHoras: (n) => `há ${n} h`,
+    haceDias: (n) => `há ${n} d`,
+    tipoEstrategiaOpciones: {
+      solotage: "Solotage", duo: "Dupla", grupo_reducido: "Grupo pequeno",
+      grupo_completo: "Grupo completo", speedrun: "Speedrun", farmeo: "Farm", otro: "Outro"
+    },
+    enfoqueOpciones: {
+      leveling: "Leveling", pvm_directo: "PvM — Dano direto", pvm_dot: "PvM — Veneno / DoT",
+      pvp: "PvP", soporte: "Suporte / Cura", tanque: "Tank", otro: "Outro"
+    },
+    tituloModalEstrategia: "Publicar estratégia de dungeon",
+    tituloModalBuild: "Publicar build de classe",
+    campoTitulo: "Título",
+    campoClase: "Classe",
+    campoDungeon: "Dungeon",
+    campoTipoEstrategia: "Tipo de estratégia (opcional)",
+    campoEnfoque: "Foco",
+    campoNivelRango: "Faixa de nível (opcional)",
+    campoTexto: "Explicação",
+    placeholderTextoEstrategia: "Conte como você fez a dungeon: ordem dos turnos, cuidados, erros comuns...",
+    placeholderTextoBuild: "Explique como distribuir os pontos de atributo por nível. Isso não inclui equipamento.",
+    campoImagen: "Imagem (opcional, PNG ou JPG, até 3MB)",
+    campoVideo: "Link do YouTube ou Twitch (opcional)",
+    seleccionar: "Selecionar...",
+    btnCancelar: "Cancelar",
+    btnPublicar: "Publicar",
+    btnPublicando: "Publicando...",
+    errorSinTitulo: "Adicione um título.",
+    errorSinClase: "Escolha uma classe.",
+    errorSinDungeon: "Diga de qual dungeon se trata.",
+    errorSinEnfoque: "Escolha um foco.",
+    errorTextoCorto: "Escreva um pouco mais (mínimo 30 caracteres).",
+    errorImagenTipo: "A imagem precisa ser PNG ou JPG.",
+    errorImagenTamano: "A imagem não pode passar de 3MB.",
+    errorGenerico: "Algo deu errado. Tente de novo.",
+    okPublicado: "Pronto! Sua publicação já está visível.",
+    avisoLogin: "Para publicar você precisa entrar com Discord ou Google.",
+    comentarAvisoLogin: "Entre para comentar.",
+    comentarPlaceholder: "Escreva um comentário...",
+    btnComentar: "Comentar",
+    comentariosVacio: "Ainda não há comentários. Seja o primeiro!",
+    btnReportar: "🚩 Denunciar",
+    reportado: "Denunciado, obrigado",
+    btnEliminarPublicacion: "Excluir publicação",
+    confirmarEliminar: "Excluir esta publicação? Isso não pode ser desfeito.",
+    confirmarEliminarComentario: "Excluir este comentário?",
+    supabaseNoConfigurado: "A conexão com o banco de dados não está disponível agora.",
+    optDiscord: "Discord", optGoogle: "Google"
+  }
+};
+
+function gt(key, ...args) {
+  const dic = GRIMORIO_T[idiomaActual] || GRIMORIO_T.es;
+  const val = dic[key] !== undefined ? dic[key] : GRIMORIO_T.es[key];
+  return typeof val === "function" ? val(...args) : val;
+}
+
+const GRIMORIO_ICONOS = {
+  libro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5c2.5-1 5.5-1 8 0v14c-2.5-1-5.5-1-8 0V5Z"/><path d="M21 5c-2.5-1-5.5-1-8 0v14c2.5-1 5.5-1 8 0V5Z"/></svg>',
+  comentario: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 20l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',
+  vacio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5c2.5-1 5.5-1 8 0v14c-2.5-1-5.5-1-8 0V5Z"/><path d="M21 5c-2.5-1-5.5-1-8 0v14c2.5-1 5.5-1 8 0V5Z"/></svg>'
+};
+
+/* ---------- datos fijos ---------- */
+const GRIMORIO_CLASES = CLASES_AVATAR.map(c => c.nombre);
+
+/* ---------- estado ---------- */
+const grimorioState = {
+  tab: "estrategia",
+  filtroClase: "",
+  filtroTipo: "",
+  filtroEnfoque: "",
+  filtroDungeon: "",
+  cache: { estrategia: [], build: [] },
+  cargando: false
+};
+
+/* ---------- utilidades ---------- */
+function grimorioFormatearFecha(iso) {
+  const ahora = Date.now();
+  const t = new Date(iso).getTime();
+  const diffSeg = Math.max(0, Math.floor((ahora - t) / 1000));
+  if (diffSeg < 90) return gt("haceRecien");
+  const diffMin = Math.floor(diffSeg / 60);
+  if (diffMin < 60) return gt("haceMin", diffMin);
+  const diffHoras = Math.floor(diffMin / 60);
+  if (diffHoras < 24) return gt("haceHoras", diffHoras);
+  const diffDias = Math.floor(diffHoras / 24);
+  return gt("haceDias", diffDias);
+}
+
+function grimorioUrlImagen(path) {
+  if (!path || !sbClient) return null;
+  return sbClient.storage.from("grimorio-imagenes").getPublicUrl(path).data.publicUrl;
+}
+
+function grimorioAvatarHtml(avatarId, nombre) {
+  const url = avatarId ? avatarUrlDesdeId(avatarId) : null;
+  if (url) return `<img class="grimorio-mini-avatar" src="${url}" alt="">`;
+  const inicial = (nombre || "?").trim().charAt(0).toUpperCase() || "?";
+  return `<span class="grimorio-mini-avatar vacio">${inicial}</span>`;
+}
+
+function grimorioEmbedVideo(url) {
+  if (!url) return "";
+  try {
+    const u = new URL(url);
+    let src = null;
+    if (/(^|\.)youtube\.com$/.test(u.hostname) && u.searchParams.get("v")) {
+      src = `https://www.youtube.com/embed/${u.searchParams.get("v")}`;
+    } else if (u.hostname === "youtu.be") {
+      src = `https://www.youtube.com/embed/${u.pathname.replace("/", "")}`;
+    } else if (/(^|\.)youtube\.com$/.test(u.hostname) && (u.pathname.startsWith("/embed/") || u.pathname.startsWith("/shorts/"))) {
+      src = `https://www.youtube.com/embed/${u.pathname.split("/").pop()}`;
+    } else if (/(^|\.)clips\.twitch\.tv$/.test(u.hostname)) {
+      const clipId = u.pathname.replace("/", "");
+      src = `https://clips.twitch.tv/embed?clip=${clipId}&parent=${window.location.hostname}`;
+    } else if (/(^|\.)twitch\.tv$/.test(u.hostname) && u.pathname.startsWith("/videos/")) {
+      const videoId = u.pathname.split("/").pop();
+      src = `https://player.twitch.tv/?video=${videoId}&parent=${window.location.hostname}`;
+    }
+    if (src) {
+      return `<div class="grimorio-video-embed"><iframe src="${src}" allowfullscreen loading="lazy"></iframe></div>`;
+    }
+  } catch (e) { /* url inválida, cae al link de abajo */ }
+  return `<p style="margin-bottom:16px;"><a href="${escaparHtml(url)}" target="_blank" rel="noopener" style="color:var(--orange-bright);">▶ ${escaparHtml(url)}</a></p>`;
+}
+
+/* ---------- construcción del esqueleto (una sola vez) ---------- */
+function grimorioOpcionesClase() {
+  return GRIMORIO_CLASES.map(c => `<option value="${c}">${c}</option>`).join("");
+}
+function grimorioOpcionesDesdeObjeto(obj) {
+  return Object.keys(obj).map(k => `<option value="${k}">${obj[k]}</option>`).join("");
+}
+
+function grimorioSkeletonSeccion() {
+  return `
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">${gt("eyebrow")}</span>
+        <h2>${gt("heading")}</h2>
+        <p class="section-desc">${gt("desc")}</p>
+      </div>
+    </div>
+    <div class="grimorio-tabs">
+      <button type="button" class="grimorio-tab-btn" data-tab="estrategia">${gt("tabEstrategias")}</button>
+      <button type="button" class="grimorio-tab-btn" data-tab="build">${gt("tabBuilds")}</button>
+    </div>
+    <div class="grimorio-barra">
+      <div class="grimorio-filtros" id="grimorioFiltros"></div>
+      <button type="button" class="btn-primary" id="grimorioBtnPublicar"></button>
+    </div>
+    <div class="grimorio-grid" id="grimorioGrid"></div>
+  `;
+}
+
+function grimorioSkeletonFiltros() {
+  if (grimorioState.tab === "estrategia") {
+    return `
+      <select class="grimorio-select" id="grimorioFiltroClase"><option value="">${gt("filtroTodasClases")}</option>${grimorioOpcionesClase()}</select>
+      <select class="grimorio-select" id="grimorioFiltroTipo"><option value="">${gt("filtroTodosTipos")}</option>${grimorioOpcionesDesdeObjeto(gtDic().tipoEstrategiaOpciones)}</select>
+      <input type="text" class="grimorio-select" id="grimorioFiltroDungeon" placeholder="${gt("filtroDungeonPlaceholder")}" maxlength="60">
+    `;
+  }
+  return `
+    <select class="grimorio-select" id="grimorioFiltroClase"><option value="">${gt("filtroTodasClases")}</option>${grimorioOpcionesClase()}</select>
+    <select class="grimorio-select" id="grimorioFiltroEnfoque"><option value="">${gt("filtroTodosEnfoques")}</option>${grimorioOpcionesDesdeObjeto(gtDic().enfoqueOpciones)}</select>
+  `;
+}
+
+function gtDic() { return GRIMORIO_T[idiomaActual] || GRIMORIO_T.es; }
+
+function grimorioModalesHtml() {
+  return `
+  <div class="modal-overlay" id="modalGrimorioPublicar" role="dialog" aria-modal="true">
+    <div class="modal-box" id="grimorioFormWrap">
+      <h3 id="grimorioTituloModal"></h3>
+      <p class="modal-aviso" id="grimorioLoginAviso" hidden></p>
+      <div class="modal-actions" id="grimorioLoginBotones" style="justify-content:flex-start;" hidden>
+        <button type="button" class="btn-primary" id="grimorioLoginDiscord"></button>
+        <button type="button" class="btn-primary" id="grimorioLoginGoogle" style="background:var(--white);"></button>
+      </div>
+      <div id="grimorioCamposWrap" style="display:flex; flex-direction:column; gap:14px;">
+        <label class="modal-label"><span id="lblGrimorioTitulo"></span>
+          <input id="grimorioInputTitulo" type="text" maxlength="80" class="modal-input">
+        </label>
+        <label class="modal-label"><span id="lblGrimorioClase"></span>
+          <select id="grimorioInputClase" class="modal-input"></select>
+        </label>
+        <div id="grimorioCamposEstrategia">
+          <label class="modal-label"><span id="lblGrimorioDungeon"></span>
+            <input id="grimorioInputDungeon" type="text" maxlength="60" class="modal-input">
+          </label>
+          <label class="modal-label" style="margin-top:14px;"><span id="lblGrimorioTipoEstrategia"></span>
+            <select id="grimorioInputTipoEstrategia" class="modal-input"></select>
+          </label>
+        </div>
+        <div id="grimorioCamposBuild">
+          <label class="modal-label"><span id="lblGrimorioEnfoque"></span>
+            <select id="grimorioInputEnfoque" class="modal-input"></select>
+          </label>
+          <label class="modal-label" style="margin-top:14px;"><span id="lblGrimorioNivelRango"></span>
+            <input id="grimorioInputNivelRango" type="text" maxlength="20" class="modal-input">
+          </label>
+        </div>
+        <label class="modal-label"><span id="lblGrimorioTexto"></span>
+          <textarea id="grimorioInputTexto" maxlength="4000" rows="6" class="modal-input modal-textarea"></textarea>
+        </label>
+        <label class="modal-label"><span id="lblGrimorioImagen"></span>
+          <input id="grimorioInputImagen" type="file" accept="image/png,image/jpeg" class="modal-input">
+        </label>
+        <p class="modal-nota" id="grimorioImagenNombre" hidden></p>
+        <label class="modal-label"><span id="lblGrimorioVideo"></span>
+          <input id="grimorioInputVideo" type="url" maxlength="300" class="modal-input" placeholder="https://...">
+        </label>
+      </div>
+      <p class="modal-error" id="grimorioPubError" hidden></p>
+      <p class="modal-ok" id="grimorioPubOk" hidden></p>
+      <div class="modal-actions">
+        <button type="button" id="grimorioPubCancelar"></button>
+        <button type="button" class="btn-primary" id="grimorioPubConfirmar"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalGrimorioDetalle" role="dialog" aria-modal="true">
+    <div class="modal-box modal-box-grimorio" id="grimorioDetalleBox"></div>
+  </div>
+  `;
+}
+
+let grimorioInicializado = false;
+
+function initGrimorioAstral() {
+  const root = document.getElementById("grimorioRoot");
+  if (!root) return;
+
+  if (!grimorioInicializado) {
+    document.body.insertAdjacentHTML("beforeend", grimorioModalesHtml());
+    grimorioInicializado = true;
+    grimorioWireModalPublicar();
+    grimorioWireModalDetalle();
+  }
+
+  root.innerHTML = grimorioSkeletonSeccion();
+  root.querySelectorAll(".grimorio-tab-btn").forEach(btn => {
+    btn.classList.toggle("activo", btn.dataset.tab === grimorioState.tab);
+    btn.addEventListener("click", () => {
+      grimorioState.tab = btn.dataset.tab;
+      initGrimorioAstral();
+    });
+  });
+
+  const btnPublicar = document.getElementById("grimorioBtnPublicar");
+  btnPublicar.textContent = grimorioState.tab === "estrategia" ? gt("btnPublicarEstrategia") : gt("btnPublicarBuild");
+  btnPublicar.addEventListener("click", () => grimorioAbrirModalPublicar(grimorioState.tab));
+
+  const filtrosWrap = document.getElementById("grimorioFiltros");
+  filtrosWrap.innerHTML = grimorioSkeletonFiltros();
+  const selClase = document.getElementById("grimorioFiltroClase");
+  if (selClase) {
+    selClase.value = grimorioState.filtroClase;
+    selClase.addEventListener("change", () => { grimorioState.filtroClase = selClase.value; grimorioRenderFeed(); });
+  }
+  const selTipo = document.getElementById("grimorioFiltroTipo");
+  if (selTipo) {
+    selTipo.value = grimorioState.filtroTipo;
+    selTipo.addEventListener("change", () => { grimorioState.filtroTipo = selTipo.value; grimorioRenderFeed(); });
+  }
+  const selEnfoque = document.getElementById("grimorioFiltroEnfoque");
+  if (selEnfoque) {
+    selEnfoque.value = grimorioState.filtroEnfoque;
+    selEnfoque.addEventListener("change", () => { grimorioState.filtroEnfoque = selEnfoque.value; grimorioRenderFeed(); });
+  }
+  const inputDungeon = document.getElementById("grimorioFiltroDungeon");
+  if (inputDungeon) {
+    inputDungeon.value = grimorioState.filtroDungeon;
+    let t = null;
+    inputDungeon.addEventListener("input", () => {
+      clearTimeout(t);
+      t = setTimeout(() => { grimorioState.filtroDungeon = inputDungeon.value.trim(); grimorioRenderFeed(); }, 300);
+    });
+  }
+
+  grimorioCargarFeed();
+}
+
+/* ---------- carga + render del feed ---------- */
+async function grimorioCargarFeed() {
+  const grid = document.getElementById("grimorioGrid");
+  if (!grid) return;
+  if (!sbClient) {
+    grid.innerHTML = `<div class="grimorio-vacio"><p>${gt("supabaseNoConfigurado")}</p></div>`;
+    return;
+  }
+  grimorioState.cargando = true;
+  let query = sbClient.from("grimorio_feed").select("*").eq("categoria", grimorioState.tab).limit(60);
+  const { data, error } = await query;
+  grimorioState.cargando = false;
+  if (error) {
+    grid.innerHTML = `<div class="grimorio-vacio"><p>${gt("errorGenerico")}</p></div>`;
+    return;
+  }
+  grimorioState.cache[grimorioState.tab] = data || [];
+  grimorioRenderFeed();
+}
+
+function grimorioRenderFeed() {
+  const grid = document.getElementById("grimorioGrid");
+  if (!grid) return;
+  let items = grimorioState.cache[grimorioState.tab] || [];
+
+  if (grimorioState.filtroClase) items = items.filter(p => p.clase === grimorioState.filtroClase);
+  if (grimorioState.tab === "estrategia") {
+    if (grimorioState.filtroTipo) items = items.filter(p => p.tipo_estrategia === grimorioState.filtroTipo);
+    if (grimorioState.filtroDungeon) {
+      const q = grimorioState.filtroDungeon.toLowerCase();
+      items = items.filter(p => (p.dungeon || "").toLowerCase().includes(q));
+    }
+  } else {
+    if (grimorioState.filtroEnfoque) items = items.filter(p => p.enfoque === grimorioState.filtroEnfoque);
+  }
+
+  if (!items.length) {
+    const titulo = grimorioState.tab === "estrategia" ? gt("vacioEstrategiasTitulo") : gt("vacioBuildsTitulo");
+    const desc = grimorioState.tab === "estrategia" ? gt("vacioEstrategiasDesc") : gt("vacioBuildsDesc");
+    grid.innerHTML = `<div class="grimorio-vacio">${GRIMORIO_ICONOS.vacio}<h3 style="color:var(--white); font-family:'Manrope',sans-serif;">${titulo}</h3><p>${desc}</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = items.map(grimorioCardHtml).join("");
+  grid.querySelectorAll(".grimorio-card").forEach(card => {
+    card.addEventListener("click", () => grimorioAbrirDetalle(card.dataset.id));
+  });
+}
+
+function grimorioCardHtml(pub) {
+  const imgUrl = grimorioUrlImagen(pub.imagen_path);
+  const tagClase = `<span class="grimorio-tag">${escaparHtml(pub.clase)}</span>`;
+  const dic = gtDic();
+  const tagExtra = pub.categoria === "estrategia"
+    ? (pub.tipo_estrategia ? `<span class="grimorio-tag">${dic.tipoEstrategiaOpciones[pub.tipo_estrategia] || pub.tipo_estrategia}</span>` : "")
+    : (pub.enfoque ? `<span class="grimorio-tag">${dic.enfoqueOpciones[pub.enfoque] || pub.enfoque}</span>` : "");
+  const subtitulo = pub.categoria === "estrategia" ? escaparHtml(pub.dungeon || "") : escaparHtml(pub.nivel_rango || "");
+  return `
+    <div class="card grimorio-card" data-id="${pub.id}">
+      ${imgUrl ? `<img class="grimorio-card-img" src="${imgUrl}" alt="" loading="lazy">` : ""}
+      <div class="grimorio-card-body">
+        <div class="grimorio-card-tags">${tagClase}${tagExtra}</div>
+        <h3>${escaparHtml(pub.titulo)}</h3>
+        ${subtitulo ? `<p class="servidor-tag" style="margin:-4px 0 8px;">${subtitulo}</p>` : ""}
+        <p class="grimorio-card-extracto">${escaparHtml(pub.texto)}</p>
+        <div class="grimorio-card-autor">${grimorioAvatarHtml(pub.autor_avatar_id, pub.autor_nombre)}<span>${escaparHtml(pub.autor_nombre || gt("autorDesconocido"))}</span></div>
+        <div class="grimorio-card-foot">
+          <span>${grimorioFormatearFecha(pub.created_at)}</span>
+          <span class="comentarios-count">${GRIMORIO_ICONOS.comentario}${gt("comentarios", pub.comentarios_count || 0)}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/* ---------- modal: publicar ---------- */
+let grimorioCategoriaModal = "estrategia";
+
+function grimorioAplicarTextosModalPublicar() {
+  document.getElementById("grimorioTituloModal").textContent = grimorioCategoriaModal === "estrategia" ? gt("tituloModalEstrategia") : gt("tituloModalBuild");
+  document.getElementById("lblGrimorioTitulo").textContent = gt("campoTitulo");
+  document.getElementById("lblGrimorioClase").textContent = gt("campoClase");
+  document.getElementById("lblGrimorioDungeon").textContent = gt("campoDungeon");
+  document.getElementById("lblGrimorioTipoEstrategia").textContent = gt("campoTipoEstrategia");
+  document.getElementById("lblGrimorioEnfoque").textContent = gt("campoEnfoque");
+  document.getElementById("lblGrimorioNivelRango").textContent = gt("campoNivelRango");
+  document.getElementById("lblGrimorioTexto").textContent = gt("campoTexto");
+  document.getElementById("lblGrimorioImagen").textContent = gt("campoImagen");
+  document.getElementById("lblGrimorioVideo").textContent = gt("campoVideo");
+  document.getElementById("grimorioInputTexto").placeholder = grimorioCategoriaModal === "estrategia" ? gt("placeholderTextoEstrategia") : gt("placeholderTextoBuild");
+  document.getElementById("grimorioPubCancelar").textContent = gt("btnCancelar");
+  document.getElementById("grimorioPubConfirmar").textContent = gt("btnPublicar");
+  document.getElementById("grimorioLoginDiscord").textContent = gt("optDiscord");
+  document.getElementById("grimorioLoginGoogle").textContent = gt("optGoogle");
+  document.getElementById("grimorioLoginAviso").textContent = gt("avisoLogin");
+
+  const selClase = document.getElementById("grimorioInputClase");
+  selClase.innerHTML = `<option value="">${gt("seleccionar")}</option>${grimorioOpcionesClase()}`;
+  const selTipo = document.getElementById("grimorioInputTipoEstrategia");
+  selTipo.innerHTML = `<option value="">${gt("seleccionar")}</option>${grimorioOpcionesDesdeObjeto(gtDic().tipoEstrategiaOpciones)}`;
+  const selEnfoque = document.getElementById("grimorioInputEnfoque");
+  selEnfoque.innerHTML = `<option value="">${gt("seleccionar")}</option>${grimorioOpcionesDesdeObjeto(gtDic().enfoqueOpciones)}`;
+
+  document.getElementById("grimorioCamposEstrategia").hidden = grimorioCategoriaModal !== "estrategia";
+  document.getElementById("grimorioCamposBuild").hidden = grimorioCategoriaModal !== "build";
+}
+
+async function grimorioAbrirModalPublicar(categoria) {
+  if (!sbClient) { alert(gt("supabaseNoConfigurado")); return; }
+  grimorioCategoriaModal = categoria;
+  const modal = document.getElementById("modalGrimorioPublicar");
+  grimorioAplicarTextosModalPublicar();
+
+  document.getElementById("grimorioInputTitulo").value = "";
+  document.getElementById("grimorioInputClase").value = "";
+  document.getElementById("grimorioInputDungeon").value = "";
+  document.getElementById("grimorioInputTipoEstrategia").value = "";
+  document.getElementById("grimorioInputEnfoque").value = "";
+  document.getElementById("grimorioInputNivelRango").value = "";
+  document.getElementById("grimorioInputTexto").value = "";
+  document.getElementById("grimorioInputImagen").value = "";
+  document.getElementById("grimorioImagenNombre").hidden = true;
+  document.getElementById("grimorioInputVideo").value = "";
+  document.getElementById("grimorioPubError").hidden = true;
+  document.getElementById("grimorioPubOk").hidden = true;
+
+  const { data: { user } } = await sbClient.auth.getUser();
+  const camposWrap = document.getElementById("grimorioCamposWrap");
+  const loginAviso = document.getElementById("grimorioLoginAviso");
+  const loginBotones = document.getElementById("grimorioLoginBotones");
+  const btnConfirmar = document.getElementById("grimorioPubConfirmar");
+  if (user) {
+    camposWrap.hidden = false;
+    loginAviso.hidden = true;
+    loginBotones.hidden = true;
+    btnConfirmar.hidden = false;
+  } else {
+    camposWrap.hidden = true;
+    loginAviso.hidden = false;
+    loginBotones.hidden = false;
+    btnConfirmar.hidden = true;
+  }
+  modal.style.display = "flex";
+}
+
+function grimorioCerrarModalPublicar() {
+  document.getElementById("modalGrimorioPublicar").style.display = "none";
+}
+
+function grimorioWireModalPublicar() {
+  const modal = document.getElementById("modalGrimorioPublicar");
+  modal.addEventListener("click", (e) => { if (e.target === modal) grimorioCerrarModalPublicar(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "flex") grimorioCerrarModalPublicar();
+  });
+  document.getElementById("grimorioPubCancelar").addEventListener("click", grimorioCerrarModalPublicar);
+  document.getElementById("grimorioLoginDiscord").addEventListener("click", () => {
+    sbClient.auth.signInWithOAuth({ provider: "discord", options: { redirectTo: window.location.href } });
+  });
+  document.getElementById("grimorioLoginGoogle").addEventListener("click", () => {
+    sbClient.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.href } });
+  });
+
+  const inputImagen = document.getElementById("grimorioInputImagen");
+  const MAX_IMG_BYTES = 3 * 1024 * 1024;
+  const TIPOS_PERMITIDOS = ["image/png", "image/jpeg"];
+  inputImagen.addEventListener("change", () => {
+    const errorEl = document.getElementById("grimorioPubError");
+    const nombreEl = document.getElementById("grimorioImagenNombre");
+    const archivo = inputImagen.files[0];
+    errorEl.hidden = true;
+    if (!archivo) { nombreEl.hidden = true; return; }
+    if (!TIPOS_PERMITIDOS.includes(archivo.type)) {
+      errorEl.textContent = gt("errorImagenTipo"); errorEl.hidden = false;
+      inputImagen.value = ""; nombreEl.hidden = true; return;
+    }
+    if (archivo.size > MAX_IMG_BYTES) {
+      errorEl.textContent = gt("errorImagenTamano"); errorEl.hidden = false;
+      inputImagen.value = ""; nombreEl.hidden = true; return;
+    }
+    nombreEl.textContent = archivo.name;
+    nombreEl.hidden = false;
+  });
+
+  document.getElementById("grimorioPubConfirmar").addEventListener("click", grimorioEnviarPublicacion);
+}
+
+async function grimorioEnviarPublicacion() {
+  const errorEl = document.getElementById("grimorioPubError");
+  const okEl = document.getElementById("grimorioPubOk");
+  errorEl.hidden = true; okEl.hidden = true;
+
+  const titulo = document.getElementById("grimorioInputTitulo").value.trim();
+  const clase = document.getElementById("grimorioInputClase").value;
+  const texto = document.getElementById("grimorioInputTexto").value.trim();
+  const dungeon = document.getElementById("grimorioInputDungeon").value.trim();
+  const tipoEstrategia = document.getElementById("grimorioInputTipoEstrategia").value;
+  const enfoque = document.getElementById("grimorioInputEnfoque").value;
+  const nivelRango = document.getElementById("grimorioInputNivelRango").value.trim();
+  const videoUrl = document.getElementById("grimorioInputVideo").value.trim();
+
+  if (!titulo) { errorEl.textContent = gt("errorSinTitulo"); errorEl.hidden = false; return; }
+  if (!clase) { errorEl.textContent = gt("errorSinClase"); errorEl.hidden = false; return; }
+  if (grimorioCategoriaModal === "estrategia" && !dungeon) { errorEl.textContent = gt("errorSinDungeon"); errorEl.hidden = false; return; }
+  if (grimorioCategoriaModal === "build" && !enfoque) { errorEl.textContent = gt("errorSinEnfoque"); errorEl.hidden = false; return; }
+  if (texto.length < 30) { errorEl.textContent = gt("errorTextoCorto"); errorEl.hidden = false; return; }
+
+  const { data: { user } } = await sbClient.auth.getUser();
+  if (!user) { errorEl.textContent = gt("avisoLogin"); errorEl.hidden = false; return; }
+
+  const btnConfirmar = document.getElementById("grimorioPubConfirmar");
+  btnConfirmar.disabled = true;
+  btnConfirmar.textContent = gt("btnPublicando");
+
+  let imagenPath = null;
+  const archivo = document.getElementById("grimorioInputImagen").files[0];
+  if (archivo) {
+    const extension = archivo.type === "image/png" ? "png" : "jpg";
+    const ruta = `${user.id}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${extension}`;
+    const { error: errSubida } = await sbClient.storage.from("grimorio-imagenes").upload(ruta, archivo, { contentType: archivo.type, upsert: false });
+    if (errSubida) {
+      errorEl.textContent = gt("errorGenerico"); errorEl.hidden = false;
+      btnConfirmar.disabled = false; btnConfirmar.textContent = gt("btnPublicar");
+      return;
+    }
+    imagenPath = ruta;
+  }
+
+  const payload = {
+    user_id: user.id,
+    categoria: grimorioCategoriaModal,
+    clase,
+    titulo,
+    texto,
+    imagen_path: imagenPath,
+    video_url: videoUrl || null,
+    dungeon: grimorioCategoriaModal === "estrategia" ? dungeon : null,
+    tipo_estrategia: grimorioCategoriaModal === "estrategia" ? (tipoEstrategia || null) : null,
+    enfoque: grimorioCategoriaModal === "build" ? enfoque : null,
+    nivel_rango: grimorioCategoriaModal === "build" ? (nivelRango || null) : null
+  };
+
+  const { error } = await sbClient.from("grimorio_publicaciones").insert(payload);
+  btnConfirmar.disabled = false;
+  btnConfirmar.textContent = gt("btnPublicar");
+
+  if (error) {
+    errorEl.textContent = error.message && error.message.includes("Esper")
+      ? error.message
+      : (error.message && error.message.includes("límite") ? error.message : gt("errorGenerico"));
+    errorEl.hidden = false;
+    return;
+  }
+
+  okEl.textContent = gt("okPublicado");
+  okEl.hidden = false;
+  grimorioState.tab = grimorioCategoriaModal;
+  setTimeout(() => {
+    grimorioCerrarModalPublicar();
+    initGrimorioAstral();
+  }, 900);
+}
+
+/* ---------- modal: detalle + comentarios ---------- */
+let grimorioPubAbierta = null;
+
+async function grimorioAbrirDetalle(id) {
+  const lista = grimorioState.cache[grimorioState.tab] || [];
+  const pub = lista.find(p => String(p.id) === String(id));
+  if (!pub) return;
+  grimorioPubAbierta = pub;
+
+  const box = document.getElementById("grimorioDetalleBox");
+  const dic = gtDic();
+  const tagClase = `<span class="grimorio-tag">${escaparHtml(pub.clase)}</span>`;
+  const tagExtra = pub.categoria === "estrategia"
+    ? (pub.tipo_estrategia ? `<span class="grimorio-tag">${dic.tipoEstrategiaOpciones[pub.tipo_estrategia] || pub.tipo_estrategia}</span>` : "")
+    : (pub.enfoque ? `<span class="grimorio-tag">${dic.enfoqueOpciones[pub.enfoque] || pub.enfoque}</span>` : "");
+  const subtitulo = pub.categoria === "estrategia" ? pub.dungeon : pub.nivel_rango;
+  const imgUrl = grimorioUrlImagen(pub.imagen_path);
+
+  const { data: { user } } = sbClient ? await sbClient.auth.getUser() : { data: { user: null } };
+  const esAutor = user && user.id === pub.user_id;
+
+  box.innerHTML = `
+    <div class="grimorio-detalle-tags">${tagClase}${tagExtra}</div>
+    <h3 style="font-size:1.4rem; margin-bottom:6px; font-family:'Manrope',sans-serif; font-weight:800;">${escaparHtml(pub.titulo)}</h3>
+    ${subtitulo ? `<p class="servidor-tag" style="margin-bottom:10px;">${escaparHtml(subtitulo)}</p>` : ""}
+    <div class="grimorio-detalle-autor">${grimorioAvatarHtml(pub.autor_avatar_id, pub.autor_nombre)}<span>${escaparHtml(pub.autor_nombre || gt("autorDesconocido"))} · ${grimorioFormatearFecha(pub.created_at)}</span></div>
+    ${imgUrl ? `<img class="grimorio-detalle-img" src="${imgUrl}" alt="">` : ""}
+    <p class="grimorio-detalle-texto">${escaparHtml(pub.texto)}</p>
+    ${grimorioEmbedVideo(pub.video_url)}
+    <div class="grimorio-detalle-acciones">
+      ${esAutor
+        ? `<button type="button" class="grimorio-link-accion peligro" id="grimorioBtnEliminarPub">${gt("btnEliminarPublicacion")}</button>`
+        : `<button type="button" class="grimorio-link-accion" id="grimorioBtnReportar">${gt("btnReportar")}</button>`}
+    </div>
+    <div class="grimorio-comentarios-head">
+      <h4></h4>
+      <div class="grimorio-comentarios-lista" id="grimorioComentariosLista"><span class="grimorio-comentario-vacio">…</span></div>
+      <div id="grimorioComentarLoginAviso" class="modal-aviso" style="margin-bottom:10px;" hidden></div>
+      <div class="grimorio-comentar-fila" id="grimorioComentarFila" hidden>
+        <textarea class="modal-input" id="grimorioInputComentario" maxlength="600" rows="1"></textarea>
+        <button type="button" class="btn-primary" id="grimorioBtnComentar"></button>
+      </div>
+    </div>
+  `;
+  box.querySelector(".grimorio-comentarios-head h4").textContent = gt("comentarios", pub.comentarios_count || 0);
+  document.getElementById("grimorioInputComentario").placeholder = gt("comentarPlaceholder");
+  document.getElementById("grimorioBtnComentar").textContent = gt("btnComentar");
+
+  if (esAutor) {
+    document.getElementById("grimorioBtnEliminarPub").addEventListener("click", () => grimorioEliminarPublicacion(pub.id));
+  } else {
+    document.getElementById("grimorioBtnReportar").addEventListener("click", (e) => grimorioReportarPublicacion(pub.id, e.target));
+  }
+
+  if (user) {
+    document.getElementById("grimorioComentarFila").hidden = false;
+    document.getElementById("grimorioComentarLoginAviso").hidden = true;
+    document.getElementById("grimorioBtnComentar").addEventListener("click", () => grimorioEnviarComentario(pub.id, user));
+  } else {
+    document.getElementById("grimorioComentarFila").hidden = true;
+    const aviso = document.getElementById("grimorioComentarLoginAviso");
+    aviso.hidden = false;
+    aviso.textContent = gt("comentarAvisoLogin");
+  }
+
+  document.getElementById("modalGrimorioDetalle").style.display = "flex";
+  grimorioCargarComentarios(pub.id, user);
+}
+
+async function grimorioCargarComentarios(publicacionId, user) {
+  const lista = document.getElementById("grimorioComentariosLista");
+  if (!sbClient) return;
+  const { data, error } = await sbClient.from("grimorio_comentarios_feed").select("*").eq("publicacion_id", publicacionId);
+  if (!lista) return;
+  if (error || !data || !data.length) {
+    lista.innerHTML = `<span class="grimorio-comentario-vacio">${gt("comentariosVacio")}</span>`;
+    return;
+  }
+  lista.innerHTML = data.map(c => grimorioComentarioHtml(c, user)).join("");
+  lista.querySelectorAll("[data-borrar-comentario]").forEach(btn => {
+    btn.addEventListener("click", () => grimorioEliminarComentario(btn.dataset.borrarComentario, publicacionId, user));
+  });
+}
+
+function grimorioComentarioHtml(c, user) {
+  const esPropio = user && user.id === c.user_id;
+  return `
+    <div class="grimorio-comentario">
+      ${grimorioAvatarHtml(c.autor_avatar_id, c.autor_nombre)}
+      <div class="grimorio-comentario-cuerpo">
+        <div class="grimorio-comentario-cabecera">
+          <span class="grimorio-comentario-nombre">${escaparHtml(c.autor_nombre || gt("autorDesconocido"))}</span>
+          <span class="grimorio-comentario-fecha">${grimorioFormatearFecha(c.created_at)}</span>
+        </div>
+        <div class="grimorio-comentario-texto">${escaparHtml(c.texto)}</div>
+        ${esPropio ? `<button type="button" class="grimorio-link-accion peligro" style="margin-top:4px;" data-borrar-comentario="${c.id}">✕</button>` : ""}
+      </div>
+    </div>
+  `;
+}
+
+async function grimorioEnviarComentario(publicacionId, user) {
+  const input = document.getElementById("grimorioInputComentario");
+  const btn = document.getElementById("grimorioBtnComentar");
+  const texto = input.value.trim();
+  if (!texto) return;
+  btn.disabled = true;
+  const { error } = await sbClient.from("grimorio_comentarios").insert({ publicacion_id: publicacionId, user_id: user.id, texto });
+  btn.disabled = false;
+  if (error) { alert(error.message || gt("errorGenerico")); return; }
+  input.value = "";
+  grimorioCargarComentarios(publicacionId, user);
+  const pub = grimorioPubAbierta;
+  if (pub) {
+    pub.comentarios_count = (pub.comentarios_count || 0) + 1;
+    document.querySelector(".grimorio-comentarios-head h4").textContent = gt("comentarios", pub.comentarios_count);
+  }
+}
+
+async function grimorioEliminarComentario(comentarioId, publicacionId, user) {
+  if (!confirm(gt("confirmarEliminarComentario"))) return;
+  const { error } = await sbClient.from("grimorio_comentarios").delete().eq("id", comentarioId);
+  if (error) { alert(error.message || gt("errorGenerico")); return; }
+  grimorioCargarComentarios(publicacionId, user);
+  const pub = grimorioPubAbierta;
+  if (pub) {
+    pub.comentarios_count = Math.max(0, (pub.comentarios_count || 1) - 1);
+    document.querySelector(".grimorio-comentarios-head h4").textContent = gt("comentarios", pub.comentarios_count);
+  }
+}
+
+async function grimorioReportarPublicacion(publicacionId, btnEl) {
+  const { data: { user } } = await sbClient.auth.getUser();
+  if (!user) { sbClient.auth.signInWithOAuth({ provider: "discord", options: { redirectTo: window.location.href } }); return; }
+  btnEl.disabled = true;
+  const { error } = await sbClient.from("grimorio_reportes").insert({ publicacion_id: publicacionId, user_id: user.id });
+  if (!error || (error.message || "").includes("duplicate")) {
+    btnEl.textContent = gt("reportado");
+  } else {
+    btnEl.disabled = false;
+  }
+}
+
+async function grimorioEliminarPublicacion(publicacionId) {
+  if (!confirm(gt("confirmarEliminar"))) return;
+  const { error } = await sbClient.from("grimorio_publicaciones").delete().eq("id", publicacionId);
+  if (error) { alert(error.message || gt("errorGenerico")); return; }
+  document.getElementById("modalGrimorioDetalle").style.display = "none";
+  grimorioCargarFeed();
+}
+
+function grimorioWireModalDetalle() {
+  const modal = document.getElementById("modalGrimorioDetalle");
+  modal.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "flex") modal.style.display = "none";
+  });
+}
+
+/* ---------- pill de nav + scrollspy propio ---------- */
+function grimorioInitNavPill() {
+  const pill = document.getElementById("grimorioNavChip");
+  if (pill) pill.querySelector("span[data-g-nav]").textContent = gt("navGrimorio");
+  const navLabel = document.getElementById("navGrimorioLabel");
+  if (navLabel) navLabel.textContent = gt("navGrimorio");
+  if (!("IntersectionObserver" in window)) return;
+  const seccion = document.getElementById("grimorio-astral");
+  const chip = document.getElementById("navChipGrimorio");
+  if (!seccion || !chip) return;
+  const obs = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => chip.classList.toggle("activo", entrada.isIntersecting));
+  }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+  obs.observe(seccion);
+}
+
+/* ---------- reactividad: idioma ---------- */
+if (typeof aplicarIdioma === "function") {
+  const _grimorioAplicarIdiomaOriginal = aplicarIdioma;
+  aplicarIdioma = function (lang) {
+    _grimorioAplicarIdiomaOriginal(lang);
+    initGrimorioAstral();
+    grimorioInitNavPill();
+    const detalle = document.getElementById("modalGrimorioDetalle");
+    if (detalle && detalle.style.display === "flex" && grimorioPubAbierta) {
+      grimorioAbrirDetalle(grimorioPubAbierta.id);
+    }
+  };
+}
+
+/* ---------- arranque ---------- */
+initGrimorioAstral();
+grimorioInitNavPill();
+
+</script>
